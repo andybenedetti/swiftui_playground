@@ -179,6 +179,6 @@ private func colorToCode(_ color: Color) -> String {
 ## pbxproj ID Ranges (for manual editing)
 
 If not using xcodeproj MCP, use these ID ranges:
-- Build file IDs: 072-083 (used), next: 084+
-- File reference IDs: 170-181 (used), next: 182+
-- Group IDs: 417-420 (used), next: 421+
+- Build file IDs: 072-091 (used), next: 092+
+- File reference IDs: 170-189 (used), next: 190+
+- Group IDs: 417-422 (used), next: 423+
