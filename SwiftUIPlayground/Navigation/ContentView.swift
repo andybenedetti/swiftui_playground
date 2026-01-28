@@ -70,6 +70,9 @@ struct ContentView: View {
         case .progressView: ProgressViewPlayground()
         case .gauge: GaugePlayground()
         case .menu: MenuPlayground()
+        case .link: LinkPlayground()
+        case .shareLink: ShareLinkPlayground()
+        case .multiDatePicker: MultiDatePickerPlayground()
         // Layout
         case .vStack: VStackPlayground()
         case .hStack: HStackPlayground()
@@ -77,6 +80,9 @@ struct ContentView: View {
         case .grid: GridPlayground()
         case .spacer: SpacerPlayground()
         case .divider: DividerPlayground()
+        case .viewThatFits: ViewThatFitsPlayground()
+        case .timelineView: TimelineViewPlayground()
+        case .geometryReader: GeometryReaderPlayground()
         // Text & Images
         case .text: TextPlayground()
         case .label: LabelPlayground()
@@ -89,6 +95,8 @@ struct ContentView: View {
         case .tabView: TabViewPlayground()
         case .sheet: SheetPlayground()
         case .alert: AlertPlayground()
+        case .disclosureGroup: DisclosureGroupPlayground()
+        case .contentUnavailableView: ContentUnavailableViewPlayground()
         // Shapes
         case .rectangle: RectanglePlayground()
         case .roundedRectangle: RoundedRectanglePlayground()

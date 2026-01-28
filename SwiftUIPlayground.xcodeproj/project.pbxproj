@@ -57,6 +57,14 @@
 		048 /* TapGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146; };
 		049 /* LongPressGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147; };
 		050 /* DragGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148; };
+		051 /* LinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149; };
+		052 /* ShareLinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150; };
+		053 /* DisclosureGroupPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151; };
+		054 /* ContentUnavailableViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152; };
+		055 /* MultiDatePickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153; };
+		056 /* ViewThatFitsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154; };
+		057 /* TimelineViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155; };
+		058 /* GeometryReaderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +117,14 @@
 		146 /* TapGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesturePlayground.swift; sourceTree = "<group>"; };
 		147 /* LongPressGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesturePlayground.swift; sourceTree = "<group>"; };
 		148 /* DragGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGesturePlayground.swift; sourceTree = "<group>"; };
+		149 /* LinkPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkPlayground.swift; sourceTree = "<group>"; };
+		150 /* ShareLinkPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLinkPlayground.swift; sourceTree = "<group>"; };
+		151 /* DisclosureGroupPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureGroupPlayground.swift; sourceTree = "<group>"; };
+		152 /* ContentUnavailableViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableViewPlayground.swift; sourceTree = "<group>"; };
+		153 /* MultiDatePickerPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerPlayground.swift; sourceTree = "<group>"; };
+		154 /* ViewThatFitsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewThatFitsPlayground.swift; sourceTree = "<group>"; };
+		155 /* TimelineViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewPlayground.swift; sourceTree = "<group>"; };
+		156 /* GeometryReaderPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,6 +240,9 @@
 				127 /* ProgressViewPlayground.swift */,
 				128 /* GaugePlayground.swift */,
 				129 /* MenuPlayground.swift */,
+				149 /* LinkPlayground.swift */,
+				150 /* ShareLinkPlayground.swift */,
+				153 /* MultiDatePickerPlayground.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -237,6 +256,9 @@
 				118 /* GridPlayground.swift */,
 				134 /* DividerPlayground.swift */,
 				135 /* SpacerPlayground.swift */,
+				154 /* ViewThatFitsPlayground.swift */,
+				155 /* TimelineViewPlayground.swift */,
+				156 /* GeometryReaderPlayground.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -261,6 +283,8 @@
 				130 /* TabViewPlayground.swift */,
 				131 /* SheetPlayground.swift */,
 				132 /* AlertPlayground.swift */,
+				151 /* DisclosureGroupPlayground.swift */,
+				152 /* ContentUnavailableViewPlayground.swift */,
 			);
 			path = ListsAndContainers;
 			sourceTree = "<group>";
@@ -403,6 +427,14 @@
 				048 /* TapGesturePlayground.swift in Sources */,
 				049 /* LongPressGesturePlayground.swift in Sources */,
 				050 /* DragGesturePlayground.swift in Sources */,
+				051 /* LinkPlayground.swift in Sources */,
+				052 /* ShareLinkPlayground.swift in Sources */,
+				053 /* DisclosureGroupPlayground.swift in Sources */,
+				054 /* ContentUnavailableViewPlayground.swift in Sources */,
+				055 /* MultiDatePickerPlayground.swift in Sources */,
+				056 /* ViewThatFitsPlayground.swift in Sources */,
+				057 /* TimelineViewPlayground.swift in Sources */,
+				058 /* GeometryReaderPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

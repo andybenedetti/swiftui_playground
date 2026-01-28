@@ -40,6 +40,9 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "ProgressView", destination: .progressView),
                 ComponentItem(name: "Gauge", destination: .gauge),
                 ComponentItem(name: "Menu", destination: .menu),
+                ComponentItem(name: "Link", destination: .link),
+                ComponentItem(name: "ShareLink", destination: .shareLink),
+                ComponentItem(name: "MultiDatePicker", destination: .multiDatePicker),
             ]
         case .layout:
             [
@@ -49,6 +52,9 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "Grid", destination: .grid),
                 ComponentItem(name: "Spacer", destination: .spacer),
                 ComponentItem(name: "Divider", destination: .divider),
+                ComponentItem(name: "ViewThatFits", destination: .viewThatFits),
+                ComponentItem(name: "TimelineView", destination: .timelineView),
+                ComponentItem(name: "GeometryReader", destination: .geometryReader),
             ]
         case .textAndImages:
             [
@@ -65,6 +71,8 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "TabView", destination: .tabView),
                 ComponentItem(name: "Sheet", destination: .sheet),
                 ComponentItem(name: "Alert", destination: .alert),
+                ComponentItem(name: "DisclosureGroup", destination: .disclosureGroup),
+                ComponentItem(name: "ContentUnavailableView", destination: .contentUnavailableView),
             ]
         case .shapes:
             [
@@ -101,13 +109,13 @@ struct ComponentItem: Identifiable, Hashable {
 
 enum ComponentDestination: Hashable {
     // Controls
-    case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField, secureField, textEditor, progressView, gauge, menu
+    case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField, secureField, textEditor, progressView, gauge, menu, link, shareLink, multiDatePicker
     // Layout
-    case vStack, hStack, zStack, grid, spacer, divider
+    case vStack, hStack, zStack, grid, spacer, divider, viewThatFits, timelineView, geometryReader
     // Text & Images
     case text, label, image, asyncImage
     // Lists & Containers
-    case list, scrollView, form, tabView, sheet, alert
+    case list, scrollView, form, tabView, sheet, alert, disclosureGroup, contentUnavailableView
     // Shapes
     case rectangle, roundedRectangle, circle, ellipse, capsule
     // Effects

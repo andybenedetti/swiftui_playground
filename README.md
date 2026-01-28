@@ -10,23 +10,24 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (42)
+## Components (50)
 
-### Controls (13)
+### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
 - DatePicker, ColorPicker, TextField, SecureField, TextEditor
-- ProgressView, Gauge, Menu
+- ProgressView, Gauge, Menu, Link, ShareLink, MultiDatePicker
 
-### Layout (6)
+### Layout (9)
 - VStack, HStack, ZStack, Grid (LazyVGrid)
-- Spacer, Divider
+- Spacer, Divider, ViewThatFits, TimelineView, GeometryReader
 
 ### Text & Images (4)
 - Text, Label, Image, AsyncImage
 
-### Lists & Containers (6)
+### Lists & Containers (8)
 - List, ScrollView, Form
 - TabView, Sheet, Alert
+- DisclosureGroup, ContentUnavailableView
 
 ### Shapes (5)
 - Rectangle, RoundedRectangle, Circle
@@ -137,6 +138,29 @@ Ideas brewing:
 - **State Management examples** - Show @State, @Binding, @Observable patterns
 
 The app is starting to feel comprehensive. 42 components across 7 categories covers most of what a developer would reach for day-to-day. But SwiftUI is deep - there's always more to explore.
+
+### Day 3: Apple Docs MCP in Action
+
+Today I put the Apple Docs MCP server to work. It's a game-changer for discovering APIs and verifying signatures before writing code.
+
+#### The Research Phase
+
+I used `search_framework_symbols` to explore SwiftUI's available views and `get_apple_doc_content` to pull detailed documentation including platform availability. The MCP returned actual code examples from Apple's docs, which I used to ensure my implementations matched the official API signatures.
+
+Key discoveries:
+- **MultiDatePicker** - I didn't know this existed! It's different from DatePicker and allows selecting multiple dates.
+- **ContentUnavailableView** has a built-in `.search` preset - no need to build custom empty states for search results.
+- **ViewThatFits** evaluates children in order and shows the first one that fits - useful for responsive layouts.
+
+#### Batch 1 Complete
+
+Added 4 new components today:
+1. **Link** - Simple URL navigation. The API is just `Link("Title", destination: url)`.
+2. **ShareLink** - Native share sheet with optional subject/message fields.
+3. **DisclosureGroup** - Expandable sections with `isExpanded` binding. Supports nesting.
+4. **ContentUnavailableView** - iOS 17+ empty states. The built-in `.search` preset is particularly elegant.
+
+We're now at 46 components. The XcodeBuild MCP made testing instant - build, run, and screenshot all from the conversation.
 
 ---
 
