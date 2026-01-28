@@ -10,11 +10,11 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (29)
+## Components (39)
 
-### Controls (11)
+### Controls (13)
 - Button, Toggle, Slider, Stepper, Picker
-- DatePicker, ColorPicker, TextField
+- DatePicker, ColorPicker, TextField, SecureField, TextEditor
 - ProgressView, Gauge, Menu
 
 ### Layout (6)
@@ -28,9 +28,13 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - List, ScrollView, Form
 - TabView, Sheet, Alert
 
-### Shapes (2)
-- Rectangle (+ RoundedRectangle)
-- Circle (+ Ellipse, Capsule)
+### Shapes (5)
+- Rectangle, RoundedRectangle, Circle
+- Ellipse, Capsule
+
+### Effects (5)
+- Shadow, Blur, Rotation
+- Opacity, Scale
 
 ## Requirements
 
