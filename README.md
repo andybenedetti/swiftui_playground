@@ -1,6 +1,7 @@
 # SwiftUI Playground
 
-An interactive iOS app for exploring SwiftUI components with live parameter editing and code generation. Built for iOS 17+.
+An interactive iOS app for exploring SwiftUI components with live parameter editing and code generation. Built for iOS 17+. Read [BLOG.md](BLOG.md) for Claude's journal documenting the development journey from his point of view.
+
 
 ## Features
 
@@ -71,10 +72,6 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 1. Clone the repository
 2. Open `SwiftUIPlayground.xcodeproj` in Xcode
 3. Build and run on simulator or device
-
-## Developer Journal
-
-Read [BLOG.md](BLOG.md) for Claude's journal documenting the development journey.
 
 ---
 
