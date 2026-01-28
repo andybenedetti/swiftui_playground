@@ -1,6 +1,6 @@
 # SwiftUI Playground - Progress Tracker
 
-## Current Status: 83 Components Complete
+## Current Status: 83 Components, 18 Categories
 
 **GitHub**: https://github.com/andybenedetti/swiftui_playground
 
@@ -10,20 +10,22 @@
 |----------|-------|------------|
 | Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
 | Charts | 4 | Bar Chart, Line Chart, Area Chart, Pie Chart |
+| Containers | 6 | Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView |
 | Controls | 16 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu, Link, ShareLink, MultiDatePicker |
 | Data Flow | 5 | @State, @Binding, @Observable, @Environment, @AppStorage |
 | Drawing | 3 | Path, Canvas, Custom Shape |
 | Effects | 5 | Shadow, Blur, Rotation, Opacity, Scale |
 | Focus & Keyboard | 3 | @FocusState, Keyboard Toolbar, Submit Actions |
 | Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
+| Images | 2 | Image, AsyncImage |
 | Layout | 9 | VStack, HStack, ZStack, Grid, Spacer, Divider, ViewThatFits, TimelineView, GeometryReader |
-| Lists & Containers | 8 | List, ScrollView, Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView |
+| Lists | 2 | List, ScrollView |
 | Maps | 3 | Map Basics, Map Markers, Map Camera |
 | Media | 2 | VideoPlayer, PhotosPicker |
 | Modifiers | 5 | Frame, Padding, Background, Overlay, ClipShape |
 | Navigation | 4 | NavigationLink, Toolbar, NavigationSplitView, NavigationPath |
 | Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
-| Text & Images | 4 | Text, Label, Image, AsyncImage |
+| Text | 2 | Text, Label |
 
 ## Next Steps - Ideas for Future Sessions
 
@@ -56,6 +58,7 @@
 - Day 3: Apple Docs MCP + Batch 1 & 2 (Link, ShareLink, DisclosureGroup, ContentUnavailableView, MultiDatePicker, ViewThatFits, TimelineView, GeometryReader) (+8)
 - Day 4: Animation category (4), Modifiers category (5), Navigation category (4) (+13)
 - Day 5: Drawing (3), Media (2), Charts (4), Maps (3) (+12)
+- Day 8: Replaced collapsible categories with push navigation, split categories (16 → 18)
 
 ## Session Notes
 
@@ -111,3 +114,13 @@
   - Keyboard Toolbar - Toolbar items above keyboard
   - Submit Actions - onSubmit and submitLabel modifiers
   - Component count: 80 → 83 (16 categories)
+
+### Day 8
+- **Redesigned home screen navigation**
+  - Replaced collapsible sidebar sections with a flat category list
+  - Tapping a category pushes a detail view with the component list
+  - Component counts now displayed in bold
+  - Search still works with components grouped by category
+- **Split "Text & Images"** into **Text** (Text, Label) and **Images** (Image, AsyncImage)
+- **Split "Lists & Containers"** into **Lists** (List, ScrollView) and **Containers** (Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView)
+- Category count: 16 → 18
