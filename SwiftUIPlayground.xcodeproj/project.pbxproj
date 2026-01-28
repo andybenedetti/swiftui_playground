@@ -65,6 +65,10 @@
 		056 /* ViewThatFitsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154; };
 		057 /* TimelineViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155; };
 		058 /* GeometryReaderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156; };
+		059 /* AnimationCurvesPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157; };
+		060 /* WithAnimationPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158; };
+		061 /* TransitionPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159; };
+		062 /* PhaseAnimatorPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +129,10 @@
 		154 /* ViewThatFitsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewThatFitsPlayground.swift; sourceTree = "<group>"; };
 		155 /* TimelineViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewPlayground.swift; sourceTree = "<group>"; };
 		156 /* GeometryReaderPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderPlayground.swift; sourceTree = "<group>"; };
+		157 /* AnimationCurvesPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurvesPlayground.swift; sourceTree = "<group>"; };
+		158 /* WithAnimationPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimationPlayground.swift; sourceTree = "<group>"; };
+		159 /* TransitionPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionPlayground.swift; sourceTree = "<group>"; };
+		160 /* PhaseAnimatorPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseAnimatorPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +206,7 @@
 				411 /* Shapes */,
 				412 /* Effects */,
 				413 /* Gestures */,
+				414 /* Animation */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -307,6 +316,17 @@
 				143 /* CapsulePlayground.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		414 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				157 /* AnimationCurvesPlayground.swift */,
+				158 /* WithAnimationPlayground.swift */,
+				159 /* TransitionPlayground.swift */,
+				160 /* PhaseAnimatorPlayground.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +455,10 @@
 				056 /* ViewThatFitsPlayground.swift in Sources */,
 				057 /* TimelineViewPlayground.swift in Sources */,
 				058 /* GeometryReaderPlayground.swift in Sources */,
+				059 /* AnimationCurvesPlayground.swift in Sources */,
+				060 /* WithAnimationPlayground.swift in Sources */,
+				061 /* TransitionPlayground.swift in Sources */,
+				062 /* PhaseAnimatorPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

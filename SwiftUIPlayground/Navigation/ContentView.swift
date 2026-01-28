@@ -113,6 +113,11 @@ struct ContentView: View {
         case .tapGesture: TapGesturePlayground()
         case .longPressGesture: LongPressGesturePlayground()
         case .dragGesture: DragGesturePlayground()
+        // Animation
+        case .animationCurves: AnimationCurvesPlayground()
+        case .withAnimation: WithAnimationPlayground()
+        case .transition: TransitionPlayground()
+        case .phaseAnimator: PhaseAnimatorPlayground()
         }
     }
 }

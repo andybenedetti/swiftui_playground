@@ -3,7 +3,7 @@
 ## Project Overview
 An interactive iOS app showcasing SwiftUI components with live parameter editing and code generation. Built for developers who want to quickly explore SwiftUI APIs and copy working code.
 
-## Current Status: 50 Components Complete
+## Current Status: 54 Components Complete
 
 ### Completed
 - [x] GitHub repo: https://github.com/andybenedetti/swiftui_playground
@@ -15,16 +15,17 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 - [x] 50 component playgrounds implemented across 7 categories
 - [x] Apple Docs MCP server configured (restart Claude Code to activate)
 
-### Component Inventory (50 total)
+### Component Inventory (54 total)
 | Category | Count | Components |
 |----------|-------|------------|
-| Controls | 16 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu, Link, ShareLink, **MultiDatePicker** |
-| Layout | 9 | VStack, HStack, ZStack, Grid, Spacer, Divider, **ViewThatFits**, **TimelineView**, **GeometryReader** |
+| Controls | 16 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu, Link, ShareLink, MultiDatePicker |
+| Layout | 9 | VStack, HStack, ZStack, Grid, Spacer, Divider, ViewThatFits, TimelineView, GeometryReader |
 | Text & Images | 4 | Text, Label, Image, AsyncImage |
-| Lists & Containers | 8 | List, ScrollView, Form, TabView, Sheet, Alert, **DisclosureGroup**, **ContentUnavailableView** |
+| Lists & Containers | 8 | List, ScrollView, Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView |
 | Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
 | Effects | 5 | Shadow, Blur, Rotation, Opacity, Scale |
 | Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
+| Animation | 4 | **Animation Curves**, **withAnimation**, **Transition**, **PhaseAnimator** |
 
 ### Architecture Decisions
 1. **Navigation**: `NavigationStack` with `searchable` modifier - simple, native, iOS 17+
@@ -46,18 +47,19 @@ SwiftUIPlayground/
 │   ├── CodePreview.swift          # Syntax display + copy button + comments toggle
 │   └── ParameterControl.swift     # SliderControl, PickerControl, ToggleControl, ColorControl, TextFieldControl
 └── Components/
-    ├── Controls/ (13 files)
-    ├── Layout/ (6 files)
+    ├── Controls/ (16 files)
+    ├── Layout/ (9 files)
     ├── TextAndImages/ (4 files)
-    ├── ListsAndContainers/ (6 files)
+    ├── ListsAndContainers/ (8 files)
     ├── Shapes/ (5 files)
     ├── Effects/ (5 files)
-    └── Gestures/ (3 files)
+    ├── Gestures/ (3 files)
+    └── Animation/ (4 files)
 ```
 
 ### Next Steps - Ideas for Future Sessions
 - [x] **Test the Apple Docs MCP** - ✅ DONE! See findings below
-- [ ] **Add Animation category** - withAnimation, Animation curves, transitions, matchedGeometryEffect
+- [x] **Add Animation category** - ✅ DONE! Animation Curves, withAnimation, Transition, PhaseAnimator
 - [ ] **Add more Navigation components** - NavigationLink, NavigationSplitView, Toolbar, ToolbarItem
 - [ ] **Add Drawing category** - Path, Canvas, custom shapes
 - [ ] **Add Accessibility category** - accessibilityLabel, accessibilityHint, VoiceOver examples
@@ -296,6 +298,52 @@ The development loop is now:
 - ViewBuilder variable assignments - Can't use `let x = ...` in @ViewBuilder, extract to helper function
 
 ### Next Session Ideas
-- **Batch 3: Animation category** - withAnimation, curves, transitions, phaseAnimator
-- **Navigation components** - NavigationLink, Toolbar, ToolbarItem
+- **Navigation components** - NavigationLink, Toolbar, ToolbarItem, NavigationSplitView
+- **Modifiers category** - .frame, .padding, .background, .overlay, .clipShape
+- **Drawing category** - Path, Canvas, custom shapes
 - Install Docker and add xcodeproj-mcp-server for automated pbxproj editing
+
+## Session Notes - Day 4
+
+### What We Accomplished
+1. **Updated README.md** - Synced Day 3 documentation to reflect 50 components
+2. **Added Animation category** - 4 new playgrounds:
+   - **Animation Curves** - Compare .linear, .easeIn, .easeOut, .spring, .bouncy, .snappy
+   - **withAnimation** - Demonstrate withAnimation wrapper for state changes
+   - **Transition** - View transitions (.slide, .opacity, .scale, .move, .push, .combined, .asymmetric)
+   - **PhaseAnimator** - iOS 17+ multi-step animations with continuous and triggered modes
+3. **Component count**: 50 → 54 (+4 components)
+4. **Category count**: 7 → 8 (+Animation)
+
+### Animation APIs Used
+```swift
+// Animation curves with duration
+.linear(duration: 1.0)
+.easeIn(duration: 1.0)
+.easeOut(duration: 1.0)
+.easeInOut(duration: 1.0)
+.spring(duration: 1.0)
+.bouncy(duration: 1.0)
+.snappy(duration: 1.0)
+
+// withAnimation wrapper
+withAnimation(.spring(duration: 0.5)) {
+    scale = 1.5
+}
+
+// View transitions
+.transition(.slide)
+.transition(.scale.combined(with: .opacity))
+.transition(.asymmetric(insertion: .scale, removal: .opacity))
+
+// PhaseAnimator (iOS 17+)
+PhaseAnimator(Phase.allCases) { phase in
+    content.scaleEffect(phase.scale)
+} animation: { phase in
+    .easeInOut(duration: 0.4)
+}
+```
+
+### Build Issue Fixed
+- `.blurReplace` transition is not available as `AnyTransition` member
+- Replaced with `.scale.combined(with: .opacity)` which achieves similar visual effect

@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (50)
+## Components (54)
 
 ### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
@@ -39,6 +39,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 ### Gestures (3)
 - TapGesture, LongPressGesture, DragGesture
+
+### Animation (4)
+- Animation Curves, withAnimation, Transition, PhaseAnimator
 
 ## Requirements
 
@@ -154,13 +157,41 @@ Key discoveries:
 
 #### Batch 1 Complete
 
-Added 4 new components today:
+Added 4 new components:
 1. **Link** - Simple URL navigation. The API is just `Link("Title", destination: url)`.
 2. **ShareLink** - Native share sheet with optional subject/message fields.
 3. **DisclosureGroup** - Expandable sections with `isExpanded` binding. Supports nesting.
 4. **ContentUnavailableView** - iOS 17+ empty states. The built-in `.search` preset is particularly elegant.
 
-We're now at 46 components. The XcodeBuild MCP made testing instant - build, run, and screenshot all from the conversation.
+#### Batch 2 Complete
+
+Added 4 more components discovered through Apple Docs MCP:
+1. **MultiDatePicker** - Select multiple dates (iOS 16+). Different from DatePicker - uses `Set<DateComponents>`.
+2. **ViewThatFits** - Responsive layouts that evaluate children in order and show the first one that fits.
+3. **TimelineView** - Time-based updates with schedule options (.periodic, .animation, .everyMinute).
+4. **GeometryReader** - Access size and position information for custom layouts.
+
+We're now at **50 components** across 7 categories. The XcodeBuild MCP made testing instant - build, run, and screenshot all from the conversation.
+
+### Day 4: Animation Category
+
+Today we added the Animation category - something I'd been looking forward to since we started planning next steps.
+
+#### The New Playgrounds
+
+1. **Animation Curves** - This one is satisfying to play with. You can compare all the timing curves side-by-side: linear, easeIn, easeOut, easeInOut, spring, bouncy, and snappy. Each has a distinct feel - linear is mechanical, spring feels natural, bouncy is playful.
+
+2. **withAnimation** - Demonstrates how to wrap state changes in animation blocks. The playground lets you scale, rotate, and fade a shape with different animation curves.
+
+3. **Transition** - Shows how views can animate as they appear and disappear. Includes slide, opacity, scale, move, push, combined, and asymmetric transitions. The asymmetric option (scale in, fade out) is particularly elegant.
+
+4. **PhaseAnimator** - This iOS 17+ API is powerful for multi-step animations. The playground shows both continuous (loops forever) and triggered (fires on tap) modes. Great for attention-grabbing effects.
+
+#### Technical Note
+
+I initially tried to include `.blurReplace` as a transition type, but discovered it's not available as an `AnyTransition` member in iOS 18.5. Replaced it with `.scale.combined(with: .opacity)` which achieves a similar visual effect.
+
+We're now at **54 components** across **8 categories**.
 
 ---
 
