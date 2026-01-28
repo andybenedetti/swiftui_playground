@@ -78,6 +78,9 @@
 		069 /* ToolbarPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167; };
 		070 /* NavigationSplitViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168; };
 		071 /* NavigationPathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169; };
+		072 /* PathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170; };
+		073 /* CanvasPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171; };
+		074 /* CustomShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +154,9 @@
 		167 /* ToolbarPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPlayground.swift; sourceTree = "<group>"; };
 		168 /* NavigationSplitViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSplitViewPlayground.swift; sourceTree = "<group>"; };
 		169 /* NavigationPathPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathPlayground.swift; sourceTree = "<group>"; };
+		170 /* PathPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPlayground.swift; sourceTree = "<group>"; };
+		171 /* CanvasPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPlayground.swift; sourceTree = "<group>"; };
+		172 /* CustomShapePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapePlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +233,7 @@
 				414 /* Animation */,
 				415 /* Modifiers */,
 				416 /* NavigationComponents */,
+				417 /* Drawing */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -372,6 +379,16 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		417 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				170 /* PathPlayground.swift */,
+				171 /* CanvasPlayground.swift */,
+				172 /* CustomShapePlayground.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -511,6 +528,9 @@
 				069 /* ToolbarPlayground.swift in Sources */,
 				070 /* NavigationSplitViewPlayground.swift in Sources */,
 				071 /* NavigationPathPlayground.swift in Sources */,
+				072 /* PathPlayground.swift in Sources */,
+				073 /* CanvasPlayground.swift in Sources */,
+				074 /* CustomShapePlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
     case animation = "Animation"
     case modifiers = "Modifiers"
     case navigation = "Navigation"
+    case drawing = "Drawing"
 
     var id: String { rawValue }
 
@@ -26,6 +27,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .animation: "play.circle"
         case .modifiers: "paintbrush"
         case .navigation: "arrow.triangle.turn.up.right.diamond"
+        case .drawing: "pencil.and.outline"
         }
     }
 
@@ -124,6 +126,12 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "NavigationSplitView", destination: .navigationSplitView),
                 ComponentItem(name: "NavigationPath", destination: .navigationPath),
             ]
+        case .drawing:
+            [
+                ComponentItem(name: "Path", destination: .path),
+                ComponentItem(name: "Canvas", destination: .canvas),
+                ComponentItem(name: "Custom Shape", destination: .customShape),
+            ]
         }
     }
 }
@@ -156,4 +164,6 @@ enum ComponentDestination: Hashable {
     case frame, padding, background, overlay, clipShape
     // Navigation
     case navigationLink, toolbar, navigationSplitView, navigationPath
+    // Drawing
+    case path, canvas, customShape
 }

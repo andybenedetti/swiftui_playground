@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (63)
+## Components (66)
 
 ### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
@@ -48,6 +48,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 ### Navigation (4)
 - NavigationLink, Toolbar, NavigationSplitView, NavigationPath
+
+### Drawing (3)
+- Path, Canvas, Custom Shape
 
 ## Requirements
 
@@ -224,6 +227,39 @@ Finally added proper navigation components - a notable gap we've had since the b
 4. **NavigationPath** - Programmatic navigation control. The deep linking example shows how to push multiple views at once - essential for handling URLs or notifications.
 
 We're now at **63 components** across **10 categories**.
+
+### Day 5: Drawing Category
+
+Today we added the Drawing category - a natural progression from Shapes, focusing on custom graphics.
+
+#### The New Playgrounds
+
+1. **Path** - The foundation of custom drawing. Demonstrates four path types:
+   - Lines (triangle)
+   - Curves (quadratic Bezier creating a lens shape)
+   - Arc (270-degree arc)
+   - Star (calculated using trigonometry)
+
+   Each can be rendered as fill or stroke with adjustable line width and color.
+
+2. **Canvas** - Immediate mode drawing with GraphicsContext. Three demo types show different use cases:
+   - Animated particles arranged in a circle with rainbow colors (uses TimelineView)
+   - Color bars (spectrum visualization)
+   - Checkerboard pattern with alternating squares and circles
+
+3. **Custom Shape** - Shows how to implement the Shape protocol for reusable, resizable graphics:
+   - **Polygon** - Any regular polygon (triangle through dodecagon)
+   - **HeartShape** - Bezier curves and arcs combined
+   - **WaveShape** - Sine wave with filled area below
+   - **BadgeShape** - Star-like shape with alternating inner/outer radii
+
+#### Technical Notes
+
+The Shape protocol is elegant - you implement one method `path(in rect: CGRect) -> Path` and SwiftUI handles everything else. The shapes automatically resize, can be filled or stroked, and work with all the standard modifiers.
+
+Canvas is different - it's immediate mode drawing like CoreGraphics. You get a GraphicsContext and draw directly. It's more powerful but less composable. I used TimelineView to animate the particle example, which shows how Canvas can create effects that would be expensive with regular SwiftUI views.
+
+We're now at **66 components** across **11 categories**.
 
 ---
 

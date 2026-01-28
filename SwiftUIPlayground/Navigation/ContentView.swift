@@ -129,6 +129,10 @@ struct ContentView: View {
         case .toolbar: ToolbarPlayground()
         case .navigationSplitView: NavigationSplitViewPlayground()
         case .navigationPath: NavigationPathPlayground()
+        // Drawing
+        case .path: PathPlayground()
+        case .canvas: CanvasPlayground()
+        case .customShape: CustomShapePlayground()
         }
     }
 }

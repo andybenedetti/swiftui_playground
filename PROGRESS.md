@@ -3,7 +3,7 @@
 ## Project Overview
 An interactive iOS app showcasing SwiftUI components with live parameter editing and code generation. Built for developers who want to quickly explore SwiftUI APIs and copy working code.
 
-## Current Status: 63 Components Complete
+## Current Status: 66 Components Complete
 
 ### Completed
 - [x] GitHub repo: https://github.com/andybenedetti/swiftui_playground
@@ -27,7 +27,8 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 | Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
 | Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
 | Modifiers | 5 | Frame, Padding, Background, Overlay, ClipShape |
-| Navigation | 4 | **NavigationLink**, **Toolbar**, **NavigationSplitView**, **NavigationPath** |
+| Navigation | 4 | NavigationLink, Toolbar, NavigationSplitView, NavigationPath |
+| Drawing | 3 | **Path**, **Canvas**, **Custom Shape** |
 
 ### Architecture Decisions
 1. **Navigation**: `NavigationStack` with `searchable` modifier - simple, native, iOS 17+
@@ -58,14 +59,15 @@ SwiftUIPlayground/
     ├── Gestures/ (3 files)
     ├── Animation/ (4 files)
     ├── Modifiers/ (5 files)
-    └── Navigation/ (4 files)
+    ├── Navigation/ (4 files)
+    └── Drawing/ (3 files)
 ```
 
 ### Next Steps - Ideas for Future Sessions
 - [x] **Test the Apple Docs MCP** - ✅ DONE! See findings below
 - [x] **Add Animation category** - ✅ DONE! Animation Curves, withAnimation, Transition, PhaseAnimator
-- [ ] **Add more Navigation components** - NavigationLink, NavigationSplitView, Toolbar, ToolbarItem
-- [ ] **Add Drawing category** - Path, Canvas, custom shapes
+- [x] **Add Navigation category** - ✅ DONE! NavigationLink, Toolbar, NavigationSplitView, NavigationPath
+- [x] **Add Drawing category** - ✅ DONE! Path, Canvas, Custom Shape
 - [ ] **Add Accessibility category** - accessibilityLabel, accessibilityHint, VoiceOver examples
 - [ ] **Add State Management category** - @State, @Binding, @Observable, @Environment examples
 - [ ] **Add Modifiers category** - Common modifiers like .frame, .padding, .background, .overlay
@@ -372,3 +374,56 @@ Added 4 playgrounds for navigation patterns:
 
 **Component count**: 59 → 63 (+4 components)
 **Category count**: 9 → 10 (+Navigation)
+
+### Drawing Category Added
+Added 3 playgrounds for custom drawing:
+- **Path** - Draw with lines, curves (quadratic Bezier), arcs, and star shapes. Toggle fill/stroke mode with adjustable stroke width.
+- **Canvas** - Immediate mode drawing with GraphicsContext. Three demo types: animated particles in a circle, color bars with center circle, and checkerboard pattern.
+- **Custom Shape** - Create reusable shapes with the Shape protocol. Includes Polygon (configurable sides), HeartShape, WaveShape, and BadgeShape (star-like with configurable points).
+
+**Component count**: 63 → 66 (+3 components)
+**Category count**: 10 → 11 (+Drawing)
+
+### Drawing APIs Used
+```swift
+// Path with lines
+Path { path in
+    path.move(to: CGPoint(x: 20, y: 180))
+    path.addLine(to: CGPoint(x: 100, y: 20))
+    path.addLine(to: CGPoint(x: 180, y: 180))
+    path.closeSubpath()
+}
+.stroke(.blue, lineWidth: 3)
+
+// Path with curves
+path.addQuadCurve(
+    to: CGPoint(x: 180, y: 100),
+    control: CGPoint(x: 100, y: 20)
+)
+
+// Path with arc
+path.addArc(
+    center: CGPoint(x: 100, y: 100),
+    radius: 80,
+    startAngle: .degrees(0),
+    endAngle: .degrees(270),
+    clockwise: false
+)
+
+// Canvas immediate mode drawing
+Canvas { context, size in
+    let rect = CGRect(x: 0, y: 0, width: 50, height: 50)
+    context.fill(Circle().path(in: rect), with: .color(.blue))
+}
+
+// Custom Shape protocol
+struct Polygon: Shape {
+    var sides: Int
+
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            // Calculate points and draw
+        }
+    }
+}
+```
