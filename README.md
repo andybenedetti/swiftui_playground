@@ -10,18 +10,19 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (26)
+## Components (29)
 
 ### Controls (11)
 - Button, Toggle, Slider, Stepper, Picker
 - DatePicker, ColorPicker, TextField
 - ProgressView, Gauge, Menu
 
-### Layout (4)
+### Layout (6)
 - VStack, HStack, ZStack, Grid (LazyVGrid)
+- Spacer, Divider
 
-### Text & Images (3)
-- Text, Label, Image
+### Text & Images (4)
+- Text, Label, Image, AsyncImage
 
 ### Lists & Containers (6)
 - List, ScrollView, Form
