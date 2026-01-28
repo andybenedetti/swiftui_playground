@@ -2,11 +2,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText = ""
-    @State private var expandedCategories: Set<ComponentCategory> = []
+
+    var sortedCategories: [ComponentCategory] {
+        ComponentCategory.allCases.sorted { $0.rawValue < $1.rawValue }
+    }
 
     var filteredCategories: [(ComponentCategory, [ComponentItem])] {
-        let sortedCategories = ComponentCategory.allCases.sorted { $0.rawValue < $1.rawValue }
-
         if searchText.isEmpty {
             return sortedCategories.map { ($0, $0.components.sorted { $0.name < $1.name }) }
         }
@@ -22,49 +23,61 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(filteredCategories, id: \.0) { category, components in
-                    Section(isExpanded: binding(for: category)) {
-                        ForEach(components) { component in
-                            NavigationLink(value: component.destination) {
-                                Text(component.name)
+                if searchText.isEmpty {
+                    ForEach(sortedCategories) { category in
+                        NavigationLink(value: category) {
+                            HStack {
+                                Label(category.rawValue, systemImage: category.icon)
+                                Spacer()
+                                Text("\(category.components.count)")
+                                    .font(.body.bold())
+                                    .foregroundStyle(.secondary)
                             }
                         }
-                    } header: {
-                        HStack {
-                            Label(category.rawValue, systemImage: category.icon)
-                            Spacer()
-                            Text("\(components.count)")
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
+                    }
+                } else {
+                    ForEach(filteredCategories, id: \.0) { category, components in
+                        Section(category.rawValue) {
+                            ForEach(components) { component in
+                                NavigationLink(value: component.destination) {
+                                    Text(component.name)
+                                }
+                            }
                         }
                     }
                 }
             }
-            .listStyle(.sidebar)
             .navigationTitle("SwiftUI Playground")
             .searchable(text: $searchText, prompt: "Search components")
+            .navigationDestination(for: ComponentCategory.self) { category in
+                CategoryDetailView(category: category)
+            }
             .navigationDestination(for: ComponentDestination.self) { destination in
                 destinationView(for: destination)
             }
         }
     }
 
-    private func binding(for category: ComponentCategory) -> Binding<Bool> {
-        Binding(
-            get: { expandedCategories.contains(category) },
-            set: { isExpanded in
-                if isExpanded {
-                    expandedCategories.insert(category)
-                } else {
-                    expandedCategories.remove(category)
-                }
-            }
-        )
-    }
-
     @ViewBuilder
     private func destinationView(for destination: ComponentDestination) -> some View {
         switch destination {
+        // Animation
+        case .animationCurves: AnimationCurvesPlayground()
+        case .withAnimation: WithAnimationPlayground()
+        case .transition: TransitionPlayground()
+        case .phaseAnimator: PhaseAnimatorPlayground()
+        // Charts
+        case .barChart: BarChartPlayground()
+        case .lineChart: LineChartPlayground()
+        case .areaChart: AreaChartPlayground()
+        case .pieChart: PieChartPlayground()
+        // Containers
+        case .form: FormPlayground()
+        case .tabView: TabViewPlayground()
+        case .sheet: SheetPlayground()
+        case .alert: AlertPlayground()
+        case .disclosureGroup: DisclosureGroupPlayground()
+        case .contentUnavailableView: ContentUnavailableViewPlayground()
         // Controls
         case .button: ButtonPlayground()
         case .toggle: TogglePlayground()
@@ -82,36 +95,16 @@ struct ContentView: View {
         case .link: LinkPlayground()
         case .shareLink: ShareLinkPlayground()
         case .multiDatePicker: MultiDatePickerPlayground()
-        // Layout
-        case .vStack: VStackPlayground()
-        case .hStack: HStackPlayground()
-        case .zStack: ZStackPlayground()
-        case .grid: GridPlayground()
-        case .spacer: SpacerPlayground()
-        case .divider: DividerPlayground()
-        case .viewThatFits: ViewThatFitsPlayground()
-        case .timelineView: TimelineViewPlayground()
-        case .geometryReader: GeometryReaderPlayground()
-        // Text & Images
-        case .text: TextPlayground()
-        case .label: LabelPlayground()
-        case .image: ImagePlayground()
-        case .asyncImage: AsyncImagePlayground()
-        // Lists & Containers
-        case .list: ListPlayground()
-        case .scrollView: ScrollViewPlayground()
-        case .form: FormPlayground()
-        case .tabView: TabViewPlayground()
-        case .sheet: SheetPlayground()
-        case .alert: AlertPlayground()
-        case .disclosureGroup: DisclosureGroupPlayground()
-        case .contentUnavailableView: ContentUnavailableViewPlayground()
-        // Shapes
-        case .rectangle: RectanglePlayground()
-        case .roundedRectangle: RoundedRectanglePlayground()
-        case .circle: CirclePlayground()
-        case .ellipse: EllipsePlayground()
-        case .capsule: CapsulePlayground()
+        // Data Flow
+        case .appStorage: AppStoragePlayground()
+        case .binding: BindingPlayground()
+        case .environment: EnvironmentPlayground()
+        case .observable: ObservablePlayground()
+        case .state: StatePlayground()
+        // Drawing
+        case .path: PathPlayground()
+        case .canvas: CanvasPlayground()
+        case .customShape: CustomShapePlayground()
         // Effects
         case .shadow: ShadowPlayground()
         case .blur: BlurPlayground()
@@ -126,11 +119,29 @@ struct ContentView: View {
         case .tapGesture: TapGesturePlayground()
         case .longPressGesture: LongPressGesturePlayground()
         case .dragGesture: DragGesturePlayground()
-        // Animation
-        case .animationCurves: AnimationCurvesPlayground()
-        case .withAnimation: WithAnimationPlayground()
-        case .transition: TransitionPlayground()
-        case .phaseAnimator: PhaseAnimatorPlayground()
+        // Images
+        case .image: ImagePlayground()
+        case .asyncImage: AsyncImagePlayground()
+        // Layout
+        case .vStack: VStackPlayground()
+        case .hStack: HStackPlayground()
+        case .zStack: ZStackPlayground()
+        case .grid: GridPlayground()
+        case .spacer: SpacerPlayground()
+        case .divider: DividerPlayground()
+        case .viewThatFits: ViewThatFitsPlayground()
+        case .timelineView: TimelineViewPlayground()
+        case .geometryReader: GeometryReaderPlayground()
+        // Lists
+        case .list: ListPlayground()
+        case .scrollView: ScrollViewPlayground()
+        // Maps
+        case .mapBasics: MapBasicsPlayground()
+        case .mapMarkers: MapMarkersPlayground()
+        case .mapCamera: MapCameraPlayground()
+        // Media
+        case .videoPlayer: VideoPlayerPlayground()
+        case .photosPicker: PhotosPickerPlayground()
         // Modifiers
         case .frame: FramePlayground()
         case .padding: PaddingPlayground()
@@ -142,29 +153,35 @@ struct ContentView: View {
         case .toolbar: ToolbarPlayground()
         case .navigationSplitView: NavigationSplitViewPlayground()
         case .navigationPath: NavigationPathPlayground()
-        // Drawing
-        case .path: PathPlayground()
-        case .canvas: CanvasPlayground()
-        case .customShape: CustomShapePlayground()
-        // Media
-        case .videoPlayer: VideoPlayerPlayground()
-        case .photosPicker: PhotosPickerPlayground()
-        // Charts
-        case .barChart: BarChartPlayground()
-        case .lineChart: LineChartPlayground()
-        case .areaChart: AreaChartPlayground()
-        case .pieChart: PieChartPlayground()
-        // Data Flow
-        case .appStorage: AppStoragePlayground()
-        case .binding: BindingPlayground()
-        case .environment: EnvironmentPlayground()
-        case .observable: ObservablePlayground()
-        case .state: StatePlayground()
-        // Maps
-        case .mapBasics: MapBasicsPlayground()
-        case .mapMarkers: MapMarkersPlayground()
-        case .mapCamera: MapCameraPlayground()
+        // Shapes
+        case .rectangle: RectanglePlayground()
+        case .roundedRectangle: RoundedRectanglePlayground()
+        case .circle: CirclePlayground()
+        case .ellipse: EllipsePlayground()
+        case .capsule: CapsulePlayground()
+        // Text
+        case .text: TextPlayground()
+        case .label: LabelPlayground()
         }
+    }
+}
+
+struct CategoryDetailView: View {
+    let category: ComponentCategory
+
+    var sortedComponents: [ComponentItem] {
+        category.components.sorted { $0.name < $1.name }
+    }
+
+    var body: some View {
+        List {
+            ForEach(sortedComponents) { component in
+                NavigationLink(value: component.destination) {
+                    Text(component.name)
+                }
+            }
+        }
+        .navigationTitle(category.rawValue)
     }
 }
 

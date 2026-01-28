@@ -1,48 +1,75 @@
 import SwiftUI
 
 enum ComponentCategory: String, CaseIterable, Identifiable {
+    case animation = "Animation"
+    case charts = "Charts"
+    case containers = "Containers"
     case controls = "Controls"
-    case layout = "Layout"
-    case textAndImages = "Text & Images"
-    case listsAndContainers = "Lists & Containers"
-    case shapes = "Shapes"
+    case dataFlow = "Data Flow"
+    case drawing = "Drawing"
     case effects = "Effects"
     case focusKeyboard = "Focus & Keyboard"
     case gestures = "Gestures"
-    case animation = "Animation"
+    case images = "Images"
+    case layout = "Layout"
+    case lists = "Lists"
+    case maps = "Maps"
+    case media = "Media"
     case modifiers = "Modifiers"
     case navigation = "Navigation"
-    case drawing = "Drawing"
-    case media = "Media"
-    case charts = "Charts"
-    case dataFlow = "Data Flow"
-    case maps = "Maps"
+    case shapes = "Shapes"
+    case text = "Text"
 
     var id: String { rawValue }
 
     var icon: String {
         switch self {
+        case .animation: "play.circle"
+        case .charts: "chart.bar.xaxis"
+        case .containers: "square.stack"
         case .controls: "slider.horizontal.3"
-        case .layout: "rectangle.3.group"
-        case .textAndImages: "textformat"
-        case .listsAndContainers: "list.bullet.rectangle"
-        case .shapes: "square.on.circle"
+        case .dataFlow: "arrow.triangle.2.circlepath"
+        case .drawing: "pencil.and.outline"
         case .effects: "wand.and.stars"
         case .focusKeyboard: "keyboard"
         case .gestures: "hand.tap"
-        case .animation: "play.circle"
+        case .images: "photo"
+        case .layout: "rectangle.3.group"
+        case .lists: "list.bullet.rectangle"
+        case .maps: "map"
+        case .media: "play.rectangle"
         case .modifiers: "paintbrush"
         case .navigation: "arrow.triangle.turn.up.right.diamond"
-        case .drawing: "pencil.and.outline"
-        case .media: "play.rectangle"
-        case .charts: "chart.bar.xaxis"
-        case .dataFlow: "arrow.triangle.2.circlepath"
-        case .maps: "map"
+        case .shapes: "square.on.circle"
+        case .text: "textformat"
         }
     }
 
     var components: [ComponentItem] {
         switch self {
+        case .animation:
+            [
+                ComponentItem(name: "Animation Curves", destination: .animationCurves),
+                ComponentItem(name: "withAnimation", destination: .withAnimation),
+                ComponentItem(name: "Transition", destination: .transition),
+                ComponentItem(name: "PhaseAnimator", destination: .phaseAnimator),
+            ]
+        case .charts:
+            [
+                ComponentItem(name: "Bar Chart", destination: .barChart),
+                ComponentItem(name: "Line Chart", destination: .lineChart),
+                ComponentItem(name: "Area Chart", destination: .areaChart),
+                ComponentItem(name: "Pie Chart", destination: .pieChart),
+            ]
+        case .containers:
+            [
+                ComponentItem(name: "Form", destination: .form),
+                ComponentItem(name: "TabView", destination: .tabView),
+                ComponentItem(name: "Sheet", destination: .sheet),
+                ComponentItem(name: "Alert", destination: .alert),
+                ComponentItem(name: "DisclosureGroup", destination: .disclosureGroup),
+                ComponentItem(name: "ContentUnavailableView", destination: .contentUnavailableView),
+            ]
         case .controls:
             [
                 ComponentItem(name: "Button", destination: .button),
@@ -62,43 +89,19 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "ShareLink", destination: .shareLink),
                 ComponentItem(name: "MultiDatePicker", destination: .multiDatePicker),
             ]
-        case .layout:
+        case .dataFlow:
             [
-                ComponentItem(name: "VStack", destination: .vStack),
-                ComponentItem(name: "HStack", destination: .hStack),
-                ComponentItem(name: "ZStack", destination: .zStack),
-                ComponentItem(name: "Grid", destination: .grid),
-                ComponentItem(name: "Spacer", destination: .spacer),
-                ComponentItem(name: "Divider", destination: .divider),
-                ComponentItem(name: "ViewThatFits", destination: .viewThatFits),
-                ComponentItem(name: "TimelineView", destination: .timelineView),
-                ComponentItem(name: "GeometryReader", destination: .geometryReader),
+                ComponentItem(name: "@AppStorage", destination: .appStorage),
+                ComponentItem(name: "@Binding", destination: .binding),
+                ComponentItem(name: "@Environment", destination: .environment),
+                ComponentItem(name: "@Observable", destination: .observable),
+                ComponentItem(name: "@State", destination: .state),
             ]
-        case .textAndImages:
+        case .drawing:
             [
-                ComponentItem(name: "Text", destination: .text),
-                ComponentItem(name: "Label", destination: .label),
-                ComponentItem(name: "Image", destination: .image),
-                ComponentItem(name: "AsyncImage", destination: .asyncImage),
-            ]
-        case .listsAndContainers:
-            [
-                ComponentItem(name: "List", destination: .list),
-                ComponentItem(name: "ScrollView", destination: .scrollView),
-                ComponentItem(name: "Form", destination: .form),
-                ComponentItem(name: "TabView", destination: .tabView),
-                ComponentItem(name: "Sheet", destination: .sheet),
-                ComponentItem(name: "Alert", destination: .alert),
-                ComponentItem(name: "DisclosureGroup", destination: .disclosureGroup),
-                ComponentItem(name: "ContentUnavailableView", destination: .contentUnavailableView),
-            ]
-        case .shapes:
-            [
-                ComponentItem(name: "Rectangle", destination: .rectangle),
-                ComponentItem(name: "RoundedRectangle", destination: .roundedRectangle),
-                ComponentItem(name: "Circle", destination: .circle),
-                ComponentItem(name: "Ellipse", destination: .ellipse),
-                ComponentItem(name: "Capsule", destination: .capsule),
+                ComponentItem(name: "Path", destination: .path),
+                ComponentItem(name: "Canvas", destination: .canvas),
+                ComponentItem(name: "Custom Shape", destination: .customShape),
             ]
         case .effects:
             [
@@ -120,12 +123,38 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "LongPressGesture", destination: .longPressGesture),
                 ComponentItem(name: "DragGesture", destination: .dragGesture),
             ]
-        case .animation:
+        case .images:
             [
-                ComponentItem(name: "Animation Curves", destination: .animationCurves),
-                ComponentItem(name: "withAnimation", destination: .withAnimation),
-                ComponentItem(name: "Transition", destination: .transition),
-                ComponentItem(name: "PhaseAnimator", destination: .phaseAnimator),
+                ComponentItem(name: "Image", destination: .image),
+                ComponentItem(name: "AsyncImage", destination: .asyncImage),
+            ]
+        case .layout:
+            [
+                ComponentItem(name: "VStack", destination: .vStack),
+                ComponentItem(name: "HStack", destination: .hStack),
+                ComponentItem(name: "ZStack", destination: .zStack),
+                ComponentItem(name: "Grid", destination: .grid),
+                ComponentItem(name: "Spacer", destination: .spacer),
+                ComponentItem(name: "Divider", destination: .divider),
+                ComponentItem(name: "ViewThatFits", destination: .viewThatFits),
+                ComponentItem(name: "TimelineView", destination: .timelineView),
+                ComponentItem(name: "GeometryReader", destination: .geometryReader),
+            ]
+        case .lists:
+            [
+                ComponentItem(name: "List", destination: .list),
+                ComponentItem(name: "ScrollView", destination: .scrollView),
+            ]
+        case .maps:
+            [
+                ComponentItem(name: "Map Basics", destination: .mapBasics),
+                ComponentItem(name: "Map Markers", destination: .mapMarkers),
+                ComponentItem(name: "Map Camera", destination: .mapCamera),
+            ]
+        case .media:
+            [
+                ComponentItem(name: "VideoPlayer", destination: .videoPlayer),
+                ComponentItem(name: "PhotosPicker", destination: .photosPicker),
             ]
         case .modifiers:
             [
@@ -142,37 +171,18 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "NavigationSplitView", destination: .navigationSplitView),
                 ComponentItem(name: "NavigationPath", destination: .navigationPath),
             ]
-        case .drawing:
+        case .shapes:
             [
-                ComponentItem(name: "Path", destination: .path),
-                ComponentItem(name: "Canvas", destination: .canvas),
-                ComponentItem(name: "Custom Shape", destination: .customShape),
+                ComponentItem(name: "Rectangle", destination: .rectangle),
+                ComponentItem(name: "RoundedRectangle", destination: .roundedRectangle),
+                ComponentItem(name: "Circle", destination: .circle),
+                ComponentItem(name: "Ellipse", destination: .ellipse),
+                ComponentItem(name: "Capsule", destination: .capsule),
             ]
-        case .media:
+        case .text:
             [
-                ComponentItem(name: "VideoPlayer", destination: .videoPlayer),
-                ComponentItem(name: "PhotosPicker", destination: .photosPicker),
-            ]
-        case .charts:
-            [
-                ComponentItem(name: "Bar Chart", destination: .barChart),
-                ComponentItem(name: "Line Chart", destination: .lineChart),
-                ComponentItem(name: "Area Chart", destination: .areaChart),
-                ComponentItem(name: "Pie Chart", destination: .pieChart),
-            ]
-        case .dataFlow:
-            [
-                ComponentItem(name: "@AppStorage", destination: .appStorage),
-                ComponentItem(name: "@Binding", destination: .binding),
-                ComponentItem(name: "@Environment", destination: .environment),
-                ComponentItem(name: "@Observable", destination: .observable),
-                ComponentItem(name: "@State", destination: .state),
-            ]
-        case .maps:
-            [
-                ComponentItem(name: "Map Basics", destination: .mapBasics),
-                ComponentItem(name: "Map Markers", destination: .mapMarkers),
-                ComponentItem(name: "Map Camera", destination: .mapCamera),
+                ComponentItem(name: "Text", destination: .text),
+                ComponentItem(name: "Label", destination: .label),
             ]
         }
     }
@@ -186,36 +196,40 @@ struct ComponentItem: Identifiable, Hashable {
 }
 
 enum ComponentDestination: Hashable {
+    // Animation
+    case animationCurves, withAnimation, transition, phaseAnimator
+    // Charts
+    case barChart, lineChart, areaChart, pieChart
+    // Containers
+    case form, tabView, sheet, alert, disclosureGroup, contentUnavailableView
     // Controls
     case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField, secureField, textEditor, progressView, gauge, menu, link, shareLink, multiDatePicker
-    // Layout
-    case vStack, hStack, zStack, grid, spacer, divider, viewThatFits, timelineView, geometryReader
-    // Text & Images
-    case text, label, image, asyncImage
-    // Lists & Containers
-    case list, scrollView, form, tabView, sheet, alert, disclosureGroup, contentUnavailableView
-    // Shapes
-    case rectangle, roundedRectangle, circle, ellipse, capsule
+    // Data Flow
+    case appStorage, binding, environment, observable, state
+    // Drawing
+    case path, canvas, customShape
     // Effects
     case shadow, blur, rotation, opacity, scale
     // Focus & Keyboard
     case focusState, keyboardToolbar, submitActions
     // Gestures
     case tapGesture, longPressGesture, dragGesture
-    // Animation
-    case animationCurves, withAnimation, transition, phaseAnimator
+    // Images
+    case image, asyncImage
+    // Layout
+    case vStack, hStack, zStack, grid, spacer, divider, viewThatFits, timelineView, geometryReader
+    // Lists
+    case list, scrollView
+    // Maps
+    case mapBasics, mapMarkers, mapCamera
+    // Media
+    case videoPlayer, photosPicker
     // Modifiers
     case frame, padding, background, overlay, clipShape
     // Navigation
     case navigationLink, toolbar, navigationSplitView, navigationPath
-    // Drawing
-    case path, canvas, customShape
-    // Media
-    case videoPlayer, photosPicker
-    // Charts
-    case barChart, lineChart, areaChart, pieChart
-    // Data Flow
-    case appStorage, binding, environment, observable, state
-    // Maps
-    case mapBasics, mapMarkers, mapCamera
+    // Shapes
+    case rectangle, roundedRectangle, circle, ellipse, capsule
+    // Text
+    case text, label
 }
