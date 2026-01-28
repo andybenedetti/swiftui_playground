@@ -1,0 +1,149 @@
+import SwiftUI
+
+struct NavigationLinkPlayground: View {
+    @State private var linkStyle = LinkStyle.label
+    @State private var showChevron = true
+
+    enum LinkStyle: String, CaseIterable {
+        case label = "Text Label"
+        case iconLabel = "Icon + Label"
+        case custom = "Custom View"
+    }
+
+    var body: some View {
+        ComponentPage(
+            title: "NavigationLink",
+            description: "Creates a navigation link to a destination view.",
+            code: generatedCode
+        ) {
+            previewContent
+        } controls: {
+            controlsContent
+        }
+    }
+
+    @ViewBuilder
+    private var previewContent: some View {
+        VStack(spacing: 16) {
+            Text("Tap a link to navigate")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+
+            NavigationStack {
+                List {
+                    switch linkStyle {
+                    case .label:
+                        NavigationLink("Settings", value: "settings")
+                        NavigationLink("Profile", value: "profile")
+                        NavigationLink("Help", value: "help")
+                    case .iconLabel:
+                        NavigationLink(value: "settings") {
+                            Label("Settings", systemImage: "gear")
+                        }
+                        NavigationLink(value: "profile") {
+                            Label("Profile", systemImage: "person")
+                        }
+                        NavigationLink(value: "help") {
+                            Label("Help", systemImage: "questionmark.circle")
+                        }
+                    case .custom:
+                        NavigationLink(value: "settings") {
+                            HStack {
+                                Image(systemName: "gear")
+                                    .foregroundStyle(.blue)
+                                    .frame(width: 30)
+                                VStack(alignment: .leading) {
+                                    Text("Settings")
+                                        .font(.headline)
+                                    Text("App preferences")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                    }
+                }
+                .navigationTitle("Menu")
+                .navigationDestination(for: String.self) { value in
+                    Text("Detail: \(value)")
+                        .navigationTitle(value.capitalized)
+                }
+            }
+            .frame(height: 280)
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+        }
+    }
+
+    @ViewBuilder
+    private var controlsContent: some View {
+        VStack(spacing: 16) {
+            PickerControl(
+                label: "Style",
+                selection: $linkStyle,
+                options: LinkStyle.allCases,
+                optionLabel: { $0.rawValue }
+            )
+        }
+    }
+
+    private var generatedCode: String {
+        switch linkStyle {
+        case .label:
+            return """
+            // Simple text NavigationLink
+            NavigationStack {
+                List {
+                    NavigationLink("Settings", value: "settings")
+                    NavigationLink("Profile", value: "profile")
+                }
+                .navigationDestination(for: String.self) { value in
+                    DetailView(item: value)
+                }
+            }
+            """
+        case .iconLabel:
+            return """
+            // NavigationLink with Label
+            NavigationStack {
+                List {
+                    NavigationLink(value: "settings") {
+                        Label("Settings", systemImage: "gear")
+                    }
+                    NavigationLink(value: "profile") {
+                        Label("Profile", systemImage: "person")
+                    }
+                }
+                .navigationDestination(for: String.self) { value in
+                    DetailView(item: value)
+                }
+            }
+            """
+        case .custom:
+            return """
+            // NavigationLink with custom content
+            NavigationStack {
+                List {
+                    NavigationLink(value: "settings") {
+                        HStack {
+                            Image(systemName: "gear")
+                            VStack(alignment: .leading) {
+                                Text("Settings")
+                                    .font(.headline)
+                                Text("App preferences")
+                                    .font(.caption)
+                            }
+                        }
+                    }
+                }
+                .navigationDestination(for: String.self) { value in
+                    DetailView(item: value)
+                }
+            }
+            """
+        }
+    }
+}
+
+#Preview {
+    NavigationLinkPlayground()
+}

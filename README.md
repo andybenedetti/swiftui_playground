@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (59)
+## Components (63)
 
 ### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
@@ -45,6 +45,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 ### Modifiers (5)
 - Frame, Padding, Background, Overlay, ClipShape
+
+### Navigation (4)
+- NavigationLink, Toolbar, NavigationSplitView, NavigationPath
 
 ## Requirements
 
@@ -208,7 +211,19 @@ Also added the Modifiers category - these are the bread-and-butter modifiers eve
 
 5. **ClipShape** - Mask content to shapes. The circle option is perfect for avatars - something developers reach for constantly.
 
-We're now at **59 components** across **9 categories**.
+#### Navigation Category
+
+Finally added proper navigation components - a notable gap we've had since the beginning:
+
+1. **NavigationLink** - The fundamental navigation primitive. Shows three styles: simple text, icon+label, and custom content with subtitles.
+
+2. **Toolbar** - Demonstrates toolbar items with different placements. The principal placement for center items is surprisingly useful.
+
+3. **NavigationSplitView** - Two and three column layouts. Best experienced on iPad, but the playground shows the concept on iPhone too.
+
+4. **NavigationPath** - Programmatic navigation control. The deep linking example shows how to push multiple views at once - essential for handling URLs or notifications.
+
+We're now at **63 components** across **10 categories**.
 
 ---
 

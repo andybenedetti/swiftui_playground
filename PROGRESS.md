@@ -3,7 +3,7 @@
 ## Project Overview
 An interactive iOS app showcasing SwiftUI components with live parameter editing and code generation. Built for developers who want to quickly explore SwiftUI APIs and copy working code.
 
-## Current Status: 59 Components Complete
+## Current Status: 63 Components Complete
 
 ### Completed
 - [x] GitHub repo: https://github.com/andybenedetti/swiftui_playground
@@ -15,7 +15,7 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 - [x] 50 component playgrounds implemented across 7 categories
 - [x] Apple Docs MCP server configured (restart Claude Code to activate)
 
-### Component Inventory (59 total)
+### Component Inventory (63 total)
 | Category | Count | Components |
 |----------|-------|------------|
 | Controls | 16 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu, Link, ShareLink, MultiDatePicker |
@@ -26,7 +26,8 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 | Effects | 5 | Shadow, Blur, Rotation, Opacity, Scale |
 | Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
 | Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
-| Modifiers | 5 | **Frame**, **Padding**, **Background**, **Overlay**, **ClipShape** |
+| Modifiers | 5 | Frame, Padding, Background, Overlay, ClipShape |
+| Navigation | 4 | **NavigationLink**, **Toolbar**, **NavigationSplitView**, **NavigationPath** |
 
 ### Architecture Decisions
 1. **Navigation**: `NavigationStack` with `searchable` modifier - simple, native, iOS 17+
@@ -56,7 +57,8 @@ SwiftUIPlayground/
     ├── Effects/ (5 files)
     ├── Gestures/ (3 files)
     ├── Animation/ (4 files)
-    └── Modifiers/ (5 files)
+    ├── Modifiers/ (5 files)
+    └── Navigation/ (4 files)
 ```
 
 ### Next Steps - Ideas for Future Sessions
@@ -300,9 +302,9 @@ The development loop is now:
 - ViewBuilder variable assignments - Can't use `let x = ...` in @ViewBuilder, extract to helper function
 
 ### Next Session Ideas
-- **Navigation components** - NavigationLink, Toolbar, ToolbarItem, NavigationSplitView
 - **Drawing category** - Path, Canvas, custom shapes
 - **Accessibility category** - accessibilityLabel, accessibilityHint, VoiceOver examples
+- **State Management examples** - @State, @Binding, @Observable, @Environment patterns
 - Install Docker and add xcodeproj-mcp-server for automated pbxproj editing
 
 ## Session Notes - Day 4
@@ -360,3 +362,13 @@ Added 5 more playgrounds for common view modifiers:
 
 **Component count**: 54 → 59 (+5 components)
 **Category count**: 8 → 9 (+Modifiers)
+
+### Navigation Category Added
+Added 4 playgrounds for navigation patterns:
+- **NavigationLink** - Value-based navigation with text, icon+label, and custom content styles
+- **Toolbar** - Toolbar items with placement options (topBarLeading, topBarTrailing, bottomBar, principal)
+- **NavigationSplitView** - Two and three column layouts for iPad
+- **NavigationPath** - Programmatic navigation with push, pop, and deep linking
+
+**Component count**: 59 → 63 (+4 components)
+**Category count**: 9 → 10 (+Navigation)

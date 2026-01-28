@@ -124,6 +124,11 @@ struct ContentView: View {
         case .background: BackgroundPlayground()
         case .overlay: OverlayPlayground()
         case .clipShape: ClipShapePlayground()
+        // Navigation
+        case .navigationLink: NavigationLinkPlayground()
+        case .toolbar: ToolbarPlayground()
+        case .navigationSplitView: NavigationSplitViewPlayground()
+        case .navigationPath: NavigationPathPlayground()
         }
     }
 }

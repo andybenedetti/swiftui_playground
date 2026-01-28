@@ -74,6 +74,10 @@
 		065 /* BackgroundPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163; };
 		066 /* OverlayPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164; };
 		067 /* ClipShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165; };
+		068 /* NavigationLinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166; };
+		069 /* ToolbarPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167; };
+		070 /* NavigationSplitViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168; };
+		071 /* NavigationPathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +147,10 @@
 		163 /* BackgroundPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundPlayground.swift; sourceTree = "<group>"; };
 		164 /* OverlayPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlayground.swift; sourceTree = "<group>"; };
 		165 /* ClipShapePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipShapePlayground.swift; sourceTree = "<group>"; };
+		166 /* NavigationLinkPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkPlayground.swift; sourceTree = "<group>"; };
+		167 /* ToolbarPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPlayground.swift; sourceTree = "<group>"; };
+		168 /* NavigationSplitViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSplitViewPlayground.swift; sourceTree = "<group>"; };
+		169 /* NavigationPathPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +226,7 @@
 				413 /* Gestures */,
 				414 /* Animation */,
 				415 /* Modifiers */,
+				416 /* NavigationComponents */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -350,6 +359,17 @@
 				165 /* ClipShapePlayground.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		416 /* NavigationComponents */ = {
+			isa = PBXGroup;
+			children = (
+				166 /* NavigationLinkPlayground.swift */,
+				167 /* ToolbarPlayground.swift */,
+				168 /* NavigationSplitViewPlayground.swift */,
+				169 /* NavigationPathPlayground.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,6 +507,10 @@
 				065 /* BackgroundPlayground.swift in Sources */,
 				066 /* OverlayPlayground.swift in Sources */,
 				067 /* ClipShapePlayground.swift in Sources */,
+				068 /* NavigationLinkPlayground.swift in Sources */,
+				069 /* ToolbarPlayground.swift in Sources */,
+				070 /* NavigationSplitViewPlayground.swift in Sources */,
+				071 /* NavigationPathPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
