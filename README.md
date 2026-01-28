@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (72)
+## Components (75)
 
 ### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
@@ -57,6 +57,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 ### Charts (4)
 - Bar Chart, Line Chart, Area Chart, Pie Chart
+
+### Maps (3)
+- Map Basics, Map Markers, Map Camera
 
 ## Requirements
 
@@ -340,6 +343,46 @@ Swift Charts uses a declarative syntax that feels very SwiftUI-native. The key t
 The `.foregroundStyle(by:)` modifier automatically creates legends and assigns colors when you have multiple series. The `.position(by:)` modifier on BarMark creates grouped (side-by-side) bars instead of stacked.
 
 We're now at **72 components** across **13 categories**.
+
+### Day 5 (continued): Maps Category
+
+Added the Maps category using Apple's MapKit framework with the new iOS 17+ SwiftUI APIs.
+
+#### The New Playgrounds
+
+1. **Map Basics** - Display maps with different styles:
+   - Standard (default road map)
+   - Imagery (satellite)
+   - Hybrid (satellite with labels)
+   - Elevation options (flat vs realistic 3D terrain)
+   - Traffic layer toggle
+
+2. **Map Markers** - Add location markers and annotations:
+   - `Marker` - The balloon-shaped default marker with tint color
+   - `Annotation` - Custom SwiftUI views as map pins
+   - Mixed mode showing both types together
+   - Multiple markers from a data array
+
+3. **Map Camera** - Control the map's viewpoint:
+   - Camera position with coordinates
+   - Distance (zoom level)
+   - Pitch (3D tilt angle)
+   - Heading (rotation/compass direction)
+   - Animated transitions between cities
+
+#### Technical Notes
+
+The iOS 17 Map API is a significant improvement over the older APIs. Key types:
+- `Map { }` - Content builder syntax for adding markers
+- `Marker` - Simple balloon marker with title and coordinate
+- `Annotation` - Custom view at a coordinate
+- `MapCameraPosition` - Controls what the map shows
+- `MapCamera` - Precise camera with distance, pitch, heading
+- `.mapStyle()` - Modifier for visual style
+
+The camera position can be `.automatic` (fits all content), `.region(MKCoordinateRegion)`, `.camera(MapCamera)`, or `.userLocation`.
+
+We're now at **75 components** across **14 categories**.
 
 ---
 

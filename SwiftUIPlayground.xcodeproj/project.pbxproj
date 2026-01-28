@@ -87,6 +87,9 @@
 		078 /* LineChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176; };
 		079 /* AreaChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177; };
 		080 /* PieChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178; };
+		081 /* MapBasicsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179; };
+		082 /* MapMarkersPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180; };
+		083 /* MapCameraPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +172,9 @@
 		176 /* LineChartPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartPlayground.swift; sourceTree = "<group>"; };
 		177 /* AreaChartPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaChartPlayground.swift; sourceTree = "<group>"; };
 		178 /* PieChartPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPlayground.swift; sourceTree = "<group>"; };
+		179 /* MapBasicsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBasicsPlayground.swift; sourceTree = "<group>"; };
+		180 /* MapMarkersPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkersPlayground.swift; sourceTree = "<group>"; };
+		181 /* MapCameraPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCameraPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -248,6 +254,7 @@
 				417 /* Drawing */,
 				418 /* Media */,
 				419 /* Charts */,
+				420 /* Maps */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -423,6 +430,16 @@
 			path = Charts;
 			sourceTree = "<group>";
 		};
+		420 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				179 /* MapBasicsPlayground.swift */,
+				180 /* MapMarkersPlayground.swift */,
+				181 /* MapCameraPlayground.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -571,6 +588,9 @@
 				078 /* LineChartPlayground.swift in Sources */,
 				079 /* AreaChartPlayground.swift in Sources */,
 				080 /* PieChartPlayground.swift in Sources */,
+				081 /* MapBasicsPlayground.swift in Sources */,
+				082 /* MapMarkersPlayground.swift in Sources */,
+				083 /* MapCameraPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

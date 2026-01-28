@@ -141,6 +141,10 @@ struct ContentView: View {
         case .lineChart: LineChartPlayground()
         case .areaChart: AreaChartPlayground()
         case .pieChart: PieChartPlayground()
+        // Maps
+        case .mapBasics: MapBasicsPlayground()
+        case .mapMarkers: MapMarkersPlayground()
+        case .mapCamera: MapCameraPlayground()
         }
     }
 }
