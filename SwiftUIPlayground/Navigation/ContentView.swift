@@ -65,6 +65,8 @@ struct ContentView: View {
         case .datePicker: DatePickerPlayground()
         case .colorPicker: ColorPickerPlayground()
         case .textField: TextFieldPlayground()
+        case .secureField: SecureFieldPlayground()
+        case .textEditor: TextEditorPlayground()
         case .progressView: ProgressViewPlayground()
         case .gauge: GaugePlayground()
         case .menu: MenuPlayground()
@@ -89,11 +91,16 @@ struct ContentView: View {
         case .alert: AlertPlayground()
         // Shapes
         case .rectangle: RectanglePlayground()
+        case .roundedRectangle: RoundedRectanglePlayground()
         case .circle: CirclePlayground()
+        case .ellipse: EllipsePlayground()
+        case .capsule: CapsulePlayground()
         // Effects
         case .shadow: ShadowPlayground()
         case .blur: BlurPlayground()
         case .rotation: RotationPlayground()
+        case .opacity: OpacityPlayground()
+        case .scale: ScalePlayground()
         }
     }
 }

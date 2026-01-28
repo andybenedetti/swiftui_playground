@@ -33,6 +33,8 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "DatePicker", destination: .datePicker),
                 ComponentItem(name: "ColorPicker", destination: .colorPicker),
                 ComponentItem(name: "TextField", destination: .textField),
+                ComponentItem(name: "SecureField", destination: .secureField),
+                ComponentItem(name: "TextEditor", destination: .textEditor),
                 ComponentItem(name: "ProgressView", destination: .progressView),
                 ComponentItem(name: "Gauge", destination: .gauge),
                 ComponentItem(name: "Menu", destination: .menu),
@@ -65,13 +67,18 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .shapes:
             [
                 ComponentItem(name: "Rectangle", destination: .rectangle),
+                ComponentItem(name: "RoundedRectangle", destination: .roundedRectangle),
                 ComponentItem(name: "Circle", destination: .circle),
+                ComponentItem(name: "Ellipse", destination: .ellipse),
+                ComponentItem(name: "Capsule", destination: .capsule),
             ]
         case .effects:
             [
                 ComponentItem(name: "Shadow", destination: .shadow),
                 ComponentItem(name: "Blur", destination: .blur),
                 ComponentItem(name: "Rotation", destination: .rotation),
+                ComponentItem(name: "Opacity", destination: .opacity),
+                ComponentItem(name: "Scale", destination: .scale),
             ]
         }
     }
@@ -86,7 +93,7 @@ struct ComponentItem: Identifiable, Hashable {
 
 enum ComponentDestination: Hashable {
     // Controls
-    case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField, progressView, gauge, menu
+    case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField, secureField, textEditor, progressView, gauge, menu
     // Layout
     case vStack, hStack, zStack, grid, spacer, divider
     // Text & Images
@@ -94,7 +101,7 @@ enum ComponentDestination: Hashable {
     // Lists & Containers
     case list, scrollView, form, tabView, sheet, alert
     // Shapes
-    case rectangle, circle
+    case rectangle, roundedRectangle, circle, ellipse, capsule
     // Effects
-    case shadow, blur, rotation
+    case shadow, blur, rotation, opacity, scale
 }
