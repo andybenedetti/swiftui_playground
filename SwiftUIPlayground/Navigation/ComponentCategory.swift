@@ -7,6 +7,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
     case listsAndContainers = "Lists & Containers"
     case shapes = "Shapes"
     case effects = "Effects"
+    case focusKeyboard = "Focus & Keyboard"
     case gestures = "Gestures"
     case animation = "Animation"
     case modifiers = "Modifiers"
@@ -27,6 +28,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .listsAndContainers: "list.bullet.rectangle"
         case .shapes: "square.on.circle"
         case .effects: "wand.and.stars"
+        case .focusKeyboard: "keyboard"
         case .gestures: "hand.tap"
         case .animation: "play.circle"
         case .modifiers: "paintbrush"
@@ -105,6 +107,12 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "Rotation", destination: .rotation),
                 ComponentItem(name: "Opacity", destination: .opacity),
                 ComponentItem(name: "Scale", destination: .scale),
+            ]
+        case .focusKeyboard:
+            [
+                ComponentItem(name: "@FocusState", destination: .focusState),
+                ComponentItem(name: "Keyboard Toolbar", destination: .keyboardToolbar),
+                ComponentItem(name: "Submit Actions", destination: .submitActions),
             ]
         case .gestures:
             [
@@ -190,6 +198,8 @@ enum ComponentDestination: Hashable {
     case rectangle, roundedRectangle, circle, ellipse, capsule
     // Effects
     case shadow, blur, rotation, opacity, scale
+    // Focus & Keyboard
+    case focusState, keyboardToolbar, submitActions
     // Gestures
     case tapGesture, longPressGesture, dragGesture
     // Animation

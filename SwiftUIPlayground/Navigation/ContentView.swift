@@ -118,6 +118,10 @@ struct ContentView: View {
         case .rotation: RotationPlayground()
         case .opacity: OpacityPlayground()
         case .scale: ScalePlayground()
+        // Focus & Keyboard
+        case .focusState: FocusStatePlayground()
+        case .keyboardToolbar: KeyboardToolbarPlayground()
+        case .submitActions: SubmitActionsPlayground()
         // Gestures
         case .tapGesture: TapGesturePlayground()
         case .longPressGesture: LongPressGesturePlayground()

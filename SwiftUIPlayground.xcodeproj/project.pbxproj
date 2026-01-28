@@ -95,6 +95,9 @@
 		086 /* EnvironmentPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184; };
 		087 /* ObservablePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185; };
 		088 /* StatePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186; };
+		089 /* FocusStatePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187; };
+		090 /* KeyboardToolbarPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188; };
+		091 /* SubmitActionsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -185,6 +188,9 @@
 		184 /* EnvironmentPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentPlayground.swift; sourceTree = "<group>"; };
 		185 /* ObservablePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePlayground.swift; sourceTree = "<group>"; };
 		186 /* StatePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePlayground.swift; sourceTree = "<group>"; };
+		187 /* FocusStatePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStatePlayground.swift; sourceTree = "<group>"; };
+		188 /* KeyboardToolbarPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbarPlayground.swift; sourceTree = "<group>"; };
+		189 /* SubmitActionsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitActionsPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -257,6 +263,7 @@
 				409 /* ListsAndContainers */,
 				411 /* Shapes */,
 				412 /* Effects */,
+				422 /* FocusKeyboard */,
 				413 /* Gestures */,
 				414 /* Animation */,
 				415 /* Modifiers */,
@@ -463,6 +470,16 @@
 			path = DataFlow;
 			sourceTree = "<group>";
 		};
+		422 /* FocusKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				187 /* FocusStatePlayground.swift */,
+				188 /* KeyboardToolbarPlayground.swift */,
+				189 /* SubmitActionsPlayground.swift */,
+			);
+			path = FocusKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -619,6 +636,9 @@
 				086 /* EnvironmentPlayground.swift in Sources */,
 				087 /* ObservablePlayground.swift in Sources */,
 				088 /* StatePlayground.swift in Sources */,
+				089 /* FocusStatePlayground.swift in Sources */,
+				090 /* KeyboardToolbarPlayground.swift in Sources */,
+				091 /* SubmitActionsPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
