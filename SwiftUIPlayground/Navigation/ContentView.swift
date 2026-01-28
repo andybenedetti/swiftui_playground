@@ -5,14 +5,16 @@ struct ContentView: View {
     @State private var expandedCategories: Set<ComponentCategory> = []
 
     var filteredCategories: [(ComponentCategory, [ComponentItem])] {
+        let sortedCategories = ComponentCategory.allCases.sorted { $0.rawValue < $1.rawValue }
+
         if searchText.isEmpty {
-            return ComponentCategory.allCases.map { ($0, $0.components) }
+            return sortedCategories.map { ($0, $0.components.sorted { $0.name < $1.name }) }
         }
 
-        return ComponentCategory.allCases.compactMap { category in
+        return sortedCategories.compactMap { category in
             let filtered = category.components.filter {
                 $0.name.localizedCaseInsensitiveContains(searchText)
-            }
+            }.sorted { $0.name < $1.name }
             return filtered.isEmpty ? nil : (category, filtered)
         }
     }

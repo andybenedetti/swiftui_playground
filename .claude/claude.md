@@ -56,7 +56,8 @@ At the **start of every new session**, do this:
 1. **Before writing code**: Check QUICK_REF.md for API signatures
 2. **Before adding files**: Check TEMPLATES.md for the checklist
 3. **Every component**: Must include `documentationURL` parameter with Apple docs link
-4. **After completing work**: Update PROGRESS.md with session notes
+4. **Alphabetical ordering**: Categories and components within categories are displayed alphabetically
+5. **After completing work**: Update PROGRESS.md with session notes
 5. **When making mistakes**: Add to QUICK_REF.md "Mistakes to Avoid"
 6. **End of significant sessions**: Write a blog entry in BLOG.md reflecting on what was accomplished, challenges faced, and insights gained
 
