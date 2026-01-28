@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText = ""
+    @State private var expandedCategories: Set<ComponentCategory> = Set(ComponentCategory.allCases)
 
     var filteredCategories: [(ComponentCategory, [ComponentItem])] {
         if searchText.isEmpty {
@@ -20,7 +21,7 @@ struct ContentView: View {
         NavigationStack {
             List {
                 ForEach(filteredCategories, id: \.0) { category, components in
-                    Section {
+                    Section(isExpanded: binding(for: category)) {
                         ForEach(components) { component in
                             NavigationLink(value: component.destination) {
                                 Text(component.name)
@@ -37,6 +38,19 @@ struct ContentView: View {
                 destinationView(for: destination)
             }
         }
+    }
+
+    private func binding(for category: ComponentCategory) -> Binding<Bool> {
+        Binding(
+            get: { expandedCategories.contains(category) },
+            set: { isExpanded in
+                if isExpanded {
+                    expandedCategories.insert(category)
+                } else {
+                    expandedCategories.remove(category)
+                }
+            }
+        )
     }
 
     @ViewBuilder
