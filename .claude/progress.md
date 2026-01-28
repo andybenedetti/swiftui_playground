@@ -3,7 +3,7 @@
 ## Project Overview
 An interactive iOS app showcasing SwiftUI components with live parameter editing and code generation.
 
-## Current Status: 39 Components Complete
+## Current Status: 42 Components Complete
 
 ### Completed
 - [x] GitHub repo cloned and configured
@@ -12,9 +12,9 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 - [x] Reusable `ComponentPage` layout (preview + controls + code)
 - [x] `CodePreview` with copy functionality and comments toggle
 - [x] Generic parameter controls (`SliderControl`, `PickerControl`, etc.)
-- [x] 39 component playgrounds implemented across 6 categories
+- [x] 42 component playgrounds implemented across 7 categories
 
-### Component Inventory (39 total)
+### Component Inventory (42 total)
 | Category | Count | Components |
 |----------|-------|------------|
 | Controls | 13 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu |
@@ -23,6 +23,7 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 | Lists & Containers | 6 | List, ScrollView, Form, TabView, Sheet, Alert |
 | Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
 | Effects | 5 | Shadow, Blur, Rotation, Opacity, Scale |
+| Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
 
 ### Architecture Decisions
 1. **Navigation**: `NavigationStack` with `searchable` modifier - simple, native, iOS 17+
@@ -49,7 +50,8 @@ SwiftUIPlayground/
     ├── TextAndImages/ (4 files)
     ├── ListsAndContainers/ (6 files)
     ├── Shapes/ (5 files)
-    └── Effects/ (5 files)
+    ├── Effects/ (5 files)
+    └── Gestures/ (3 files)
 ```
 
 ### Next Steps

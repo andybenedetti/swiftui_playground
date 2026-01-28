@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (39)
+## Components (42)
 
 ### Controls (13)
 - Button, Toggle, Slider, Stepper, Picker
@@ -35,6 +35,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 ### Effects (5)
 - Shadow, Blur, Rotation
 - Opacity, Scale
+
+### Gestures (3)
+- TapGesture, LongPressGesture, DragGesture
 
 ## Requirements
 
