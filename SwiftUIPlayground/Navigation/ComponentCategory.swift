@@ -41,12 +41,15 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "HStack", destination: .hStack),
                 ComponentItem(name: "ZStack", destination: .zStack),
                 ComponentItem(name: "Grid", destination: .grid),
+                ComponentItem(name: "Spacer", destination: .spacer),
+                ComponentItem(name: "Divider", destination: .divider),
             ]
         case .textAndImages:
             [
                 ComponentItem(name: "Text", destination: .text),
                 ComponentItem(name: "Label", destination: .label),
                 ComponentItem(name: "Image", destination: .image),
+                ComponentItem(name: "AsyncImage", destination: .asyncImage),
             ]
         case .listsAndContainers:
             [
@@ -77,9 +80,9 @@ enum ComponentDestination: Hashable {
     // Controls
     case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField, progressView, gauge, menu
     // Layout
-    case vStack, hStack, zStack, grid
+    case vStack, hStack, zStack, grid, spacer, divider
     // Text & Images
-    case text, label, image
+    case text, label, image, asyncImage
     // Lists & Containers
     case list, scrollView, form, tabView, sheet, alert
     // Shapes

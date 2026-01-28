@@ -73,10 +73,13 @@ struct ContentView: View {
         case .hStack: HStackPlayground()
         case .zStack: ZStackPlayground()
         case .grid: GridPlayground()
+        case .spacer: SpacerPlayground()
+        case .divider: DividerPlayground()
         // Text & Images
         case .text: TextPlayground()
         case .label: LabelPlayground()
         case .image: ImagePlayground()
+        case .asyncImage: AsyncImagePlayground()
         // Lists & Containers
         case .list: ListPlayground()
         case .scrollView: ScrollViewPlayground()

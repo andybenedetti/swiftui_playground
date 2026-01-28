@@ -41,6 +41,9 @@
 		032 /* TabViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130; };
 		033 /* SheetPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131; };
 		034 /* AlertPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132; };
+		035 /* AsyncImagePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133; };
+		036 /* DividerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134; };
+		037 /* SpacerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +80,9 @@
 		130 /* TabViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewPlayground.swift; sourceTree = "<group>"; };
 		131 /* SheetPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPlayground.swift; sourceTree = "<group>"; };
 		132 /* AlertPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPlayground.swift; sourceTree = "<group>"; };
+		133 /* AsyncImagePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImagePlayground.swift; sourceTree = "<group>"; };
+		134 /* DividerPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerPlayground.swift; sourceTree = "<group>"; };
+		135 /* SpacerPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacerPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +183,8 @@
 				116 /* HStackPlayground.swift */,
 				117 /* ZStackPlayground.swift */,
 				118 /* GridPlayground.swift */,
+				134 /* DividerPlayground.swift */,
+				135 /* SpacerPlayground.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 				119 /* TextPlayground.swift */,
 				120 /* LabelPlayground.swift */,
 				121 /* ImagePlayground.swift */,
+				133 /* AsyncImagePlayground.swift */,
 			);
 			path = TextAndImages;
 			sourceTree = "<group>";
@@ -323,6 +332,9 @@
 				032 /* TabViewPlayground.swift in Sources */,
 				033 /* SheetPlayground.swift in Sources */,
 				034 /* AlertPlayground.swift in Sources */,
+				035 /* AsyncImagePlayground.swift in Sources */,
+				036 /* DividerPlayground.swift in Sources */,
+				037 /* SpacerPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
