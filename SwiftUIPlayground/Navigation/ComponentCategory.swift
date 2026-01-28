@@ -53,6 +53,9 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "List", destination: .list),
                 ComponentItem(name: "ScrollView", destination: .scrollView),
                 ComponentItem(name: "Form", destination: .form),
+                ComponentItem(name: "TabView", destination: .tabView),
+                ComponentItem(name: "Sheet", destination: .sheet),
+                ComponentItem(name: "Alert", destination: .alert),
             ]
         case .shapes:
             [
@@ -78,7 +81,7 @@ enum ComponentDestination: Hashable {
     // Text & Images
     case text, label, image
     // Lists & Containers
-    case list, scrollView, form
+    case list, scrollView, form, tabView, sheet, alert
     // Shapes
     case rectangle, circle
 }

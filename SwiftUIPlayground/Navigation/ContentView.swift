@@ -81,6 +81,9 @@ struct ContentView: View {
         case .list: ListPlayground()
         case .scrollView: ScrollViewPlayground()
         case .form: FormPlayground()
+        case .tabView: TabViewPlayground()
+        case .sheet: SheetPlayground()
+        case .alert: AlertPlayground()
         // Shapes
         case .rectangle: RectanglePlayground()
         case .circle: CirclePlayground()

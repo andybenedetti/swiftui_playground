@@ -38,6 +38,9 @@
 		029 /* ProgressViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127; };
 		030 /* GaugePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128; };
 		031 /* MenuPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129; };
+		032 /* TabViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130; };
+		033 /* SheetPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131; };
+		034 /* AlertPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,9 @@
 		127 /* ProgressViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewPlayground.swift; sourceTree = "<group>"; };
 		128 /* GaugePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugePlayground.swift; sourceTree = "<group>"; };
 		129 /* MenuPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPlayground.swift; sourceTree = "<group>"; };
+		130 /* TabViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewPlayground.swift; sourceTree = "<group>"; };
+		131 /* SheetPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetPlayground.swift; sourceTree = "<group>"; };
+		132 /* AlertPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +197,9 @@
 				122 /* ListPlayground.swift */,
 				123 /* ScrollViewPlayground.swift */,
 				124 /* FormPlayground.swift */,
+				130 /* TabViewPlayground.swift */,
+				131 /* SheetPlayground.swift */,
+				132 /* AlertPlayground.swift */,
 			);
 			path = ListsAndContainers;
 			sourceTree = "<group>";
@@ -311,6 +320,9 @@
 				029 /* ProgressViewPlayground.swift in Sources */,
 				030 /* GaugePlayground.swift in Sources */,
 				031 /* MenuPlayground.swift in Sources */,
+				032 /* TabViewPlayground.swift in Sources */,
+				033 /* SheetPlayground.swift in Sources */,
+				034 /* AlertPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
