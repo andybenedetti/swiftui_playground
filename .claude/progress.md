@@ -81,16 +81,33 @@ SwiftUIPlayground/
 - `Inspector` - Side panel (iOS 17+)
 
 ## MCP Server Setup
-Apple Docs MCP has been added to this project:
+Two MCP servers have been added to this project:
+
+### 1. Apple Docs MCP
 ```bash
 claude mcp add apple-docs -- npx -y @kimsungwhee/apple-docs-mcp@latest
 ```
-**After restarting Claude Code**, I should have access to:
+Provides access to:
 - `search_documentation` - Search Apple docs
 - `get_api_details` - Get specific API info
 - `search_wwdc` - Search WWDC session transcripts
 - `get_framework_index` - List all APIs in a framework
 - `check_platform_availability` - Version compatibility
+
+### 2. XcodeBuild MCP
+```bash
+claude mcp add xcodebuild -- npx -y xcodebuildmcp@latest
+```
+Provides access to:
+- Build projects directly (no more parsing xcodebuild output!)
+- Run tests
+- Manage simulators (list, launch, select)
+- Get structured build diagnostics and errors
+- Device management
+
+**Requirements**: macOS 14.5+, Xcode 16.x+, Node.js 18.x+
+
+**After restarting Claude Code**, both servers should be available.
 
 ## Lessons Learned
 1. **Xcode project.pbxproj** - Complex but predictable structure:
@@ -128,9 +145,9 @@ claude mcp add apple-docs -- npx -y @kimsungwhee/apple-docs-mcp@latest
 
 ## What I Wish I Had
 - **Live preview** - Would love to see the app running without manual simulator launch
-- **Xcode integration** - Direct access to build warnings/errors without parsing xcodebuild output
 - **Screenshot capability** - To show the user what components look like
-- **Apple Docs access** - NOW AVAILABLE via MCP! Test after restart.
+- ~~**Xcode integration**~~ - NOW AVAILABLE via XcodeBuild MCP!
+- ~~**Apple Docs access**~~ - NOW AVAILABLE via Apple Docs MCP!
 
 ## Git History (key commits)
 - Initial 20 components
