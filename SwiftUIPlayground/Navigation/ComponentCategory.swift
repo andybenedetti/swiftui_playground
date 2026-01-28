@@ -9,6 +9,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
     case effects = "Effects"
     case gestures = "Gestures"
     case animation = "Animation"
+    case modifiers = "Modifiers"
 
     var id: String { rawValue }
 
@@ -22,6 +23,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .effects: "wand.and.stars"
         case .gestures: "hand.tap"
         case .animation: "play.circle"
+        case .modifiers: "paintbrush"
         }
     }
 
@@ -105,6 +107,14 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "Transition", destination: .transition),
                 ComponentItem(name: "PhaseAnimator", destination: .phaseAnimator),
             ]
+        case .modifiers:
+            [
+                ComponentItem(name: "Frame", destination: .frame),
+                ComponentItem(name: "Padding", destination: .padding),
+                ComponentItem(name: "Background", destination: .background),
+                ComponentItem(name: "Overlay", destination: .overlay),
+                ComponentItem(name: "ClipShape", destination: .clipShape),
+            ]
         }
     }
 }
@@ -133,4 +143,6 @@ enum ComponentDestination: Hashable {
     case tapGesture, longPressGesture, dragGesture
     // Animation
     case animationCurves, withAnimation, transition, phaseAnimator
+    // Modifiers
+    case frame, padding, background, overlay, clipShape
 }

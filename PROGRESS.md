@@ -3,7 +3,7 @@
 ## Project Overview
 An interactive iOS app showcasing SwiftUI components with live parameter editing and code generation. Built for developers who want to quickly explore SwiftUI APIs and copy working code.
 
-## Current Status: 54 Components Complete
+## Current Status: 59 Components Complete
 
 ### Completed
 - [x] GitHub repo: https://github.com/andybenedetti/swiftui_playground
@@ -15,7 +15,7 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 - [x] 50 component playgrounds implemented across 7 categories
 - [x] Apple Docs MCP server configured (restart Claude Code to activate)
 
-### Component Inventory (54 total)
+### Component Inventory (59 total)
 | Category | Count | Components |
 |----------|-------|------------|
 | Controls | 16 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu, Link, ShareLink, MultiDatePicker |
@@ -25,7 +25,8 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 | Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
 | Effects | 5 | Shadow, Blur, Rotation, Opacity, Scale |
 | Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
-| Animation | 4 | **Animation Curves**, **withAnimation**, **Transition**, **PhaseAnimator** |
+| Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
+| Modifiers | 5 | **Frame**, **Padding**, **Background**, **Overlay**, **ClipShape** |
 
 ### Architecture Decisions
 1. **Navigation**: `NavigationStack` with `searchable` modifier - simple, native, iOS 17+
@@ -54,7 +55,8 @@ SwiftUIPlayground/
     ├── Shapes/ (5 files)
     ├── Effects/ (5 files)
     ├── Gestures/ (3 files)
-    └── Animation/ (4 files)
+    ├── Animation/ (4 files)
+    └── Modifiers/ (5 files)
 ```
 
 ### Next Steps - Ideas for Future Sessions
@@ -299,8 +301,8 @@ The development loop is now:
 
 ### Next Session Ideas
 - **Navigation components** - NavigationLink, Toolbar, ToolbarItem, NavigationSplitView
-- **Modifiers category** - .frame, .padding, .background, .overlay, .clipShape
 - **Drawing category** - Path, Canvas, custom shapes
+- **Accessibility category** - accessibilityLabel, accessibilityHint, VoiceOver examples
 - Install Docker and add xcodeproj-mcp-server for automated pbxproj editing
 
 ## Session Notes - Day 4
@@ -347,3 +349,14 @@ PhaseAnimator(Phase.allCases) { phase in
 ### Build Issue Fixed
 - `.blurReplace` transition is not available as `AnyTransition` member
 - Replaced with `.scale.combined(with: .opacity)` which achieves similar visual effect
+
+### Modifiers Category Added
+Added 5 more playgrounds for common view modifiers:
+- **Frame** - Fixed and flexible sizing with alignment options
+- **Padding** - Edge-specific padding with amount control
+- **Background** - Color, gradient, and material backgrounds with shapes
+- **Overlay** - Badge, icon, border, and gradient overlays
+- **ClipShape** - Mask views to shapes (Circle, RoundedRectangle, Capsule, etc.)
+
+**Component count**: 54 → 59 (+5 components)
+**Category count**: 8 → 9 (+Modifiers)

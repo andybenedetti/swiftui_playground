@@ -118,6 +118,12 @@ struct ContentView: View {
         case .withAnimation: WithAnimationPlayground()
         case .transition: TransitionPlayground()
         case .phaseAnimator: PhaseAnimatorPlayground()
+        // Modifiers
+        case .frame: FramePlayground()
+        case .padding: PaddingPlayground()
+        case .background: BackgroundPlayground()
+        case .overlay: OverlayPlayground()
+        case .clipShape: ClipShapePlayground()
         }
     }
 }

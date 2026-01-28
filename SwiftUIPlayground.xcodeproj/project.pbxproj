@@ -69,6 +69,11 @@
 		060 /* WithAnimationPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158; };
 		061 /* TransitionPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159; };
 		062 /* PhaseAnimatorPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160; };
+		063 /* FramePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161; };
+		064 /* PaddingPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162; };
+		065 /* BackgroundPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163; };
+		066 /* OverlayPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164; };
+		067 /* ClipShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +138,11 @@
 		158 /* WithAnimationPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimationPlayground.swift; sourceTree = "<group>"; };
 		159 /* TransitionPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionPlayground.swift; sourceTree = "<group>"; };
 		160 /* PhaseAnimatorPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseAnimatorPlayground.swift; sourceTree = "<group>"; };
+		161 /* FramePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePlayground.swift; sourceTree = "<group>"; };
+		162 /* PaddingPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingPlayground.swift; sourceTree = "<group>"; };
+		163 /* BackgroundPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundPlayground.swift; sourceTree = "<group>"; };
+		164 /* OverlayPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlayground.swift; sourceTree = "<group>"; };
+		165 /* ClipShapePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipShapePlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +217,7 @@
 				412 /* Effects */,
 				413 /* Gestures */,
 				414 /* Animation */,
+				415 /* Modifiers */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -327,6 +338,18 @@
 				160 /* PhaseAnimatorPlayground.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		415 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				161 /* FramePlayground.swift */,
+				162 /* PaddingPlayground.swift */,
+				163 /* BackgroundPlayground.swift */,
+				164 /* OverlayPlayground.swift */,
+				165 /* ClipShapePlayground.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +482,11 @@
 				060 /* WithAnimationPlayground.swift in Sources */,
 				061 /* TransitionPlayground.swift in Sources */,
 				062 /* PhaseAnimatorPlayground.swift in Sources */,
+				063 /* FramePlayground.swift in Sources */,
+				064 /* PaddingPlayground.swift in Sources */,
+				065 /* BackgroundPlayground.swift in Sources */,
+				066 /* OverlayPlayground.swift in Sources */,
+				067 /* ClipShapePlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

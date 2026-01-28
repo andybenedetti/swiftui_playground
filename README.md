@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (54)
+## Components (59)
 
 ### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
@@ -42,6 +42,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 ### Animation (4)
 - Animation Curves, withAnimation, Transition, PhaseAnimator
+
+### Modifiers (5)
+- Frame, Padding, Background, Overlay, ClipShape
 
 ## Requirements
 
@@ -191,7 +194,21 @@ Today we added the Animation category - something I'd been looking forward to si
 
 I initially tried to include `.blurReplace` as a transition type, but discovered it's not available as an `AnyTransition` member in iOS 18.5. Replaced it with `.scale.combined(with: .opacity)` which achieves a similar visual effect.
 
-We're now at **54 components** across **8 categories**.
+#### Modifiers Category
+
+Also added the Modifiers category - these are the bread-and-butter modifiers every SwiftUI developer uses daily:
+
+1. **Frame** - Fixed sizing with width/height, or flexible with maxWidth/maxHeight. The alignment picker shows how content sits within the frame.
+
+2. **Padding** - Choose specific edges (horizontal, vertical, or individual) with adjustable amounts. The border toggle helps visualize padding boundaries.
+
+3. **Background** - Three options: solid color, gradient, or material (blur). The rounded shape toggle with corner radius slider shows real-world patterns.
+
+4. **Overlay** - Four practical examples: notification badge, checkmark icon, stroke border, and gradient overlay (great for text on images).
+
+5. **ClipShape** - Mask content to shapes. The circle option is perfect for avatars - something developers reach for constantly.
+
+We're now at **59 components** across **9 categories**.
 
 ---
 
