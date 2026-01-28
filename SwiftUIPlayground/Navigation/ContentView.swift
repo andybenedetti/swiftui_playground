@@ -101,6 +101,10 @@ struct ContentView: View {
         case .rotation: RotationPlayground()
         case .opacity: OpacityPlayground()
         case .scale: ScalePlayground()
+        // Gestures
+        case .tapGesture: TapGesturePlayground()
+        case .longPressGesture: LongPressGesturePlayground()
+        case .dragGesture: DragGesturePlayground()
         }
     }
 }

@@ -54,6 +54,9 @@
 		045 /* CapsulePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143; };
 		046 /* OpacityPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144; };
 		047 /* ScalePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145; };
+		048 /* TapGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146; };
+		049 /* LongPressGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147; };
+		050 /* DragGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,9 @@
 		143 /* CapsulePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsulePlayground.swift; sourceTree = "<group>"; };
 		144 /* OpacityPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityPlayground.swift; sourceTree = "<group>"; };
 		145 /* ScalePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalePlayground.swift; sourceTree = "<group>"; };
+		146 /* TapGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesturePlayground.swift; sourceTree = "<group>"; };
+		147 /* LongPressGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesturePlayground.swift; sourceTree = "<group>"; };
+		148 /* DragGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGesturePlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +181,7 @@
 				409 /* ListsAndContainers */,
 				411 /* Shapes */,
 				412 /* Effects */,
+				413 /* Gestures */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,6 +196,16 @@
 				145 /* ScalePlayground.swift */,
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		413 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				146 /* TapGesturePlayground.swift */,
+				147 /* LongPressGesturePlayground.swift */,
+				148 /* DragGesturePlayground.swift */,
+			);
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 		406 /* Controls */ = {
@@ -383,6 +400,9 @@
 				045 /* CapsulePlayground.swift in Sources */,
 				046 /* OpacityPlayground.swift in Sources */,
 				047 /* ScalePlayground.swift in Sources */,
+				048 /* TapGesturePlayground.swift in Sources */,
+				049 /* LongPressGesturePlayground.swift in Sources */,
+				050 /* DragGesturePlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

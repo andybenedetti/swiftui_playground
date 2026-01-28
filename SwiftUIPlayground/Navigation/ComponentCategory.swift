@@ -7,6 +7,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
     case listsAndContainers = "Lists & Containers"
     case shapes = "Shapes"
     case effects = "Effects"
+    case gestures = "Gestures"
 
     var id: String { rawValue }
 
@@ -18,6 +19,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .listsAndContainers: "list.bullet.rectangle"
         case .shapes: "square.on.circle"
         case .effects: "wand.and.stars"
+        case .gestures: "hand.tap"
         }
     }
 
@@ -80,6 +82,12 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "Opacity", destination: .opacity),
                 ComponentItem(name: "Scale", destination: .scale),
             ]
+        case .gestures:
+            [
+                ComponentItem(name: "TapGesture", destination: .tapGesture),
+                ComponentItem(name: "LongPressGesture", destination: .longPressGesture),
+                ComponentItem(name: "DragGesture", destination: .dragGesture),
+            ]
         }
     }
 }
@@ -104,4 +112,6 @@ enum ComponentDestination: Hashable {
     case rectangle, roundedRectangle, circle, ellipse, capsule
     // Effects
     case shadow, blur, rotation, opacity, scale
+    // Gestures
+    case tapGesture, longPressGesture, dragGesture
 }
