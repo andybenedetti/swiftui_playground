@@ -31,6 +31,9 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "DatePicker", destination: .datePicker),
                 ComponentItem(name: "ColorPicker", destination: .colorPicker),
                 ComponentItem(name: "TextField", destination: .textField),
+                ComponentItem(name: "ProgressView", destination: .progressView),
+                ComponentItem(name: "Gauge", destination: .gauge),
+                ComponentItem(name: "Menu", destination: .menu),
             ]
         case .layout:
             [
@@ -69,7 +72,7 @@ struct ComponentItem: Identifiable, Hashable {
 
 enum ComponentDestination: Hashable {
     // Controls
-    case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField
+    case button, toggle, slider, stepper, picker, datePicker, colorPicker, textField, progressView, gauge, menu
     // Layout
     case vStack, hStack, zStack, grid
     // Text & Images

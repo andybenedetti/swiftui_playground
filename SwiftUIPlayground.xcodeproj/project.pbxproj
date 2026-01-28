@@ -35,6 +35,9 @@
 		026 /* CirclePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126; };
 		027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200; };
 		028 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201; };
+		029 /* ProgressViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127; };
+		030 /* GaugePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128; };
+		031 /* MenuPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		124 /* FormPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPlayground.swift; sourceTree = "<group>"; };
 		125 /* RectanglePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectanglePlayground.swift; sourceTree = "<group>"; };
 		126 /* CirclePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePlayground.swift; sourceTree = "<group>"; };
+		127 /* ProgressViewPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewPlayground.swift; sourceTree = "<group>"; };
+		128 /* GaugePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugePlayground.swift; sourceTree = "<group>"; };
+		129 /* MenuPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +157,9 @@
 				112 /* DatePickerPlayground.swift */,
 				113 /* ColorPickerPlayground.swift */,
 				114 /* TextFieldPlayground.swift */,
+				127 /* ProgressViewPlayground.swift */,
+				128 /* GaugePlayground.swift */,
+				129 /* MenuPlayground.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -299,6 +308,9 @@
 				024 /* FormPlayground.swift in Sources */,
 				025 /* RectanglePlayground.swift in Sources */,
 				026 /* CirclePlayground.swift in Sources */,
+				029 /* ProgressViewPlayground.swift in Sources */,
+				030 /* GaugePlayground.swift in Sources */,
+				031 /* MenuPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,6 +65,9 @@ struct ContentView: View {
         case .datePicker: DatePickerPlayground()
         case .colorPicker: ColorPickerPlayground()
         case .textField: TextFieldPlayground()
+        case .progressView: ProgressViewPlayground()
+        case .gauge: GaugePlayground()
+        case .menu: MenuPlayground()
         // Layout
         case .vStack: VStackPlayground()
         case .hStack: HStackPlayground()

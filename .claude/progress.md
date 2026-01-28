@@ -46,10 +46,11 @@ SwiftUIPlayground/
 ```
 
 ### Next Steps
-- [ ] Build and test in Xcode/Simulator
-- [ ] Fix any build errors
+- [x] Build and test in Xcode/Simulator
+- [x] Fix any build errors (ImagePlayground @ViewBuilder issue)
+- [x] Make sections collapsible
+- [ ] Add more components (ProgressView, Gauge, Menu, etc.)
 - [ ] Refine UI/UX based on testing
-- [ ] Add more components in future iterations
 
 ## Lessons Learned
 - Xcode project.pbxproj files are complex - created manually with proper UUIDs and references
