@@ -90,6 +90,10 @@ struct ContentView: View {
         // Shapes
         case .rectangle: RectanglePlayground()
         case .circle: CirclePlayground()
+        // Effects
+        case .shadow: ShadowPlayground()
+        case .blur: BlurPlayground()
+        case .rotation: RotationPlayground()
         }
     }
 }

@@ -6,6 +6,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
     case textAndImages = "Text & Images"
     case listsAndContainers = "Lists & Containers"
     case shapes = "Shapes"
+    case effects = "Effects"
 
     var id: String { rawValue }
 
@@ -16,6 +17,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .textAndImages: "textformat"
         case .listsAndContainers: "list.bullet.rectangle"
         case .shapes: "square.on.circle"
+        case .effects: "wand.and.stars"
         }
     }
 
@@ -65,6 +67,12 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "Rectangle", destination: .rectangle),
                 ComponentItem(name: "Circle", destination: .circle),
             ]
+        case .effects:
+            [
+                ComponentItem(name: "Shadow", destination: .shadow),
+                ComponentItem(name: "Blur", destination: .blur),
+                ComponentItem(name: "Rotation", destination: .rotation),
+            ]
         }
     }
 }
@@ -87,4 +95,6 @@ enum ComponentDestination: Hashable {
     case list, scrollView, form, tabView, sheet, alert
     // Shapes
     case rectangle, circle
+    // Effects
+    case shadow, blur, rotation
 }
