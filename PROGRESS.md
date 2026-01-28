@@ -92,3 +92,7 @@
   - Updated ComponentPage.swift with `documentationURL` parameter and SafariView
   - Updated all 75 component files with official documentation URLs
   - Updated README.md, TEMPLATES.md, QUICK_REF.md, CLAUDE.md with new requirement
+- **Fixed collapsible categories in main menu**
+  - Categories now start collapsed by default (was expanded)
+  - Added component count badge on right side of each category header
+  - Added `.listStyle(.sidebar)` to enable proper expand/collapse with chevrons

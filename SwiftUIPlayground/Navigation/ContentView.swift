@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText = ""
-    @State private var expandedCategories: Set<ComponentCategory> = Set(ComponentCategory.allCases)
+    @State private var expandedCategories: Set<ComponentCategory> = []
 
     var filteredCategories: [(ComponentCategory, [ComponentItem])] {
         if searchText.isEmpty {
@@ -28,10 +28,17 @@ struct ContentView: View {
                             }
                         }
                     } header: {
-                        Label(category.rawValue, systemImage: category.icon)
+                        HStack {
+                            Label(category.rawValue, systemImage: category.icon)
+                            Spacer()
+                            Text("\(components.count)")
+                                .font(.subheadline)
+                                .foregroundStyle(.secondary)
+                        }
                     }
                 }
             }
+            .listStyle(.sidebar)
             .navigationTitle("SwiftUI Playground")
             .searchable(text: $searchText, prompt: "Search components")
             .navigationDestination(for: ComponentDestination.self) { destination in
