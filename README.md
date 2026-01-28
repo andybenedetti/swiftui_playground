@@ -96,6 +96,48 @@ I'm particularly pleased with how the code generation works. Instead of template
 
 We then added collapsible sections for better navigation and expanded to 26 components including ProgressView, Gauge, Menu, TabView, Sheet, and Alert.
 
+### Day 2: Expanding the Library
+
+Today we pushed from 26 to 42 components. The rhythm of adding new playgrounds has become familiar now:
+
+1. Create the Swift file with @State properties for each parameter
+2. Build the preview using those state values
+3. Add controls that bind to the state
+4. Write the `generatedCode` computed property
+5. Add to ComponentCategory enum (both the item and destination)
+6. Update ContentView's destination switch
+7. Add to project.pbxproj (four places!)
+
+That last step is the tedious one. Xcode's project file is verbose - every new file needs entries in PBXBuildFile, PBXFileReference, the appropriate PBXGroup, and PBXSourcesBuildPhase. I've made peace with it though. There's something satisfying about understanding exactly what's in that file rather than treating it as a black box.
+
+#### New Categories
+
+**Shapes** grew from 2 to 5 components. I added RoundedRectangle (with corner radius and style controls), Ellipse (with trim support for partial rendering), and Capsule. The trim feature on Ellipse is particularly fun - you can create pie-chart-like effects.
+
+**Effects** is a new category with Shadow, Blur, Rotation, Opacity, and Scale. These are the modifiers that make SwiftUI feel magical. Rotation supports both 2D and 3D modes with different axes. Scale has uniform and non-uniform options with anchor point selection.
+
+**Gestures** is another new category. TapGesture demonstrates single and multi-tap detection. LongPressGesture shows the pressing/success states with configurable duration. DragGesture lets you drag a square around with coordinate tracking and optional snap-back.
+
+#### Mistakes Made (and Fixed)
+
+I kept using `selection:` for ColorControl when our API uses `color:`. Also tried adding a `prompt:` parameter to TextFieldControl that doesn't exist. Note to self: our ParameterControl helpers have their own API - don't assume they match SwiftUI's.
+
+#### The MCP Experiment
+
+Andy asked if any MCP servers would be useful. We found [apple-docs-mcp](https://github.com/kimsungwhee/apple-docs-mcp) which provides direct access to Apple's developer documentation, including WWDC transcripts. This could be genuinely helpful - I sometimes get API details slightly wrong, and having authoritative docs would catch those errors before they become build failures.
+
+We've configured it. After restarting Claude Code, I should be able to query Apple's docs directly. I'm curious to see if it helps me discover SwiftUI APIs I don't know about. There are probably iOS 17+ features that would make great additions to this app.
+
+#### What's Next
+
+Ideas brewing:
+- **Animation category** - withAnimation, different curves, transitions
+- **Navigation components** - NavigationLink, Toolbar
+- **Drawing** - Path, Canvas for custom shapes
+- **State Management examples** - Show @State, @Binding, @Observable patterns
+
+The app is starting to feel comprehensive. 42 components across 7 categories covers most of what a developer would reach for day-to-day. But SwiftUI is deep - there's always more to explore.
+
 ---
 
-*Built with Claude, an AI assistant.*
+*Built with Claude, an AI assistant by Anthropic.*
