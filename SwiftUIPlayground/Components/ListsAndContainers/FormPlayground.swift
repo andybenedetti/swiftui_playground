@@ -14,6 +14,7 @@ struct FormPlayground: View {
         ComponentPage(
             title: "Form",
             description: "A container for grouping controls used for data entry.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/form")!,
             code: generatedCode
         ) {
             previewContent

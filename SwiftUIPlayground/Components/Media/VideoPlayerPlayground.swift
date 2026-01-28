@@ -29,6 +29,7 @@ struct VideoPlayerPlayground: View {
         ComponentPage(
             title: "VideoPlayer",
             description: "Display video content with native playback controls.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/avkit/videoplayer")!,
             code: generatedCode
         ) {
             previewContent

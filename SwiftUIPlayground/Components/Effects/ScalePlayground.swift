@@ -28,6 +28,7 @@ struct ScalePlayground: View {
         ComponentPage(
             title: "Scale",
             description: "Scales a view's rendered output by the given amounts.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/scaleeffect(_:anchor:)")!,
             code: generatedCode
         ) {
             previewContent

@@ -18,6 +18,7 @@ struct AlertPlayground: View {
         ComponentPage(
             title: "Alert",
             description: "A modal view that displays important information and optionally requests user action.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/alert(_:ispresented:actions:)")!,
             code: generatedCode
         ) {
             previewContent

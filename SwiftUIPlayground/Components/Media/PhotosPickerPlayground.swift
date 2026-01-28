@@ -33,6 +33,7 @@ struct PhotosPickerPlayground: View {
         ComponentPage(
             title: "PhotosPicker",
             description: "Select photos and videos from the photo library.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/photokit/photospicker")!,
             code: generatedCode
         ) {
             previewContent

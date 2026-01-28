@@ -35,6 +35,7 @@ struct GeometryReaderPlayground: View {
         ComponentPage(
             title: "GeometryReader",
             description: "A container that provides size and position info. iOS 13+",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/geometryreader")!,
             code: generatedCode
         ) {
             previewContent
@@ -120,7 +121,6 @@ struct GeometryReaderPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // GeometryReader provides layout information
         GeometryReader { geometry in
         """
 

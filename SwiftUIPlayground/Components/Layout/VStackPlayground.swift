@@ -23,6 +23,7 @@ struct VStackPlayground: View {
         ComponentPage(
             title: "VStack",
             description: "A view that arranges its subviews in a vertical line.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/vstack")!,
             code: generatedCode
         ) {
             previewContent

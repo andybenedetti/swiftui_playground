@@ -22,6 +22,7 @@ struct ToolbarPlayground: View {
         ComponentPage(
             title: "Toolbar",
             description: "Adds items to the navigation bar or bottom bar.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/toolbar(content:)-5w0tj")!,
             code: generatedCode
         ) {
             previewContent

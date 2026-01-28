@@ -16,6 +16,7 @@ struct GridPlayground: View {
         ComponentPage(
             title: "Grid",
             description: "A container that arranges views in a grid using LazyVGrid.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/lazyvgrid")!,
             code: generatedCode
         ) {
             previewContent
@@ -96,7 +97,7 @@ struct GridPlayground: View {
     }
 
     private var generatedCode: String {
-        var code = "// LazyVGrid layout\n"
+        var code = ""
 
         switch gridStyle {
         case .fixed:

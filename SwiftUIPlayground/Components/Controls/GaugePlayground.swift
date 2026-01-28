@@ -20,6 +20,7 @@ struct GaugePlayground: View {
         ComponentPage(
             title: "Gauge",
             description: "A view that displays a value within a range.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/gauge")!,
             code: generatedCode
         ) {
             previewContent
@@ -101,7 +102,6 @@ struct GaugePlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Gauge
         Gauge(value: \(Int(value)), in: \(Int(minValue))...\(Int(maxValue))) {
             Text("\(label)")
         }

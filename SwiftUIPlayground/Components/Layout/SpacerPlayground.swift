@@ -22,6 +22,7 @@ struct SpacerPlayground: View {
         ComponentPage(
             title: "Spacer",
             description: "A flexible space that expands along the major axis of its containing stack.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/spacer")!,
             code: generatedCode
         ) {
             previewContent
@@ -160,7 +161,6 @@ struct SpacerPlayground: View {
         switch spacerPosition {
         case .leading:
             return """
-            // Spacer pushes content to trailing/bottom
             \(stackType) {
                 \(spacerCode)
                 ContentA()
@@ -169,7 +169,6 @@ struct SpacerPlayground: View {
             """
         case .between:
             return """
-            // Spacer between items
             \(stackType) {
                 ContentA()
                 \(spacerCode)
@@ -178,7 +177,6 @@ struct SpacerPlayground: View {
             """
         case .trailing:
             return """
-            // Spacer pushes content to leading/top
             \(stackType) {
                 ContentA()
                 ContentB()
@@ -187,7 +185,6 @@ struct SpacerPlayground: View {
             """
         case .both:
             return """
-            // Spacers center content
             \(stackType) {
                 \(spacerCode)
                 ContentA()

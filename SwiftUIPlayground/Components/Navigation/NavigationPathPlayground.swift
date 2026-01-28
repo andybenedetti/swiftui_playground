@@ -15,6 +15,7 @@ struct NavigationPathPlayground: View {
         ComponentPage(
             title: "NavigationPath",
             description: "Programmatically control navigation stack.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/navigationpath")!,
             code: generatedCode
         ) {
             previewContent

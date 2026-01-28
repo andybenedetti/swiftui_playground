@@ -30,6 +30,7 @@ struct ImagePlayground: View {
         ComponentPage(
             title: "Image",
             description: "A view that displays an image. This example uses SF Symbols.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/image")!,
             code: generatedCode
         ) {
             previewContent

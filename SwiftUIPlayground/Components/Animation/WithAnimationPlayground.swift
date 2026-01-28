@@ -18,6 +18,7 @@ struct WithAnimationPlayground: View {
         ComponentPage(
             title: "withAnimation",
             description: "Wraps state changes in an animation block.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/withanimation(_:_:)")!,
             code: generatedCode
         ) {
             previewContent

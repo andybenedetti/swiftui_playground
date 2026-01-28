@@ -18,6 +18,7 @@ struct ClipShapePlayground: View {
         ComponentPage(
             title: "ClipShape",
             description: "Masks a view to a shape.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/clipshape(_:style:)")!,
             code: generatedCode
         ) {
             previewContent

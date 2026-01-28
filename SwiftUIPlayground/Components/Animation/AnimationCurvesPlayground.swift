@@ -19,6 +19,7 @@ struct AnimationCurvesPlayground: View {
         ComponentPage(
             title: "Animation Curves",
             description: "Different timing curves affect how animations feel.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/animation")!,
             code: generatedCode
         ) {
             previewContent

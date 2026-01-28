@@ -15,6 +15,7 @@ struct CanvasPlayground: View {
         ComponentPage(
             title: "Canvas",
             description: "Immediate mode drawing with GraphicsContext.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/canvas")!,
             code: generatedCode
         ) {
             previewContent

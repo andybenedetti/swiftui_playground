@@ -45,6 +45,7 @@ struct BarChartPlayground: View {
         ComponentPage(
             title: "Bar Chart",
             description: "Display data using bars with Swift Charts.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/charts/barmark")!,
             code: generatedCode
         ) {
             previewContent

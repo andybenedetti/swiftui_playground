@@ -14,6 +14,7 @@ struct EllipsePlayground: View {
         ComponentPage(
             title: "Ellipse",
             description: "An ellipse aligned inside the frame of the view containing it.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/ellipse")!,
             code: generatedCode
         ) {
             previewContent

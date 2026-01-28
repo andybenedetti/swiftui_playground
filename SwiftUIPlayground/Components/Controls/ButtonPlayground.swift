@@ -38,6 +38,7 @@ struct ButtonPlayground: View {
         ComponentPage(
             title: "Button",
             description: "A control that initiates an action when tapped.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/button")!,
             code: generatedCode
         ) {
             previewContent
@@ -106,7 +107,6 @@ struct ButtonPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Button with \(buttonStyle.rawValue.lowercased()) style
         Button("\(buttonLabel)") {
             // Action
         }

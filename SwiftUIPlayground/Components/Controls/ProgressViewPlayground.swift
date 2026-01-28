@@ -16,6 +16,7 @@ struct ProgressViewPlayground: View {
         ComponentPage(
             title: "ProgressView",
             description: "A view that shows the progress of a task or an indeterminate loading state.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/progressview")!,
             code: generatedCode
         ) {
             previewContent
@@ -94,7 +95,7 @@ struct ProgressViewPlayground: View {
     }
 
     private var generatedCode: String {
-        var code = "// ProgressView\n"
+        var code = ""
 
         if showLabel {
             code += "ProgressView(\"\(label)\", value: \(String(format: "%.2f", progress)))"

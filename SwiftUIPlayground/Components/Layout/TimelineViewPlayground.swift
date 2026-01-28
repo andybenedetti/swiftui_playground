@@ -17,6 +17,7 @@ struct TimelineViewPlayground: View {
         ComponentPage(
             title: "TimelineView",
             description: "A view that updates according to a schedule. iOS 15+",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/timelineview")!,
             code: generatedCode
         ) {
             previewContent
@@ -141,7 +142,6 @@ struct TimelineViewPlayground: View {
         switch scheduleType {
         case .periodic:
             return """
-            // TimelineView updates on a schedule
             TimelineView(.periodic(from: .now, by: \(String(format: "%.1f", updateInterval)))) { context in
                 // context.date contains the current time
                 Text(context.date.formatted(.dateTime.hour().minute()\(showSeconds ? ".second()" : "")))
@@ -150,7 +150,6 @@ struct TimelineViewPlayground: View {
             """
         case .everyMinute:
             return """
-            // Updates at the start of every minute
             TimelineView(.everyMinute) { context in
                 Text(context.date.formatted(.dateTime.hour().minute()))
                     .font(.largeTitle.monospacedDigit())
@@ -158,7 +157,6 @@ struct TimelineViewPlayground: View {
             """
         case .animation:
             return """
-            // High-frequency updates for smooth animation
             TimelineView(.animation(minimumInterval: 1/60)) { context in
                 let progress = secondsProgress(from: context.date)
 

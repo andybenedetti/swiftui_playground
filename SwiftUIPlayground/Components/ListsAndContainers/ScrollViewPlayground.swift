@@ -15,6 +15,7 @@ struct ScrollViewPlayground: View {
         ComponentPage(
             title: "ScrollView",
             description: "A scrollable view that allows content to scroll in one or both axes.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/scrollview")!,
             code: generatedCode
         ) {
             previewContent

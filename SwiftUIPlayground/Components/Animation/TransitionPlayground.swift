@@ -20,6 +20,7 @@ struct TransitionPlayground: View {
         ComponentPage(
             title: "Transition",
             description: "Animates views as they appear and disappear.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/anytransition")!,
             code: generatedCode
         ) {
             previewContent

@@ -24,6 +24,7 @@ struct MapBasicsPlayground: View {
         ComponentPage(
             title: "Map Basics",
             description: "Display maps with different styles using MapKit.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/mapkit/map")!,
             code: generatedCode
         ) {
             previewContent

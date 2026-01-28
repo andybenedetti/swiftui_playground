@@ -22,6 +22,7 @@ struct LabelPlayground: View {
         ComponentPage(
             title: "Label",
             description: "A standard label for user interface items, consisting of an icon and a title.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/label")!,
             code: generatedCode
         ) {
             previewContent

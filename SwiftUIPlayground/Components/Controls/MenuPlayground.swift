@@ -11,6 +11,7 @@ struct MenuPlayground: View {
         ComponentPage(
             title: "Menu",
             description: "A control for presenting a menu of actions.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/menu")!,
             code: generatedCode
         ) {
             previewContent
@@ -63,7 +64,6 @@ struct MenuPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Menu with actions
         Menu {
             Button("Edit") { }
             Button("Duplicate") { }

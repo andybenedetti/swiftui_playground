@@ -19,6 +19,7 @@ struct PaddingPlayground: View {
         ComponentPage(
             title: "Padding",
             description: "Adds space around a view's content.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/padding(_:_:)")!,
             code: generatedCode
         ) {
             previewContent

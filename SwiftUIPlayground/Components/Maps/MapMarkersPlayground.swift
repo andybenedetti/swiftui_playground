@@ -31,6 +31,7 @@ struct MapMarkersPlayground: View {
         ComponentPage(
             title: "Map Markers",
             description: "Add markers and annotations to maps.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/mapkit/marker")!,
             code: generatedCode
         ) {
             previewContent

@@ -49,6 +49,7 @@ struct PhaseAnimatorPlayground: View {
         ComponentPage(
             title: "PhaseAnimator",
             description: "Cycles through animation phases automatically (iOS 17+).",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/phaseanimator")!,
             code: generatedCode
         ) {
             previewContent

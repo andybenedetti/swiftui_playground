@@ -19,6 +19,7 @@ struct ShareLinkPlayground: View {
         ComponentPage(
             title: "ShareLink",
             description: "A view that controls a sharing presentation.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/sharelink")!,
             code: generatedCode
         ) {
             previewContent
@@ -117,7 +118,7 @@ struct ShareLinkPlayground: View {
     }
 
     private var generatedCode: String {
-        var code = "// ShareLink presents system share sheet\n"
+        var code = ""
 
         let itemCode = shareType == .url ? "URL(string: \"\(shareURL)\")!" : "\"\(shareText)\""
 

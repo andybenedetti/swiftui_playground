@@ -72,6 +72,7 @@ struct TextPlayground: View {
         ComponentPage(
             title: "Text",
             description: "A view that displays one or more lines of read-only text.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/text")!,
             code: generatedCode
         ) {
             previewContent

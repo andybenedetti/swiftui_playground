@@ -17,6 +17,7 @@ struct {ComponentName}Playground: View {
         ComponentPage(
             title: "{Component Name}",
             description: "Brief description of the component.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/{componentname}")!,
             code: generatedCode
         ) {
             previewContent
@@ -44,7 +45,6 @@ struct {ComponentName}Playground: View {
     // MARK: - Code Generation
     private var generatedCode: String {
         var code = """
-        // {Component Name}
         Text("Example")
         """
 
@@ -69,6 +69,7 @@ struct {ComponentName}Playground: View {
 - [ ] Create `SwiftUIPlayground/Components/{Category}/{ComponentName}Playground.swift`
 - [ ] Use the template above
 - [ ] Implement `previewContent`, `controlsContent`, and `generatedCode`
+- [ ] Add `documentationURL` parameter with official Apple documentation URL
 
 ### Step 2: Update ComponentCategory.swift
 ```swift

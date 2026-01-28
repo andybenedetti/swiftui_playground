@@ -11,6 +11,7 @@ struct DragGesturePlayground: View {
         ComponentPage(
             title: "DragGesture",
             description: "Recognizes a dragging motion on a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/draggesture")!,
             code: generatedCode
         ) {
             previewContent

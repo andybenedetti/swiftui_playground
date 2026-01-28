@@ -9,6 +9,7 @@ struct ColorPickerPlayground: View {
         ComponentPage(
             title: "ColorPicker",
             description: "A control for selecting a color from the system color picker.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/colorpicker")!,
             code: generatedCode
         ) {
             previewContent
@@ -39,7 +40,6 @@ struct ColorPickerPlayground: View {
 
     private var generatedCode: String {
         """
-        // ColorPicker control
         @State private var selectedColor = Color.blue
 
         ColorPicker("\(label)", selection: $selectedColor, supportsOpacity: \(supportsOpacity))

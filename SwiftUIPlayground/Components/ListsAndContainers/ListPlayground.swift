@@ -18,6 +18,7 @@ struct ListPlayground: View {
         ComponentPage(
             title: "List",
             description: "A container that presents rows of data in a single column.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/list")!,
             code: generatedCode
         ) {
             previewContent

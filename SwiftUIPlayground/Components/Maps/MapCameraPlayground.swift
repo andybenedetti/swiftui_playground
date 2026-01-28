@@ -32,6 +32,7 @@ struct MapCameraPlayground: View {
         ComponentPage(
             title: "Map Camera",
             description: "Control map camera position, pitch, and heading.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/mapkit/mapcamera")!,
             code: generatedCode
         ) {
             previewContent

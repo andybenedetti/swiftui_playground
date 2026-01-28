@@ -16,6 +16,7 @@ struct BackgroundPlayground: View {
         ComponentPage(
             title: "Background",
             description: "Adds a background behind the view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/background(_:in:fillstyle:)")!,
             code: generatedCode
         ) {
             previewContent

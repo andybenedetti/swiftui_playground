@@ -18,6 +18,7 @@ struct CustomShapePlayground: View {
         ComponentPage(
             title: "Custom Shape",
             description: "Create reusable shapes with the Shape protocol.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/shape")!,
             code: generatedCode
         ) {
             previewContent

@@ -18,6 +18,7 @@ struct PickerPlayground: View {
         ComponentPage(
             title: "Picker",
             description: "A control for selecting from a set of mutually exclusive values.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/picker")!,
             code: generatedCode
         ) {
             previewContent
@@ -108,7 +109,6 @@ struct PickerPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Picker control
         @State private var selection = "\(selection)"
 
         Picker("\(label)", selection: $selection) {

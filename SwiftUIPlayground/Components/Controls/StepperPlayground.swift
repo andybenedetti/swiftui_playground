@@ -11,6 +11,7 @@ struct StepperPlayground: View {
         ComponentPage(
             title: "Stepper",
             description: "A control for incrementing or decrementing a value.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/stepper")!,
             code: generatedCode
         ) {
             previewContent
@@ -55,7 +56,6 @@ struct StepperPlayground: View {
 
     private var generatedCode: String {
         """
-        // Stepper control
         @State private var value = \(value)
 
         Stepper("\\(\(label.lowercased().replacingOccurrences(of: " ", with: ""))): \\(value)", value: $value, in: \(minValue)...\(maxValue), step: \(step))

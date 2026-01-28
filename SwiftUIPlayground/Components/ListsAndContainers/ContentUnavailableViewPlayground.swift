@@ -19,6 +19,7 @@ struct ContentUnavailableViewPlayground: View {
         ComponentPage(
             title: "ContentUnavailableView",
             description: "A view displayed when content is unavailable. iOS 17+",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/contentunavailableview")!,
             code: generatedCode
         ) {
             previewContent

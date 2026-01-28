@@ -10,6 +10,7 @@ struct LongPressGesturePlayground: View {
         ComponentPage(
             title: "LongPressGesture",
             description: "Recognizes a long-press gesture on a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/longpressgesture")!,
             code: generatedCode
         ) {
             previewContent

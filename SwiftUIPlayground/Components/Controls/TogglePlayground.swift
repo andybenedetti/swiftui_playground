@@ -16,6 +16,7 @@ struct TogglePlayground: View {
         ComponentPage(
             title: "Toggle",
             description: "A control that toggles between on and off states.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/toggle")!,
             code: generatedCode
         ) {
             previewContent
@@ -68,7 +69,6 @@ struct TogglePlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Toggle control
         @State private var isOn = \(isOn)
 
         Toggle("\(label)", isOn: $isOn)

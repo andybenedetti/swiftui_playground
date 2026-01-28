@@ -38,6 +38,7 @@ struct FramePlayground: View {
         ComponentPage(
             title: "Frame",
             description: "Sets the size and alignment of a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/frame(width:height:alignment:)")!,
             code: generatedCode
         ) {
             previewContent

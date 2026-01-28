@@ -20,6 +20,7 @@ struct TabViewPlayground: View {
         ComponentPage(
             title: "TabView",
             description: "A view that switches between multiple child views using interactive tabs.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/tabview")!,
             code: generatedCode
         ) {
             previewContent

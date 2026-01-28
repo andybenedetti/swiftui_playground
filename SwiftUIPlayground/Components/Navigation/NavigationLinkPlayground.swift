@@ -14,6 +14,7 @@ struct NavigationLinkPlayground: View {
         ComponentPage(
             title: "NavigationLink",
             description: "Creates a navigation link to a destination view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/navigationlink")!,
             code: generatedCode
         ) {
             previewContent

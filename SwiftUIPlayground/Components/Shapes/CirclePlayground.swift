@@ -20,6 +20,7 @@ struct CirclePlayground: View {
         ComponentPage(
             title: "Circle",
             description: "A circle shape, plus ellipse and capsule variants.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/circle")!,
             code: generatedCode
         ) {
             previewContent
@@ -148,7 +149,7 @@ struct CirclePlayground: View {
         let shapeCode = shapeType.rawValue
 
         if useGradient {
-            code = """
+            code += """
             // \(shapeCode) with radial gradient
             \(shapeCode)()
             """
@@ -170,7 +171,7 @@ struct CirclePlayground: View {
                 .frame(width: \(Int(size)), height: \(Int(size)))
             """
         } else {
-            code = """
+            code += """
             // \(shapeCode)
             \(shapeCode)()
             """

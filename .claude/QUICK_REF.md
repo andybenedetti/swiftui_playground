@@ -134,6 +134,33 @@ PhotosPicker(selection: $selectedItem, matching: .images) {
 }
 ```
 
+## Documentation Links (Required in every component)
+
+Every component must include a `documentationURL` parameter in its ComponentPage call. This displays a clickable "View Documentation" button that opens the docs in an inline Safari browser.
+
+```swift
+var body: some View {
+    ComponentPage(
+        title: "Button",
+        description: "A control that initiates an action.",
+        documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/button")!,
+        code: generatedCode
+    ) {
+        previewContent
+    } controls: {
+        controlsContent
+    }
+}
+```
+
+**URL Pattern**: `https://developer.apple.com/documentation/{framework}/{typename}`
+
+- SwiftUI components: `swiftui/button`, `swiftui/text`, `swiftui/vstack`
+- Charts: `charts/barmark`, `charts/linemark`
+- MapKit: `mapkit/map`
+- AVKit: `avkit/videoplayer`
+- PhotosUI: `photokit/photospicker`
+
 ## Color to Code Helper
 
 ```swift

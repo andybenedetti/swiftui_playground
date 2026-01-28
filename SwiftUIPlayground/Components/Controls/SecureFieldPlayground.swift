@@ -33,6 +33,7 @@ struct SecureFieldPlayground: View {
         ComponentPage(
             title: "SecureField",
             description: "A control into which the user securely enters private text.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/securefield")!,
             code: generatedCode
         ) {
             previewContent
@@ -99,7 +100,6 @@ struct SecureFieldPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Secure text field
         @State private var password = ""
 
         SecureField("\(promptText)", text: $password)

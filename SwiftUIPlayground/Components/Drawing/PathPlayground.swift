@@ -17,6 +17,7 @@ struct PathPlayground: View {
         ComponentPage(
             title: "Path",
             description: "Draw custom shapes with lines, curves, and arcs.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/path")!,
             code: generatedCode
         ) {
             previewContent

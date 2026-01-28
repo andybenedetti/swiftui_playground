@@ -13,6 +13,7 @@ struct SliderPlayground: View {
         ComponentPage(
             title: "Slider",
             description: "A control for selecting a value from a bounded linear range.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/slider")!,
             code: generatedCode
         ) {
             previewContent
@@ -115,7 +116,6 @@ struct SliderPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Slider control
         @State private var value = \(value)
 
         """

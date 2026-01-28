@@ -16,6 +16,7 @@ struct AsyncImagePlayground: View {
         ComponentPage(
             title: "AsyncImage",
             description: "A view that asynchronously loads and displays an image from a URL.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/asyncimage")!,
             code: generatedCode
         ) {
             previewContent

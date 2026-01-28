@@ -35,6 +35,7 @@ struct ZStackPlayground: View {
         ComponentPage(
             title: "ZStack",
             description: "A view that overlays its subviews, aligning them in both axes.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/zstack")!,
             code: generatedCode
         ) {
             previewContent

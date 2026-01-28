@@ -9,6 +9,7 @@ struct OpacityPlayground: View {
         ComponentPage(
             title: "Opacity",
             description: "Sets the transparency of a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/opacity(_:)")!,
             code: generatedCode
         ) {
             previewContent

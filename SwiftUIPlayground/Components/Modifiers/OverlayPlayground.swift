@@ -43,6 +43,7 @@ struct OverlayPlayground: View {
         ComponentPage(
             title: "Overlay",
             description: "Layers content on top of a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/overlay(_:in:fillstyle:)")!,
             code: generatedCode
         ) {
             previewContent

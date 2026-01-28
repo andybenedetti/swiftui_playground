@@ -11,6 +11,7 @@ struct ShadowPlayground: View {
         ComponentPage(
             title: "Shadow",
             description: "Adds a shadow effect to a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/shadow(color:radius:x:y:)")!,
             code: generatedCode
         ) {
             previewContent

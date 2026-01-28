@@ -15,6 +15,7 @@ struct ViewThatFitsPlayground: View {
         ComponentPage(
             title: "ViewThatFits",
             description: "Shows the first child view that fits in available space. iOS 16+",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/viewthatfits")!,
             code: generatedCode
         ) {
             previewContent
@@ -142,8 +143,6 @@ struct ViewThatFitsPlayground: View {
         }
 
         return """
-        // ViewThatFits evaluates children in order
-        // and displays the first one that fits
         \(axisCode) {
             // Wide layout (tried first)
             HStack {

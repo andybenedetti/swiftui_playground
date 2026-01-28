@@ -9,6 +9,7 @@ struct BlurPlayground: View {
         ComponentPage(
             title: "Blur",
             description: "Applies a Gaussian blur effect to a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/blur(radius:opaque:)")!,
             code: generatedCode
         ) {
             previewContent

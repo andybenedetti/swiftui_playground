@@ -13,6 +13,7 @@ struct DisclosureGroupPlayground: View {
         ComponentPage(
             title: "DisclosureGroup",
             description: "A view that shows or hides content based on a disclosure control.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/disclosuregroup")!,
             code: generatedCode
         ) {
             previewContent

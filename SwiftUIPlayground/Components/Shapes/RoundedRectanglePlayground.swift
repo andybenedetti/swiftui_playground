@@ -25,6 +25,7 @@ struct RoundedRectanglePlayground: View {
         ComponentPage(
             title: "RoundedRectangle",
             description: "A rectangular shape with rounded corners, aligned inside the frame of the view containing it.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/roundedrectangle")!,
             code: generatedCode
         ) {
             previewContent

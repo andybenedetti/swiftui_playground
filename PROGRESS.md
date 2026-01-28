@@ -72,7 +72,7 @@
 - Component count: 42 → 50 (+8)
 - Identified xcodeproj-mcp-server for pbxproj automation
 
-### Day 6 (Current)
+### Day 6
 - Installed 3 new MCP servers to fulfill wishlist:
   - **xcodeproj** - Xcode project file automation (no more manual pbxproj edits!)
   - **swiftlens** - Swift LSP integration (validate code before build)
@@ -83,3 +83,12 @@
   - `.claude/TEMPLATES.md` - Component templates, checklists
   - `.claude/TOOL_WORKFLOWS.md` - MCP tools and workflows
   - Updated `.claude/CLAUDE.md` - Session startup checklist
+
+### Day 7
+- **Added documentation links to all 75 components**
+  - Clickable "View Documentation" button below each component description
+  - Opens Apple Developer documentation in inline Safari browser (SFSafariViewController)
+  - Features: back button to return, share button to open in external browser
+  - Updated ComponentPage.swift with `documentationURL` parameter and SafariView
+  - Updated all 75 component files with official documentation URLs
+  - Updated README.md, TEMPLATES.md, QUICK_REF.md, CLAUDE.md with new requirement

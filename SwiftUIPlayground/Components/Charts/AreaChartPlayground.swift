@@ -47,6 +47,7 @@ struct AreaChartPlayground: View {
         ComponentPage(
             title: "Area Chart",
             description: "Visualize quantities over time with filled areas.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/charts/areamark")!,
             code: generatedCode
         ) {
             previewContent

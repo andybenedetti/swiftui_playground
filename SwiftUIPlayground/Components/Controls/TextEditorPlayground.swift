@@ -28,6 +28,7 @@ struct TextEditorPlayground: View {
         ComponentPage(
             title: "TextEditor",
             description: "A view that can display and edit long-form text.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/texteditor")!,
             code: generatedCode
         ) {
             previewContent
@@ -114,7 +115,6 @@ struct TextEditorPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Multi-line text editor
         @State private var text = ""
 
         TextEditor(text: $text)

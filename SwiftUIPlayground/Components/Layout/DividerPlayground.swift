@@ -14,6 +14,7 @@ struct DividerPlayground: View {
         ComponentPage(
             title: "Divider",
             description: "A visual element used to separate content.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/divider")!,
             code: generatedCode
         ) {
             previewContent
@@ -113,7 +114,6 @@ struct DividerPlayground: View {
         if orientation == .horizontal {
             if padding > 0 {
                 return """
-                // Horizontal divider
                 VStack {
                     Text("Above")
                     Divider()
@@ -123,7 +123,6 @@ struct DividerPlayground: View {
                 """
             } else {
                 return """
-                // Horizontal divider
                 VStack {
                     Text("Above")
                     Divider()
@@ -134,7 +133,6 @@ struct DividerPlayground: View {
         } else {
             if padding > 0 {
                 return """
-                // Vertical divider (in HStack)
                 HStack {
                     Text("Left")
                     Divider()
@@ -144,7 +142,6 @@ struct DividerPlayground: View {
                 """
             } else {
                 return """
-                // Vertical divider (in HStack)
                 HStack {
                     Text("Left")
                     Divider()

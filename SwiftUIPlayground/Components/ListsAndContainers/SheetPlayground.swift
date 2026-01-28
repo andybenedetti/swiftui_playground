@@ -22,6 +22,7 @@ struct SheetPlayground: View {
         ComponentPage(
             title: "Sheet",
             description: "A modal presentation that slides up from the bottom of the screen.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/sheet(ispresented:ondismiss:content:)")!,
             code: generatedCode
         ) {
             previewContent

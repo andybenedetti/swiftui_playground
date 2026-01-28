@@ -10,6 +10,7 @@ struct TapGesturePlayground: View {
         ComponentPage(
             title: "TapGesture",
             description: "Recognizes one or more taps on a view.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/tapgesture")!,
             code: generatedCode
         ) {
             previewContent

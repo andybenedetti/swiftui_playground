@@ -1,13 +1,32 @@
 import SwiftUI
+import SafariServices
 
 struct ComponentPage<Preview: View, Controls: View>: View {
     let title: String
     let description: String
+    let documentationURL: URL?
     let code: String
     @ViewBuilder let preview: () -> Preview
     @ViewBuilder let controls: () -> Controls
 
     @State private var selectedTab = 0
+    @State private var showingDocumentation = false
+
+    init(
+        title: String,
+        description: String,
+        documentationURL: URL? = nil,
+        code: String,
+        @ViewBuilder preview: @escaping () -> Preview,
+        @ViewBuilder controls: @escaping () -> Controls
+    ) {
+        self.title = title
+        self.description = description
+        self.documentationURL = documentationURL
+        self.code = code
+        self.preview = preview
+        self.controls = controls
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -35,6 +54,11 @@ struct ComponentPage<Preview: View, Controls: View>: View {
         }
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showingDocumentation) {
+            if let url = documentationURL {
+                SafariView(url: url)
+            }
+        }
     }
 
     private var previewSection: some View {
@@ -59,6 +83,15 @@ struct ComponentPage<Preview: View, Controls: View>: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
 
+                if documentationURL != nil {
+                    Button {
+                        showingDocumentation = true
+                    } label: {
+                        Label("View Documentation", systemImage: "book")
+                            .font(.subheadline)
+                    }
+                }
+
                 controls()
             }
             .padding()
@@ -66,11 +99,23 @@ struct ComponentPage<Preview: View, Controls: View>: View {
     }
 }
 
+// MARK: - Safari View
+struct SafariView: UIViewControllerRepresentable {
+    let url: URL
+
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        SFSafariViewController(url: url)
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) {}
+}
+
 #Preview {
     NavigationStack {
         ComponentPage(
             title: "Button",
             description: "A control that initiates an action.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/button"),
             code: "Button(\"Tap me\") {\n    print(\"Tapped\")\n}"
         ) {
             Button("Tap me") {}

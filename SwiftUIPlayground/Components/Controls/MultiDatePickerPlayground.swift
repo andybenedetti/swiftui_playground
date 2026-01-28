@@ -12,6 +12,7 @@ struct MultiDatePickerPlayground: View {
         ComponentPage(
             title: "MultiDatePicker",
             description: "A control for picking multiple dates. iOS 16+",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/multidatepicker")!,
             code: generatedCode
         ) {
             previewContent
@@ -86,7 +87,6 @@ struct MultiDatePickerPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // MultiDatePicker allows selecting multiple dates
         @State private var selectedDates: Set<DateComponents> = []
 
         """

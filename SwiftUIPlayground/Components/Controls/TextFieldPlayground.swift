@@ -52,6 +52,7 @@ struct TextFieldPlayground: View {
         ComponentPage(
             title: "TextField",
             description: "A control for entering and editing text.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/textfield")!,
             code: generatedCode
         ) {
             previewContent
@@ -130,7 +131,6 @@ struct TextFieldPlayground: View {
     private var generatedCode: String {
         if isSecure {
             return """
-            // SecureField for password entry
             @State private var text = ""
 
             SecureField("\(placeholder)", text: $text)
@@ -138,7 +138,6 @@ struct TextFieldPlayground: View {
         }
 
         var code = """
-        // TextField control
         @State private var text = ""
 
         TextField("\(placeholder)", text: $text)

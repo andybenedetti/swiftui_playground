@@ -7,6 +7,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 - **Live Preview**: See components update in real-time as you adjust parameters
 - **Code Generation**: Copy ready-to-use SwiftUI code that reflects your customizations
+- **Documentation Links**: Every component includes a link to official Apple documentation
 - **Searchable**: Quickly find any component
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments

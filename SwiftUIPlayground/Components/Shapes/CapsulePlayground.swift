@@ -24,6 +24,7 @@ struct CapsulePlayground: View {
         ComponentPage(
             title: "Capsule",
             description: "A capsule shape aligned inside the frame of the view containing it.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/capsule")!,
             code: generatedCode
         ) {
             previewContent

@@ -32,6 +32,7 @@ struct PieChartPlayground: View {
         ComponentPage(
             title: "Pie Chart",
             description: "Show proportions with SectorMark (iOS 17+).",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/charts/sectormark")!,
             code: generatedCode
         ) {
             previewContent

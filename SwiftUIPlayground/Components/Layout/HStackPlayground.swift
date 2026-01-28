@@ -23,6 +23,7 @@ struct HStackPlayground: View {
         ComponentPage(
             title: "HStack",
             description: "A view that arranges its subviews in a horizontal line.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/hstack")!,
             code: generatedCode
         ) {
             previewContent

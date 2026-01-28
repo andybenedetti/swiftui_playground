@@ -46,6 +46,7 @@ struct LineChartPlayground: View {
         ComponentPage(
             title: "Line Chart",
             description: "Display trends over time with connected line segments.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/charts/linemark")!,
             code: generatedCode
         ) {
             previewContent

@@ -13,6 +13,7 @@ struct RectanglePlayground: View {
         ComponentPage(
             title: "Rectangle",
             description: "A rectangular shape with optional rounded corners.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/rectangle")!,
             code: generatedCode
         ) {
             previewContent
@@ -93,7 +94,7 @@ struct RectanglePlayground: View {
         let shapeType = cornerRadius > 0 ? "RoundedRectangle(cornerRadius: \(Int(cornerRadius)))" : "Rectangle()"
 
         if useGradient {
-            code = """
+            code += """
             // \(cornerRadius > 0 ? "Rounded rectangle" : "Rectangle") with gradient
             \(shapeType)
                 .fill(
@@ -106,7 +107,7 @@ struct RectanglePlayground: View {
                 .frame(width: \(Int(width)), height: \(Int(height)))
             """
         } else {
-            code = """
+            code += """
             // \(cornerRadius > 0 ? "Rounded rectangle" : "Rectangle")
             \(shapeType)
                 .fill(\(colorToCode(fillColor)))

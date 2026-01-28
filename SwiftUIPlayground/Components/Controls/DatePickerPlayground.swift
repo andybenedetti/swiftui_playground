@@ -31,6 +31,7 @@ struct DatePickerPlayground: View {
         ComponentPage(
             title: "DatePicker",
             description: "A control for selecting an absolute date and/or time.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/datepicker")!,
             code: generatedCode
         ) {
             previewContent
@@ -94,7 +95,6 @@ struct DatePickerPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // DatePicker control
         @State private var date = Date()
 
         DatePicker(

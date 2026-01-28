@@ -26,6 +26,7 @@ struct LinkPlayground: View {
         ComponentPage(
             title: "Link",
             description: "A control for navigating to a URL.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/link")!,
             code: generatedCode
         ) {
             previewContent
@@ -72,7 +73,6 @@ struct LinkPlayground: View {
 
     private var generatedCode: String {
         var code = """
-        // Link opens URL in Safari or associated app
         Link("\(linkText)", destination: URL(string: "\(urlString)")!)
         """
 

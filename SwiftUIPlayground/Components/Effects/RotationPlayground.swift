@@ -33,6 +33,7 @@ struct RotationPlayground: View {
         ComponentPage(
             title: "Rotation",
             description: "Rotates a view in 2D or 3D space.",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/view/rotationeffect(_:anchor:)")!,
             code: generatedCode
         ) {
             previewContent

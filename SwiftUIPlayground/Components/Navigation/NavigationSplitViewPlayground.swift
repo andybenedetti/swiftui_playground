@@ -18,6 +18,7 @@ struct NavigationSplitViewPlayground: View {
         ComponentPage(
             title: "NavigationSplitView",
             description: "Creates a multi-column navigation layout (iPad).",
+            documentationURL: URL(string: "https://developer.apple.com/documentation/swiftui/navigationsplitview")!,
             code: generatedCode
         ) {
             previewContent
