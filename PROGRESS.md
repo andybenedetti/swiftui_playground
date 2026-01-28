@@ -15,7 +15,7 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 - [x] 50 component playgrounds implemented across 7 categories
 - [x] Apple Docs MCP server configured (restart Claude Code to activate)
 
-### Component Inventory (63 total)
+### Component Inventory (75 total)
 | Category | Count | Components |
 |----------|-------|------------|
 | Controls | 16 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu, Link, ShareLink, MultiDatePicker |
@@ -77,9 +77,9 @@ SwiftUIPlayground/
 - [x] **Add Media category** - ✅ DONE! VideoPlayer, PhotosPicker
 - [x] **Add Charts category** - ✅ DONE! Bar Chart, Line Chart, Area Chart, Pie Chart
 - [x] **Add Maps category** - ✅ DONE! Map Basics, Map Markers, Map Camera
-- [ ] **Add Accessibility category** - accessibilityLabel, accessibilityHint, VoiceOver examples
-- [ ] **Add State Management category** - @State, @Binding, @Observable, @Environment examples
-- [ ] **Add Modifiers category** - Common modifiers like .frame, .padding, .background, .overlay
+- [ ] **Add Accessibility category** - accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver
+- [ ] **Add Data Flow category** - @State, @Binding, @Observable, @Environment examples
+- [ ] **Add Focus & Keyboard category** - @FocusState, keyboard toolbar, submit actions
 - [ ] **Consider adding a "Favorites" feature** - Let users bookmark frequently used components
 - [ ] **Consider adding a "History" feature** - Remember recent parameter configurations
 - [ ] **Run on real device** - Test touch interactions, especially gestures
@@ -313,9 +313,9 @@ The development loop is now:
 - ViewBuilder variable assignments - Can't use `let x = ...` in @ViewBuilder, extract to helper function
 
 ### Next Session Ideas
-- **Drawing category** - Path, Canvas, custom shapes
 - **Accessibility category** - accessibilityLabel, accessibilityHint, VoiceOver examples
-- **State Management examples** - @State, @Binding, @Observable, @Environment patterns
+- **Data Flow category** - @State, @Binding, @Observable, @Environment patterns
+- **Focus & Keyboard category** - @FocusState, keyboard toolbar, submit actions
 - Install Docker and add xcodeproj-mcp-server for automated pbxproj editing
 
 ## Session Notes - Day 4
@@ -436,3 +436,50 @@ struct Polygon: Shape {
     }
 }
 ```
+
+## Session Notes - Day 5
+
+### What We Accomplished
+Today was a big day - we added 4 new categories with 12 new components total!
+
+1. **Drawing category** (3 components)
+   - Path, Canvas, Custom Shape
+   - Component count: 63 → 66
+
+2. **Media category** (2 components)
+   - VideoPlayer (AVKit), PhotosPicker (PhotosUI)
+   - Component count: 66 → 68
+
+3. **Charts category** (4 components)
+   - Bar Chart, Line Chart, Area Chart, Pie Chart (Swift Charts)
+   - Component count: 68 → 72
+
+4. **Maps category** (3 components)
+   - Map Basics, Map Markers, Map Camera (MapKit iOS 17+)
+   - Component count: 72 → 75
+
+**Final count**: 75 components across 14 categories
+
+### Frameworks Used Today
+```swift
+import AVKit      // VideoPlayer
+import PhotosUI   // PhotosPicker
+import Charts     // Bar, Line, Area, Pie charts
+import MapKit     // Map, Marker, Annotation, MapCamera
+```
+
+### Key APIs Learned
+- **Swift Charts**: `Chart { BarMark/LineMark/AreaMark/SectorMark }` with `.value()` bindings
+- **MapKit iOS 17**: New `Map { Marker/Annotation }` content builder syntax
+- **PhotosPicker**: `PhotosPickerItem` with `loadTransferable` for async image loading
+- **VideoPlayer**: Use `.task` modifier to create AVPlayer to avoid recreation
+
+### pbxproj IDs Used
+- Build files: 072-083
+- File refs: 170-181
+- Groups: 417-420
+
+### Next Session Ideas
+- **Accessibility** - accessibilityLabel, accessibilityHint, Dynamic Type
+- **Data Flow** - @State, @Binding, @Observable, @Environment patterns
+- **Focus & Keyboard** - @FocusState, keyboard toolbar, submit actions
