@@ -136,6 +136,11 @@ struct ContentView: View {
         // Media
         case .videoPlayer: VideoPlayerPlayground()
         case .photosPicker: PhotosPickerPlayground()
+        // Charts
+        case .barChart: BarChartPlayground()
+        case .lineChart: LineChartPlayground()
+        case .areaChart: AreaChartPlayground()
+        case .pieChart: PieChartPlayground()
         }
     }
 }

@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (68)
+## Components (72)
 
 ### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
@@ -54,6 +54,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 ### Media (2)
 - VideoPlayer, PhotosPicker
+
+### Charts (4)
+- Bar Chart, Line Chart, Area Chart, Pie Chart
 
 ## Requirements
 
@@ -295,6 +298,48 @@ Both components require framework imports beyond SwiftUI:
 PhotosPicker returns `PhotosPickerItem` which is a placeholder - you load the actual data asynchronously using the Transferable protocol. This keeps the picker fast even with large selections.
 
 We're now at **68 components** across **12 categories**.
+
+### Day 5 (continued): Charts Category
+
+Added the Charts category using Apple's Swift Charts framework (iOS 16+).
+
+#### The New Playgrounds
+
+1. **Bar Chart** - The workhorse of data visualization. Four styles:
+   - Vertical bars (classic)
+   - Horizontal bars (good for long category names)
+   - Stacked bars (comparing parts of a whole)
+   - Grouped bars (side-by-side comparison)
+
+   Features corner radius control and gradient fills.
+
+2. **Line Chart** - Perfect for trends over time:
+   - Single or multiple series
+   - Optional point markers
+   - Smooth (Catmull-Rom) or linear interpolation
+   - Adjustable line width
+
+3. **Area Chart** - Like line charts but with filled regions:
+   - Simple solid fill
+   - Gradient fill (fades to transparent)
+   - Stacked areas for cumulative data
+
+4. **Pie Chart** - SectorMark for proportional data (iOS 17+):
+   - Traditional pie
+   - Donut (with inner radius)
+   - Adjustable gap between sectors
+   - Built-in legend support
+
+#### Technical Notes
+
+Swift Charts uses a declarative syntax that feels very SwiftUI-native. The key types are:
+- `Chart` - The container view
+- `BarMark`, `LineMark`, `AreaMark`, `PointMark`, `SectorMark` - The visual marks
+- `.value("Label", data)` - How you bind data to visual properties
+
+The `.foregroundStyle(by:)` modifier automatically creates legends and assigns colors when you have multiple series. The `.position(by:)` modifier on BarMark creates grouped (side-by-side) bars instead of stacked.
+
+We're now at **72 components** across **13 categories**.
 
 ---
 

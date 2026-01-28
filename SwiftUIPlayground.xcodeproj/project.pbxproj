@@ -83,6 +83,10 @@
 		074 /* CustomShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172; };
 		075 /* VideoPlayerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173; };
 		076 /* PhotosPickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174; };
+		077 /* BarChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175; };
+		078 /* LineChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176; };
+		079 /* AreaChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177; };
+		080 /* PieChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +165,10 @@
 		172 /* CustomShapePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapePlayground.swift; sourceTree = "<group>"; };
 		173 /* VideoPlayerPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerPlayground.swift; sourceTree = "<group>"; };
 		174 /* PhotosPickerPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerPlayground.swift; sourceTree = "<group>"; };
+		175 /* BarChartPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartPlayground.swift; sourceTree = "<group>"; };
+		176 /* LineChartPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartPlayground.swift; sourceTree = "<group>"; };
+		177 /* AreaChartPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaChartPlayground.swift; sourceTree = "<group>"; };
+		178 /* PieChartPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +247,7 @@
 				416 /* NavigationComponents */,
 				417 /* Drawing */,
 				418 /* Media */,
+				419 /* Charts */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -403,6 +412,17 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		419 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				175 /* BarChartPlayground.swift */,
+				176 /* LineChartPlayground.swift */,
+				177 /* AreaChartPlayground.swift */,
+				178 /* PieChartPlayground.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -547,6 +567,10 @@
 				074 /* CustomShapePlayground.swift in Sources */,
 				075 /* VideoPlayerPlayground.swift in Sources */,
 				076 /* PhotosPickerPlayground.swift in Sources */,
+				077 /* BarChartPlayground.swift in Sources */,
+				078 /* LineChartPlayground.swift in Sources */,
+				079 /* AreaChartPlayground.swift in Sources */,
+				080 /* PieChartPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
