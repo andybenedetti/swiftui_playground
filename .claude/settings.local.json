@@ -7,7 +7,25 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git push)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(claude mcp add apple-docs -- npx -y @kimsungwhee/apple-docs-mcp@latest)",
+      "Bash(npx -y @smithery/cli@latest install cameroncooke/xcodebuildmcp --client claude)",
+      "Bash(claude mcp add:*)",
+      "mcp__apple-docs__search_framework_symbols",
+      "mcp__apple-docs__get_documentation_updates",
+      "mcp__apple-docs__get_apple_doc_content",
+      "mcp__apple-docs__search_apple_docs",
+      "mcp__xcodebuild__discover_projs",
+      "mcp__xcodebuild__list_sims",
+      "mcp__xcodebuild__session-set-defaults",
+      "mcp__xcodebuild__build_sim",
+      "mcp__xcodebuild__build_run_sim",
+      "mcp__xcodebuild__screenshot",
+      "mcp__xcodebuild__gesture",
+      "mcp__xcodebuild__tap",
+      "WebSearch",
+      "Bash(docker:*)"
     ]
   }
 }

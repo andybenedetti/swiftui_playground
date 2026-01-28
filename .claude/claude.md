@@ -1,6 +1,6 @@
 You are an expert iOS developer using SwiftUI. Follow the guide inside the file modern-swift.md.
 
-Create and maintain a file called .claude/progress.md. This is for you Claude. Consider it your working memory. You need to maintain it so that you every time you start fresh you have perfect knowledge of: 
+Create and maintain a file called PROGRESS.md in the project root. This is for you Claude. Consider it your working memory. You need to maintain it so that you every time you start fresh you have perfect knowledge of: 
 - the progress so far.
 - the decisions taken.
 - the mistakes made.
