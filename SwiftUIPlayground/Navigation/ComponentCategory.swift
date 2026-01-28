@@ -14,6 +14,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
     case drawing = "Drawing"
     case media = "Media"
     case charts = "Charts"
+    case dataFlow = "Data Flow"
     case maps = "Maps"
 
     var id: String { rawValue }
@@ -33,6 +34,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .drawing: "pencil.and.outline"
         case .media: "play.rectangle"
         case .charts: "chart.bar.xaxis"
+        case .dataFlow: "arrow.triangle.2.circlepath"
         case .maps: "map"
         }
     }
@@ -150,6 +152,14 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "Area Chart", destination: .areaChart),
                 ComponentItem(name: "Pie Chart", destination: .pieChart),
             ]
+        case .dataFlow:
+            [
+                ComponentItem(name: "@AppStorage", destination: .appStorage),
+                ComponentItem(name: "@Binding", destination: .binding),
+                ComponentItem(name: "@Environment", destination: .environment),
+                ComponentItem(name: "@Observable", destination: .observable),
+                ComponentItem(name: "@State", destination: .state),
+            ]
         case .maps:
             [
                 ComponentItem(name: "Map Basics", destination: .mapBasics),
@@ -194,6 +204,8 @@ enum ComponentDestination: Hashable {
     case videoPlayer, photosPicker
     // Charts
     case barChart, lineChart, areaChart, pieChart
+    // Data Flow
+    case appStorage, binding, environment, observable, state
     // Maps
     case mapBasics, mapMarkers, mapCamera
 }

@@ -150,6 +150,12 @@ struct ContentView: View {
         case .lineChart: LineChartPlayground()
         case .areaChart: AreaChartPlayground()
         case .pieChart: PieChartPlayground()
+        // Data Flow
+        case .appStorage: AppStoragePlayground()
+        case .binding: BindingPlayground()
+        case .environment: EnvironmentPlayground()
+        case .observable: ObservablePlayground()
+        case .state: StatePlayground()
         // Maps
         case .mapBasics: MapBasicsPlayground()
         case .mapMarkers: MapMarkersPlayground()

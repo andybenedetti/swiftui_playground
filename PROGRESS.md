@@ -1,32 +1,33 @@
 # SwiftUI Playground - Progress Tracker
 
-## Current Status: 75 Components Complete
+## Current Status: 80 Components Complete
 
 **GitHub**: https://github.com/andybenedetti/swiftui_playground
 
-### Component Inventory (75 total)
+### Component Inventory (80 total)
 
 | Category | Count | Components |
 |----------|-------|------------|
+| Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
+| Charts | 4 | Bar Chart, Line Chart, Area Chart, Pie Chart |
 | Controls | 16 | Button, Toggle, Slider, Stepper, Picker, DatePicker, ColorPicker, TextField, SecureField, TextEditor, ProgressView, Gauge, Menu, Link, ShareLink, MultiDatePicker |
-| Layout | 9 | VStack, HStack, ZStack, Grid, Spacer, Divider, ViewThatFits, TimelineView, GeometryReader |
-| Text & Images | 4 | Text, Label, Image, AsyncImage |
-| Lists & Containers | 8 | List, ScrollView, Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView |
-| Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
+| Data Flow | 5 | @State, @Binding, @Observable, @Environment, @AppStorage |
+| Drawing | 3 | Path, Canvas, Custom Shape |
 | Effects | 5 | Shadow, Blur, Rotation, Opacity, Scale |
 | Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
-| Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
+| Layout | 9 | VStack, HStack, ZStack, Grid, Spacer, Divider, ViewThatFits, TimelineView, GeometryReader |
+| Lists & Containers | 8 | List, ScrollView, Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView |
+| Maps | 3 | Map Basics, Map Markers, Map Camera |
+| Media | 2 | VideoPlayer, PhotosPicker |
 | Modifiers | 5 | Frame, Padding, Background, Overlay, ClipShape |
 | Navigation | 4 | NavigationLink, Toolbar, NavigationSplitView, NavigationPath |
-| Drawing | 3 | Path, Canvas, Custom Shape |
-| Media | 2 | VideoPlayer, PhotosPicker |
-| Charts | 4 | Bar Chart, Line Chart, Area Chart, Pie Chart |
-| Maps | 3 | Map Basics, Map Markers, Map Camera |
+| Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
+| Text & Images | 4 | Text, Label, Image, AsyncImage |
 
 ## Next Steps - Ideas for Future Sessions
 
 - [ ] **Add Accessibility category** - accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver
-- [ ] **Add Data Flow category** - @State, @Binding, @Observable, @Environment examples
+- [x] **Add Data Flow category** - @State, @Binding, @Observable, @Environment, @AppStorage
 - [ ] **Add Focus & Keyboard category** - @FocusState, keyboard toolbar, submit actions
 - [ ] **Consider adding a "Favorites" feature** - Let users bookmark frequently used components
 - [ ] **Consider adding a "History" feature** - Remember recent parameter configurations
@@ -96,3 +97,11 @@
   - Categories now start collapsed by default (was expanded)
   - Added component count badge on right side of each category header
   - Added `.listStyle(.sidebar)` to enable proper expand/collapse with chevrons
+- **Alphabetical sorting** - Categories and components now sorted A-Z
+- **Added Data Flow category** (5 new components)
+  - @State - Local value storage within a view
+  - @Binding - Two-way connection to parent state
+  - @Observable - iOS 17+ observation macro
+  - @Environment - System environment values
+  - @AppStorage - UserDefaults persistence
+  - Component count: 75 → 80

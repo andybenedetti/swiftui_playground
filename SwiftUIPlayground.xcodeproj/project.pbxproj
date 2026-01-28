@@ -90,6 +90,11 @@
 		081 /* MapBasicsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179; };
 		082 /* MapMarkersPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180; };
 		083 /* MapCameraPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181; };
+		084 /* AppStoragePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182; };
+		085 /* BindingPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183; };
+		086 /* EnvironmentPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184; };
+		087 /* ObservablePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185; };
+		088 /* StatePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +180,11 @@
 		179 /* MapBasicsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBasicsPlayground.swift; sourceTree = "<group>"; };
 		180 /* MapMarkersPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkersPlayground.swift; sourceTree = "<group>"; };
 		181 /* MapCameraPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCameraPlayground.swift; sourceTree = "<group>"; };
+		182 /* AppStoragePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoragePlayground.swift; sourceTree = "<group>"; };
+		183 /* BindingPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingPlayground.swift; sourceTree = "<group>"; };
+		184 /* EnvironmentPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentPlayground.swift; sourceTree = "<group>"; };
+		185 /* ObservablePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablePlayground.swift; sourceTree = "<group>"; };
+		186 /* StatePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatePlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +264,7 @@
 				417 /* Drawing */,
 				418 /* Media */,
 				419 /* Charts */,
+				421 /* DataFlow */,
 				420 /* Maps */,
 			);
 			path = Components;
@@ -440,6 +451,18 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		421 /* DataFlow */ = {
+			isa = PBXGroup;
+			children = (
+				182 /* AppStoragePlayground.swift */,
+				183 /* BindingPlayground.swift */,
+				184 /* EnvironmentPlayground.swift */,
+				185 /* ObservablePlayground.swift */,
+				186 /* StatePlayground.swift */,
+			);
+			path = DataFlow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -591,6 +614,11 @@
 				081 /* MapBasicsPlayground.swift in Sources */,
 				082 /* MapMarkersPlayground.swift in Sources */,
 				083 /* MapCameraPlayground.swift in Sources */,
+				084 /* AppStoragePlayground.swift in Sources */,
+				085 /* BindingPlayground.swift in Sources */,
+				086 /* EnvironmentPlayground.swift in Sources */,
+				087 /* ObservablePlayground.swift in Sources */,
+				088 /* StatePlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
