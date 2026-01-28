@@ -81,6 +81,8 @@
 		072 /* PathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170; };
 		073 /* CanvasPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171; };
 		074 /* CustomShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172; };
+		075 /* VideoPlayerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173; };
+		076 /* PhotosPickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +159,8 @@
 		170 /* PathPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathPlayground.swift; sourceTree = "<group>"; };
 		171 /* CanvasPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasPlayground.swift; sourceTree = "<group>"; };
 		172 /* CustomShapePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapePlayground.swift; sourceTree = "<group>"; };
+		173 /* VideoPlayerPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerPlayground.swift; sourceTree = "<group>"; };
+		174 /* PhotosPickerPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPickerPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +238,7 @@
 				415 /* Modifiers */,
 				416 /* NavigationComponents */,
 				417 /* Drawing */,
+				418 /* Media */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -389,6 +394,15 @@
 			path = Drawing;
 			sourceTree = "<group>";
 		};
+		418 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				173 /* VideoPlayerPlayground.swift */,
+				174 /* PhotosPickerPlayground.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -531,6 +545,8 @@
 				072 /* PathPlayground.swift in Sources */,
 				073 /* CanvasPlayground.swift in Sources */,
 				074 /* CustomShapePlayground.swift in Sources */,
+				075 /* VideoPlayerPlayground.swift in Sources */,
+				076 /* PhotosPickerPlayground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

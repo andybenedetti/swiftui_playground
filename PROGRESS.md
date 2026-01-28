@@ -3,7 +3,7 @@
 ## Project Overview
 An interactive iOS app showcasing SwiftUI components with live parameter editing and code generation. Built for developers who want to quickly explore SwiftUI APIs and copy working code.
 
-## Current Status: 66 Components Complete
+## Current Status: 68 Components Complete
 
 ### Completed
 - [x] GitHub repo: https://github.com/andybenedetti/swiftui_playground
@@ -28,7 +28,8 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 | Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
 | Modifiers | 5 | Frame, Padding, Background, Overlay, ClipShape |
 | Navigation | 4 | NavigationLink, Toolbar, NavigationSplitView, NavigationPath |
-| Drawing | 3 | **Path**, **Canvas**, **Custom Shape** |
+| Drawing | 3 | Path, Canvas, Custom Shape |
+| Media | 2 | **VideoPlayer**, **PhotosPicker** |
 
 ### Architecture Decisions
 1. **Navigation**: `NavigationStack` with `searchable` modifier - simple, native, iOS 17+
@@ -60,7 +61,8 @@ SwiftUIPlayground/
     ├── Animation/ (4 files)
     ├── Modifiers/ (5 files)
     ├── Navigation/ (4 files)
-    └── Drawing/ (3 files)
+    ├── Drawing/ (3 files)
+    └── Media/ (2 files)
 ```
 
 ### Next Steps - Ideas for Future Sessions
@@ -68,6 +70,7 @@ SwiftUIPlayground/
 - [x] **Add Animation category** - ✅ DONE! Animation Curves, withAnimation, Transition, PhaseAnimator
 - [x] **Add Navigation category** - ✅ DONE! NavigationLink, Toolbar, NavigationSplitView, NavigationPath
 - [x] **Add Drawing category** - ✅ DONE! Path, Canvas, Custom Shape
+- [x] **Add Media category** - ✅ DONE! VideoPlayer, PhotosPicker
 - [ ] **Add Accessibility category** - accessibilityLabel, accessibilityHint, VoiceOver examples
 - [ ] **Add State Management category** - @State, @Binding, @Observable, @Environment examples
 - [ ] **Add Modifiers category** - Common modifiers like .frame, .padding, .background, .overlay

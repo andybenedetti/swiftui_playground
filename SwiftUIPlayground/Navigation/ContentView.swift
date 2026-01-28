@@ -133,6 +133,9 @@ struct ContentView: View {
         case .path: PathPlayground()
         case .canvas: CanvasPlayground()
         case .customShape: CustomShapePlayground()
+        // Media
+        case .videoPlayer: VideoPlayerPlayground()
+        case .photosPicker: PhotosPickerPlayground()
         }
     }
 }

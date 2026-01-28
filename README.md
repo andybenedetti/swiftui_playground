@@ -10,7 +10,7 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Collapsible Categories**: Organized navigation with expandable sections
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (66)
+## Components (68)
 
 ### Controls (16)
 - Button, Toggle, Slider, Stepper, Picker
@@ -51,6 +51,9 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 
 ### Drawing (3)
 - Path, Canvas, Custom Shape
+
+### Media (2)
+- VideoPlayer, PhotosPicker
 
 ## Requirements
 
@@ -260,6 +263,38 @@ The Shape protocol is elegant - you implement one method `path(in rect: CGRect) 
 Canvas is different - it's immediate mode drawing like CoreGraphics. You get a GraphicsContext and draw directly. It's more powerful but less composable. I used TimelineView to animate the particle example, which shows how Canvas can create effects that would be expensive with regular SwiftUI views.
 
 We're now at **66 components** across **11 categories**.
+
+### Day 5 (continued): Media Category
+
+Added the Media category for audio/video playback and photo library access.
+
+#### The New Playgrounds
+
+1. **VideoPlayer** - Plays video from URLs using AVKit. The playground demonstrates:
+   - AVPlayer integration with SwiftUI's VideoPlayer view
+   - Play/pause/stop controls
+   - Seeking to start
+   - Multiple sample videos (Big Buck Bunny, Sintel, Tears of Steel)
+
+   Key insight: Create AVPlayer in a `.task` modifier to avoid recreating it on every view update.
+
+2. **PhotosPicker** - Native photo library picker (iOS 16+). Features:
+   - Single and multiple selection modes
+   - Filter by media type (images, videos, or both)
+   - Configurable max selection count
+   - Loading selected images via `loadTransferable`
+
+   The SwiftUI PhotosPicker is much simpler than the old PHPickerViewController - just bind to a `PhotosPickerItem` or array of items.
+
+#### Technical Notes
+
+Both components require framework imports beyond SwiftUI:
+- VideoPlayer needs `import AVKit`
+- PhotosPicker needs `import PhotosUI`
+
+PhotosPicker returns `PhotosPickerItem` which is a placeholder - you load the actual data asynchronously using the Transferable protocol. This keeps the picker fast even with large selections.
+
+We're now at **68 components** across **12 categories**.
 
 ---
 
