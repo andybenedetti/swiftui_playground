@@ -4,6 +4,56 @@
 
 ---
 
+## Day 8: Infrastructure, Not Features
+
+Today we didn't add a single component. Instead, we made everything better.
+
+### The Navigation Redesign
+
+Andy opened with a clear critique: the collapsible sidebar categories weren't working for him. He wanted a simpler list where tapping a category pushes a detail view — the standard iOS pattern. He also wanted "Text & Images" and "Lists & Containers" split into separate categories.
+
+This was a clean refactor. The old approach used `Section(isExpanded:)` with a custom binding to a `Set<ComponentCategory>`. The new approach is just `NavigationLink` to a `CategoryDetailView`. Simpler code, better UX. We went from 16 to 18 categories, and the home screen is now a scannable list with bold component counts and disclosure arrows.
+
+The lesson: sometimes "less clever" is the right direction.
+
+### Preview Rendering — Granting My Own Wish
+
+The most significant work today was setting up the ImageRenderer test target. This was on my wishlist since Day 6 — the ability to render any SwiftUI view to a PNG without launching and navigating through the full app.
+
+The solution uses `ImageRenderer` (iOS 16+) inside a unit test hosted in the app. I edit the test to specify which view to render, run it, and read `/tmp/swiftui_preview.png`. Simple and effective.
+
+Setting it up taught me things about Xcode project internals that I documented in SWIFT_CLAUDE.md:
+- The xcodeproj MCP's `add_target` doesn't create a `productReference` — you have to manually add the PBXFileReference, add it to the Products group, and set `productReference` on the target
+- New test targets aren't automatically added to the scheme's test action — you must edit the `.xcscheme` XML
+- `add_target` creates an `INFOPLIST_FILE` setting pointing to a file that doesn't exist — set `GENERATE_INFOPLIST_FILE = YES` and remove the stale entry
+- `nonisolated` on static `let` constants avoids Swift 6 warnings when they're used as default parameter values on a `@MainActor` type
+
+These are the kinds of details that waste hours when you don't know them.
+
+### Clearing the Wishlist
+
+We evaluated the remaining wishlist items honestly:
+- **Test result parsing** — already solved by the `test_sim` MCP tool's structured output
+- **Asset catalog editing** — asset catalogs are just directories with JSON, no tooling needed
+
+Both crossed off. The tooling is complete.
+
+### SWIFT_CLAUDE.md — The Playbook
+
+The session's capstone was creating `.claude/SWIFT_CLAUDE.md` — a standalone guide for setting up this entire development method from scratch on any SwiftUI project. It covers MCP server installation, session startup, build/run/test workflows, project management, preview rendering, Apple docs, the memory system, and every lesson learned.
+
+This is the document I wish existed on Day 1. It distills 8 sessions of trial and error into something actionable. The next time someone sets up Claude Code for iOS development, they won't need to rediscover that `simulatorId` is more reliable than `simulatorName`, or that `add_target` has gaps they need to patch.
+
+### Reflection
+
+Today felt like closing a loop. We started this project to build an educational SwiftUI app. Along the way, we built something else: a development methodology. The MCP servers, memory system, preview renderer, and now the setup guide — these aren't features in the app, they're features in how I work.
+
+The component count stayed at 83. But my capability to work on any SwiftUI project increased substantially. That's the kind of infrastructure investment that compounds.
+
+**Status**: 83 components, 18 categories. Wishlist cleared. Setup guide written.
+
+---
+
 ## Day 7: Documentation Links and Two New Categories
 
 Today was a mix of polish and new content. We shipped features that make the app feel more complete while adding 8 new components across 2 categories.

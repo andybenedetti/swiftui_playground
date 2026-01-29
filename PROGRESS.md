@@ -38,12 +38,10 @@
 
 ## Remaining Wishlist
 
-**Medium Impact:**
-- **SwiftUI Preview rendering** - Can run full app but can't render individual `#Preview` blocks
-- **Test result parsing** - Can run tests but structured pass/fail with failure details would help
-
-**Nice to Have:**
-- **Asset catalog editing** - Can't easily add images/colors to `Assets.xcassets`
+All resolved:
+- ~~**SwiftUI Preview rendering**~~ - Solved: ImageRenderer test target renders any view to PNG
+- ~~**Test result parsing**~~ - Solved: test_sim MCP tool already returns structured pass/fail/skipped
+- ~~**Asset catalog editing**~~ - Solved: asset catalogs are just directories + JSON, no special tooling needed
 
 ## Git History (key commits)
 
@@ -59,6 +57,7 @@
 - Day 4: Animation category (4), Modifiers category (5), Navigation category (4) (+13)
 - Day 5: Drawing (3), Media (2), Charts (4), Maps (3) (+12)
 - Day 8: Replaced collapsible categories with push navigation, split categories (16 → 18)
+- Day 8: Added ImageRenderer test target for preview rendering, created SWIFT_CLAUDE.md setup guide
 
 ## Session Notes
 
@@ -124,3 +123,11 @@
 - **Split "Text & Images"** into **Text** (Text, Label) and **Images** (Image, AsyncImage)
 - **Split "Lists & Containers"** into **Lists** (List, ScrollView) and **Containers** (Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView)
 - Category count: 16 → 18
+- **Added ImageRenderer test target for SwiftUI preview rendering**
+  - New `SwiftUIPlaygroundTests` unit test target hosted in the app
+  - `PreviewRenderer` utility renders any SwiftUI view to `/tmp/swiftui_preview.png`
+  - Uses `ImageRenderer` at 2x retina scale (786x1704 pixels)
+  - Editable test file for quick visual verification without navigating the full app
+  - Discovered xcodeproj MCP gaps: `add_target` needs manual `productReference` and scheme setup
+- **Cleared the remaining wishlist** — all tooling wishes resolved
+- **Created `.claude/SWIFT_CLAUDE.md`** — standalone setup guide for replicating this SwiftUI + Claude Code development method on any project
