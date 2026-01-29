@@ -25,53 +25,61 @@ struct NavigationLinkPlayground: View {
 
     @ViewBuilder
     private var previewContent: some View {
-        VStack(spacing: 16) {
-            Text("Tap a link to navigate")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+        VStack(spacing: 0) {
+            // Simulated navigation bar
+            Text("Menu")
+                .font(.headline)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 10)
+                .background(.bar)
 
-            NavigationStack {
-                List {
-                    switch linkStyle {
-                    case .label:
-                        NavigationLink("Settings", value: "settings")
-                        NavigationLink("Profile", value: "profile")
-                        NavigationLink("Help", value: "help")
-                    case .iconLabel:
-                        NavigationLink(value: "settings") {
-                            Label("Settings", systemImage: "gear")
+            // Simulated list rows with disclosure indicators
+            List {
+                switch linkStyle {
+                case .label:
+                    navRow("Settings")
+                    navRow("Profile")
+                    navRow("Help")
+                case .iconLabel:
+                    navRow("Settings", icon: "gear")
+                    navRow("Profile", icon: "person")
+                    navRow("Help", icon: "questionmark.circle")
+                case .custom:
+                    HStack {
+                        Image(systemName: "gear")
+                            .foregroundStyle(.blue)
+                            .frame(width: 30)
+                        VStack(alignment: .leading) {
+                            Text("Settings")
+                                .font(.headline)
+                            Text("App preferences")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
                         }
-                        NavigationLink(value: "profile") {
-                            Label("Profile", systemImage: "person")
-                        }
-                        NavigationLink(value: "help") {
-                            Label("Help", systemImage: "questionmark.circle")
-                        }
-                    case .custom:
-                        NavigationLink(value: "settings") {
-                            HStack {
-                                Image(systemName: "gear")
-                                    .foregroundStyle(.blue)
-                                    .frame(width: 30)
-                                VStack(alignment: .leading) {
-                                    Text("Settings")
-                                        .font(.headline)
-                                    Text("App preferences")
-                                        .font(.caption)
-                                        .foregroundStyle(.secondary)
-                                }
-                            }
-                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.tertiary)
                     }
                 }
-                .navigationTitle("Menu")
-                .navigationDestination(for: String.self) { value in
-                    Text("Detail: \(value)")
-                        .navigationTitle(value.capitalized)
-                }
             }
-            .frame(height: 280)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .listStyle(.plain)
+        }
+        .frame(height: 280)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+    }
+
+    private func navRow(_ title: String, icon: String? = nil) -> some View {
+        HStack {
+            if let icon {
+                Label(title, systemImage: icon)
+            } else {
+                Text(title)
+            }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.tertiary)
         }
     }
 

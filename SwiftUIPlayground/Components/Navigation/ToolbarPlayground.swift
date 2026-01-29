@@ -33,24 +33,53 @@ struct ToolbarPlayground: View {
 
     @ViewBuilder
     private var previewContent: some View {
-        NavigationStack {
+        VStack(spacing: 0) {
+            // Simulated navigation bar with toolbar items
+            HStack {
+                if placement == .topBarLeading {
+                    toolbarContent
+                } else if showMultiple && placement == .topBarTrailing {
+                    Button(action: {}) {
+                        Image(systemName: "sidebar.left")
+                    }
+                }
+
+                Spacer()
+
+                if placement == .principal {
+                    toolbarContent
+                } else {
+                    Text("Toolbar Demo")
+                        .font(.headline)
+                }
+
+                Spacer()
+
+                if placement == .topBarTrailing {
+                    toolbarContent
+                }
+            }
+            .padding(.horizontal)
+            .padding(.vertical, 10)
+            .background(.bar)
+
+            // Simulated list content
             List {
                 Text("Item 1")
                 Text("Item 2")
                 Text("Item 3")
             }
-            .navigationTitle("Toolbar Demo")
-            .toolbar {
-                ToolbarItem(placement: toolbarPlacement) {
+            .listStyle(.plain)
+
+            // Simulated bottom bar
+            if placement == .bottomBar {
+                HStack {
+                    Spacer()
                     toolbarContent
+                    Spacer()
                 }
-                if showMultiple && placement == .topBarTrailing {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button(action: {}) {
-                            Image(systemName: "sidebar.left")
-                        }
-                    }
-                }
+                .padding(.vertical, 10)
+                .background(.bar)
             }
         }
         .frame(height: 300)

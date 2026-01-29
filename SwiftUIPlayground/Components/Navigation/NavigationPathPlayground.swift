@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct NavigationPathPlayground: View {
-    @State private var path = NavigationPath()
+    @State private var path: [Int] = []
     @State private var navigationStyle = NavigationStyle.push
     @State private var showControls = true
 
@@ -26,7 +26,8 @@ struct NavigationPathPlayground: View {
 
     @ViewBuilder
     private var previewContent: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: 12) {
+            // Stack depth indicator
             HStack {
                 Text("Stack depth: \(path.count)")
                     .font(.caption)
@@ -34,53 +35,89 @@ struct NavigationPathPlayground: View {
                 Spacer()
                 if path.count > 0 {
                     Button("Pop to Root") {
-                        path = NavigationPath()
+                        path.removeLast(path.count)
                     }
                     .font(.caption)
                 }
             }
-            .padding(.horizontal)
 
-            NavigationStack(path: $path) {
-                VStack(spacing: 20) {
-                    Text("Root View")
-                        .font(.headline)
-
-                    Button("Push View 1") {
-                        path.append(1)
-                    }
-                    .buttonStyle(.borderedProminent)
-
-                    Button("Deep Link to View 3") {
-                        path.append(1)
-                        path.append(2)
-                        path.append(3)
-                    }
-                    .buttonStyle(.bordered)
-                }
-                .navigationTitle("Home")
-                .navigationDestination(for: Int.self) { value in
-                    VStack(spacing: 20) {
-                        Text("View \(value)")
-                            .font(.headline)
-
-                        if value < 5 {
-                            Button("Push View \(value + 1)") {
-                                path.append(value + 1)
-                            }
-                            .buttonStyle(.borderedProminent)
+            // Visual stack representation
+            VStack(spacing: 0) {
+                // Simulated nav bar
+                HStack {
+                    if path.count > 0 {
+                        Button {
+                            path.removeLast()
+                        } label: {
+                            Image(systemName: "chevron.left")
+                                .font(.body.weight(.semibold))
                         }
+                    }
+                    Spacer()
+                    Text(path.count == 0 ? "Home" : "Level \(path.count)")
+                        .font(.headline)
+                    Spacer()
+                    if path.count > 0 {
+                        // Balance the back button
+                        Image(systemName: "chevron.left")
+                            .font(.body.weight(.semibold))
+                            .hidden()
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.vertical, 10)
+                .background(.bar)
 
+                // Content area
+                VStack(spacing: 16) {
+                    Spacer()
+                    Text(path.count == 0 ? "Root View" : "View \(path.count)")
+                        .font(.title2.bold())
+
+                    if path.count < 5 {
+                        Button("Push View \(path.count + 1)") {
+                            path.append(path.count + 1)
+                        }
+                        .buttonStyle(.borderedProminent)
+                    }
+
+                    if path.count > 0 {
                         Button("Pop to Root") {
-                            path = NavigationPath()
+                            path.removeLast(path.count)
+                        }
+                        .buttonStyle(.bordered)
+                    } else {
+                        Button("Deep Link to View 3") {
+                            path.append(1)
+                            path.append(2)
+                            path.append(3)
                         }
                         .buttonStyle(.bordered)
                     }
-                    .navigationTitle("Level \(value)")
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+            }
+            .frame(height: 260)
+            .background(Color(.systemGroupedBackground))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+
+            // Visual breadcrumb
+            HStack(spacing: 4) {
+                Text("Home")
+                    .font(.caption2)
+                    .foregroundStyle(path.count == 0 ? .primary : .secondary)
+                ForEach(1...max(1, path.count), id: \.self) { i in
+                    if i <= path.count {
+                        Image(systemName: "chevron.right")
+                            .font(.caption2)
+                            .foregroundStyle(.tertiary)
+                        Text("View \(i)")
+                            .font(.caption2)
+                            .foregroundStyle(i == path.count ? .primary : .secondary)
+                    }
                 }
             }
-            .frame(height: 300)
-            .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }
 
@@ -114,7 +151,7 @@ struct NavigationPathPlayground: View {
                     .disabled(path.isEmpty)
 
                     Button("Reset") {
-                        path = NavigationPath()
+                        path.removeAll()
                     }
                     .buttonStyle(.bordered)
                 }
