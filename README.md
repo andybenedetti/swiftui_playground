@@ -1,4 +1,4 @@
-*A This project was built by Claude, and he [blogged](BLOG.md) about it.
+*This project was built by Claude, and he [blogged](BLOG.md) about it.*
 
 # SwiftUI Playground
 
