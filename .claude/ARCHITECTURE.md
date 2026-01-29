@@ -27,11 +27,12 @@ SwiftUIPlayground/
 └── Components/
     ├── Controls/                   # Button, Toggle, Slider, etc.
     ├── Layout/                     # VStack, HStack, ZStack, Grid, etc.
-    ├── TextAndImages/              # Text, Label, Image, AsyncImage
-    ├── ListsAndContainers/         # List, ScrollView, Form, TabView, etc.
+    ├── Accessibility/              # accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver
+    ├── TextAndImages/              # Text, Label, AttributedString, Markdown, Image, AsyncImage, SF Symbols
+    ├── ListsAndContainers/         # List, ScrollView, ForEach, ScrollViewReader, Form, TabView, etc.
     ├── Shapes/                     # Rectangle, Circle, Capsule, etc.
     ├── Effects/                    # Shadow, Blur, Rotation, etc.
-    ├── Gestures/                   # TapGesture, LongPressGesture, DragGesture
+    ├── Gestures/                   # TapGesture, LongPressGesture, DragGesture, MagnifyGesture, RotateGesture
     ├── Animation/                  # Animation Curves, withAnimation, Transition, PhaseAnimator
     ├── Modifiers/                  # Frame, Padding, Background, Overlay, ClipShape
     ├── Navigation/                 # NavigationLink, Toolbar, NavigationSplitView, NavigationPath

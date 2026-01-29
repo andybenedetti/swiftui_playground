@@ -1,6 +1,7 @@
 import SwiftUI
 
 enum ComponentCategory: String, CaseIterable, Identifiable {
+    case accessibility = "Accessibility"
     case animation = "Animation"
     case charts = "Charts"
     case containers = "Containers"
@@ -24,6 +25,7 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
 
     var icon: String {
         switch self {
+        case .accessibility: "accessibility"
         case .animation: "play.circle"
         case .charts: "chart.bar.xaxis"
         case .containers: "square.stack"
@@ -47,6 +49,14 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
 
     var components: [ComponentItem] {
         switch self {
+        case .accessibility:
+            [
+                ComponentItem(name: "accessibilityLabel", destination: .accessibilityLabel),
+                ComponentItem(name: "accessibilityHint", destination: .accessibilityHint),
+                ComponentItem(name: "accessibilityValue", destination: .accessibilityValue),
+                ComponentItem(name: "Dynamic Type", destination: .dynamicType),
+                ComponentItem(name: "VoiceOver", destination: .voiceOver),
+            ]
         case .animation:
             [
                 ComponentItem(name: "Animation Curves", destination: .animationCurves),
@@ -122,11 +132,14 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "TapGesture", destination: .tapGesture),
                 ComponentItem(name: "LongPressGesture", destination: .longPressGesture),
                 ComponentItem(name: "DragGesture", destination: .dragGesture),
+                ComponentItem(name: "MagnifyGesture", destination: .magnifyGesture),
+                ComponentItem(name: "RotateGesture", destination: .rotateGesture),
             ]
         case .images:
             [
                 ComponentItem(name: "Image", destination: .image),
                 ComponentItem(name: "AsyncImage", destination: .asyncImage),
+                ComponentItem(name: "SF Symbols", destination: .sfSymbols),
             ]
         case .layout:
             [
@@ -144,6 +157,8 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
             [
                 ComponentItem(name: "List", destination: .list),
                 ComponentItem(name: "ScrollView", destination: .scrollView),
+                ComponentItem(name: "ForEach", destination: .forEach),
+                ComponentItem(name: "ScrollViewReader", destination: .scrollViewReader),
             ]
         case .maps:
             [
@@ -183,6 +198,8 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
             [
                 ComponentItem(name: "Text", destination: .text),
                 ComponentItem(name: "Label", destination: .label),
+                ComponentItem(name: "AttributedString", destination: .attributedString),
+                ComponentItem(name: "Markdown", destination: .markdown),
             ]
         }
     }
@@ -196,6 +213,8 @@ struct ComponentItem: Identifiable, Hashable {
 }
 
 enum ComponentDestination: Hashable {
+    // Accessibility
+    case accessibilityLabel, accessibilityHint, accessibilityValue, dynamicType, voiceOver
     // Animation
     case animationCurves, withAnimation, transition, phaseAnimator
     // Charts
@@ -213,13 +232,13 @@ enum ComponentDestination: Hashable {
     // Focus & Keyboard
     case focusState, keyboardToolbar, submitActions
     // Gestures
-    case tapGesture, longPressGesture, dragGesture
+    case tapGesture, longPressGesture, dragGesture, magnifyGesture, rotateGesture
     // Images
-    case image, asyncImage
+    case image, asyncImage, sfSymbols
     // Layout
     case vStack, hStack, zStack, grid, spacer, divider, viewThatFits, timelineView, geometryReader
     // Lists
-    case list, scrollView
+    case list, scrollView, forEach, scrollViewReader
     // Maps
     case mapBasics, mapMarkers, mapCamera
     // Media
@@ -231,5 +250,5 @@ enum ComponentDestination: Hashable {
     // Shapes
     case rectangle, roundedRectangle, circle, ellipse, capsule
     // Text
-    case text, label
+    case text, label, attributedString, markdown
 }

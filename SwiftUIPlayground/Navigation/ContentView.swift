@@ -61,6 +61,12 @@ struct ContentView: View {
     @ViewBuilder
     private func destinationView(for destination: ComponentDestination) -> some View {
         switch destination {
+        // Accessibility
+        case .accessibilityLabel: AccessibilityLabelPlayground()
+        case .accessibilityHint: AccessibilityHintPlayground()
+        case .accessibilityValue: AccessibilityValuePlayground()
+        case .dynamicType: DynamicTypePlayground()
+        case .voiceOver: VoiceOverPlayground()
         // Animation
         case .animationCurves: AnimationCurvesPlayground()
         case .withAnimation: WithAnimationPlayground()
@@ -119,9 +125,12 @@ struct ContentView: View {
         case .tapGesture: TapGesturePlayground()
         case .longPressGesture: LongPressGesturePlayground()
         case .dragGesture: DragGesturePlayground()
+        case .magnifyGesture: MagnifyGesturePlayground()
+        case .rotateGesture: RotateGesturePlayground()
         // Images
         case .image: ImagePlayground()
         case .asyncImage: AsyncImagePlayground()
+        case .sfSymbols: SFSymbolsPlayground()
         // Layout
         case .vStack: VStackPlayground()
         case .hStack: HStackPlayground()
@@ -135,6 +144,8 @@ struct ContentView: View {
         // Lists
         case .list: ListPlayground()
         case .scrollView: ScrollViewPlayground()
+        case .forEach: ForEachPlayground()
+        case .scrollViewReader: ScrollViewReaderPlayground()
         // Maps
         case .mapBasics: MapBasicsPlayground()
         case .mapMarkers: MapMarkersPlayground()
@@ -162,6 +173,8 @@ struct ContentView: View {
         // Text
         case .text: TextPlayground()
         case .label: LabelPlayground()
+        case .attributedString: AttributedStringPlayground()
+        case .markdown: MarkdownPlayground()
         }
     }
 }

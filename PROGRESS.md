@@ -1,13 +1,14 @@
 # SwiftUI Playground - Progress Tracker
 
-## Current Status: 83 Components, 18 Categories
+## Current Status: 95 Components, 19 Categories
 
 **GitHub**: https://github.com/andybenedetti/swiftui_playground
 
-### Component Inventory (83 total)
+### Component Inventory (95 total)
 
 | Category | Count | Components |
 |----------|-------|------------|
+| Accessibility | 5 | accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver |
 | Animation | 4 | Animation Curves, withAnimation, Transition, PhaseAnimator |
 | Charts | 4 | Bar Chart, Line Chart, Area Chart, Pie Chart |
 | Containers | 6 | Form, TabView, Sheet, Alert, DisclosureGroup, ContentUnavailableView |
@@ -16,22 +17,23 @@
 | Drawing | 3 | Path, Canvas, Custom Shape |
 | Effects | 5 | Shadow, Blur, Rotation, Opacity, Scale |
 | Focus & Keyboard | 3 | @FocusState, Keyboard Toolbar, Submit Actions |
-| Gestures | 3 | TapGesture, LongPressGesture, DragGesture |
-| Images | 2 | Image, AsyncImage |
+| Gestures | 5 | TapGesture, LongPressGesture, DragGesture, MagnifyGesture, RotateGesture |
+| Images | 3 | Image, AsyncImage, SF Symbols |
 | Layout | 9 | VStack, HStack, ZStack, Grid, Spacer, Divider, ViewThatFits, TimelineView, GeometryReader |
-| Lists | 2 | List, ScrollView |
+| Lists | 4 | List, ScrollView, ForEach, ScrollViewReader |
 | Maps | 3 | Map Basics, Map Markers, Map Camera |
 | Media | 2 | VideoPlayer, PhotosPicker |
 | Modifiers | 5 | Frame, Padding, Background, Overlay, ClipShape |
 | Navigation | 4 | NavigationLink, Toolbar, NavigationSplitView, NavigationPath |
 | Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
-| Text | 2 | Text, Label |
+| Text | 4 | Text, Label, AttributedString, Markdown |
 
 ## Next Steps - Ideas for Future Sessions
 
-- [ ] **Add Accessibility category** - accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver
+- [x] **Add Accessibility category** - accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver
 - [x] **Add Data Flow category** - @State, @Binding, @Observable, @Environment, @AppStorage
 - [x] **Add Focus & Keyboard category** - @FocusState, Keyboard Toolbar, Submit Actions
+- [x] **Round out thin categories** - Text (+2), Images (+1), Lists (+2), Gestures (+2)
 - [ ] **Consider adding a "Favorites" feature** - Let users bookmark frequently used components
 - [ ] **Consider adding a "History" feature** - Remember recent parameter configurations
 - [ ] **Run on real device** - Test touch interactions, especially gestures
@@ -58,6 +60,7 @@ All resolved:
 - Day 5: Drawing (3), Media (2), Charts (4), Maps (3) (+12)
 - Day 8: Replaced collapsible categories with push navigation, split categories (16 → 18)
 - Day 8: Added ImageRenderer test target for preview rendering, created SWIFT_CLAUDE.md setup guide
+- Day 9: Added Accessibility category (5), rounded out Text (+2), Images (+1), Lists (+2), Gestures (+2) = +12 components
 
 ## Session Notes
 
@@ -131,3 +134,18 @@ All resolved:
   - Discovered xcodeproj MCP gaps: `add_target` needs manual `productReference` and scheme setup
 - **Cleared the remaining wishlist** — all tooling wishes resolved
 - **Created `.claude/SWIFT_CLAUDE.md`** — standalone setup guide for replicating this SwiftUI + Claude Code development method on any project
+
+### Day 9
+- **Added Accessibility category** (5 new components)
+  - accessibilityLabel - Label views for VoiceOver
+  - accessibilityHint - Describe action results
+  - accessibilityValue - Custom control values
+  - Dynamic Type - Text size adaptation
+  - VoiceOver - Traits, element grouping, hidden elements
+- **Rounded out thin categories** (7 new components)
+  - Text: AttributedString, Markdown (+2, now 4)
+  - Images: SF Symbols (+1, now 3)
+  - Lists: ForEach, ScrollViewReader (+2, now 4)
+  - Gestures: MagnifyGesture, RotateGesture (+2, now 5)
+- Component count: 83 → 95 (+12)
+- Category count: 18 → 19
