@@ -10,10 +10,13 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Code Generation**: Copy ready-to-use SwiftUI code that reflects your customizations
 - **Documentation Links**: Every component includes a link to official Apple documentation
 - **Searchable**: Quickly find any component across all categories
-- **Category Navigation**: Browse 18 organized categories, tap to see components
+- **Category Navigation**: Browse 19 organized categories, tap to see components
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (83)
+## Components (95)
+
+### Accessibility (5)
+- accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver
 
 ### Animation (4)
 - Animation Curves, withAnimation, Transition, PhaseAnimator
@@ -41,18 +44,18 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 ### Focus & Keyboard (3)
 - @FocusState, Keyboard Toolbar, Submit Actions
 
-### Gestures (3)
-- TapGesture, LongPressGesture, DragGesture
+### Gestures (5)
+- TapGesture, LongPressGesture, DragGesture, MagnifyGesture, RotateGesture
 
-### Images (2)
-- Image, AsyncImage
+### Images (3)
+- Image, AsyncImage, SF Symbols
 
 ### Layout (9)
 - VStack, HStack, ZStack, Grid (LazyVGrid)
 - Spacer, Divider, ViewThatFits, TimelineView, GeometryReader
 
-### Lists (2)
-- List, ScrollView
+### Lists (4)
+- List, ScrollView, ForEach, ScrollViewReader
 
 ### Maps (3)
 - Map Basics, Map Markers, Map Camera
@@ -69,8 +72,8 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 ### Shapes (5)
 - Rectangle, RoundedRectangle, Circle, Ellipse, Capsule
 
-### Text (2)
-- Text, Label
+### Text (4)
+- Text, Label, AttributedString, Markdown
 
 ## Requirements
 
