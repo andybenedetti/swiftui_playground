@@ -169,3 +169,10 @@ All resolved:
 - Category count: 19 → 21
 - Frameworks added: CoreLocation, CoreMotion, LocalAuthentication
 - Info.plist keys added: NSLocationWhenInUseUsageDescription, NSFaceIDUsageDescription
+- **Fixed Navigation category bug** - NavigationLink, Toolbar, NavigationPath all had nested NavigationStack conflicts; replaced with visual mockups
+- **Polish pass**:
+  - App icon: 4x4 SF Symbols grid on indigo gradient (generated via AppKit script)
+  - Accent color: Indigo (light + dark mode variants)
+  - Display name: "SwiftUI Play"
+  - App theming: `.tint(.indigo)` on root view
+  - README updated to 104 components / 21 categories

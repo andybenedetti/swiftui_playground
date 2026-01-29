@@ -10,10 +10,10 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 - **Code Generation**: Copy ready-to-use SwiftUI code that reflects your customizations
 - **Documentation Links**: Every component includes a link to official Apple documentation
 - **Searchable**: Quickly find any component across all categories
-- **Category Navigation**: Browse 19 organized categories, tap to see components
+- **Category Navigation**: Browse 21 organized categories, tap to see components
 - **Comments Toggle**: Choose whether generated code includes explanatory comments
 
-## Components (95)
+## Components (104)
 
 ### Accessibility (5)
 - accessibilityLabel, accessibilityHint, accessibilityValue, Dynamic Type, VoiceOver
@@ -69,8 +69,14 @@ An interactive iOS app for exploring SwiftUI components with live parameter edit
 ### Navigation (4)
 - NavigationLink, Toolbar, NavigationSplitView, NavigationPath
 
+### Sensors (4)
+- Location, Device Motion, Biometric Auth, Battery Monitor
+
 ### Shapes (5)
 - Rectangle, RoundedRectangle, Circle, Ellipse, Capsule
+
+### Styling (5)
+- ButtonStyle, ShapeStyle, Material, LabelStyle, ViewModifier
 
 ### Text (4)
 - Text, Label, AttributedString, Markdown

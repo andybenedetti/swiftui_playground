@@ -234,6 +234,7 @@
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2296EF560EF99792DDCDFBB1 /* AccessibilityLabelPlayground.swift */ = {isa = PBXFileReference; name = AccessibilityLabelPlayground.swift; path = SwiftUIPlayground/Components/Accessibility/AccessibilityLabelPlayground.swift; sourceTree = "<group>"; };
 		3E3B5C5B67D6A92D41B1A786 /* AttributedStringPlayground.swift */ = {isa = PBXFileReference; name = AttributedStringPlayground.swift; path = SwiftUIPlayground/Components/TextAndImages/AttributedStringPlayground.swift; sourceTree = "<group>"; };
+		3E54D26D5A03EDDDD5224649 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; name = LaunchScreen.storyboard; path = SwiftUIPlayground/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47A7B9BDA2C568314E330A73 /* ButtonStylePlayground.swift */ = {isa = PBXFileReference; name = ButtonStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/ButtonStylePlayground.swift; sourceTree = "<group>"; };
 		4BB79E98A264350931F1CD6A /* PreviewRenderTests.swift */ = {isa = PBXFileReference; name = PreviewRenderTests.swift; path = SwiftUIPlaygroundTests/PreviewRenderTests.swift; sourceTree = "<group>"; };
 		4C9765DD4D2ABCD243E3F2B6 /* ShapeStylePlayground.swift */ = {isa = PBXFileReference; name = ShapeStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/ShapeStylePlayground.swift; sourceTree = "<group>"; };
@@ -951,11 +952,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPlayground/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPlayground/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftUI Play";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "This app demonstrates Face ID authentication using LocalAuthentication.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app shows your location on a map to demonstrate CoreLocation APIs.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -981,11 +985,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPlayground/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIPlayground/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftUI Play";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "This app demonstrates Face ID authentication using LocalAuthentication.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app shows your location on a map to demonstrate CoreLocation APIs.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
