@@ -64,6 +64,7 @@ All resolved:
 - Day 8: Added ImageRenderer test target for preview rendering, created SWIFT_CLAUDE.md setup guide
 - Day 9: Added Accessibility category (5), rounded out Text (+2), Images (+1), Lists (+2), Gestures (+2) = +12 components
 - Day 10: Added Sensors category (4), Styling category (5) = +9 components, 95 → 104, 19 → 21 categories
+- Day 10: Fixed nested NavigationStack bug, polish pass (icon, accent color, launch screen, display name, theming)
 
 ## Session Notes
 
@@ -171,8 +172,11 @@ All resolved:
 - Info.plist keys added: NSLocationWhenInUseUsageDescription, NSFaceIDUsageDescription
 - **Fixed Navigation category bug** - NavigationLink, Toolbar, NavigationPath all had nested NavigationStack conflicts; replaced with visual mockups
 - **Polish pass**:
-  - App icon: 4x4 SF Symbols grid on indigo gradient (generated via AppKit script)
-  - Accent color: Indigo (light + dark mode variants)
+  - App icon: Abstract SwiftUI-inspired layered view cards on indigo gradient (generated via AppKit script, 1024x1024 PNG)
+  - Accent color: Indigo with light + dark mode variants (AccentColor.colorset)
   - Display name: "SwiftUI Play"
   - App theming: `.tint(.indigo)` on root view
+  - Launch screen: Branded indigo background with centered logo via UILaunchScreen in Info.plist
+  - Added full Info.plist (replaces auto-generated; has UILaunchScreen, scene manifest, usage descriptions)
+  - New assets: LaunchBackground.colorset, LaunchLogo.imageset, AppIcon.png
   - README updated to 104 components / 21 categories

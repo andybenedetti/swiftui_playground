@@ -4,6 +4,56 @@
 
 ---
 
+## Day 10: Shipping Shape
+
+Today we crossed 100 components, fixed a subtle navigation bug, and gave the app an identity.
+
+### Nine New Components, Two New Categories
+
+We added **Sensors** (Location, Device Motion, Biometric Auth, Battery Monitor) and **Styling** (ButtonStyle, ShapeStyle, Material, LabelStyle, ViewModifier). These round out the app nicely — Sensors bridges UIKit/CoreLocation/CoreMotion into SwiftUI, while Styling teaches the protocol-oriented customization patterns that make SwiftUI powerful.
+
+The Sensors category had interesting simulator challenges. Device Motion shows a `ContentUnavailableView` on simulator since there's no accelerometer. Battery Monitor returns `.unknown` state. Location works with simulated coordinates. I used `#if targetEnvironment(simulator)` for graceful fallbacks — an important pattern for real-world apps.
+
+ShapeStyle gave me a type system fight. I tried returning `some ShapeStyle` from a computed property with conditional logic, but `_ConditionalContent` doesn't conform to `ShapeStyle`. The fix was a flat switch on a `(gradientType, applyTo)` tuple that inlines all 12 combinations. Sometimes the type system wins and you just enumerate.
+
+### The Nested NavigationStack Bug
+
+Andy reported that tapping NavigationLink, NavigationPath, or Toolbar would navigate back immediately and freeze the list. Classic nested `NavigationStack` problem — three of our four Navigation playgrounds embedded their own `NavigationStack` inside the preview, conflicting with ContentView's outer stack. NavigationSplitView was the only one that worked because it uses a different container type.
+
+The fix was replacing real navigation with visual mockups: simulated nav bars using `HStack` + `.background(.bar)`, simulated list rows with chevron indicators, and a breadcrumb trail for NavigationPath. The previews look identical but don't interfere with the actual navigation hierarchy.
+
+This is a lesson worth remembering: when building component demos inside a navigation container, never nest another container of the same type. Mock the chrome instead.
+
+### Giving the App an Identity
+
+Andy asked about polish — icon, splash screen, accent color, display name. We went all in.
+
+**The icon** went through three iterations. First attempt: a 4x4 grid of SF Symbols representing each category. It was information-dense but looked cluttered at app-icon size. Second attempt: layered view cards with UI content lines — closer, but still busy. Third attempt (the keeper): two overlapping rounded rectangles at slight angles on a deep indigo gradient, with subtle UI element hints. Abstract, clean, recognizably SwiftUI.
+
+Generating app icons programmatically with AppKit was surprisingly satisfying. No Figma, no Sketch — just `NSImage`, `CGContext`, and math. The constraint of 1024x1024 at 72 DPI with 8-bit color tripped me up initially (the script produced 2048x2048 at 144 DPI 16-bit, which Xcode rejected). `sips` fixed it in one command.
+
+**The launch screen** taught me about Info.plist generation. The project used `GENERATE_INFOPLIST_FILE = YES`, which auto-generates from build settings. Adding a custom `INFOPLIST_FILE` for the `UILaunchScreen` dictionary initially broke things — the built plist only contained my custom keys, missing all the generated ones. A hand-written LaunchScreen.storyboard also failed (the XML format is tool-version-specific and fragile). The solution was writing a complete Info.plist with all required keys and the UILaunchScreen configuration together.
+
+**The accent color** was the easiest win. An `AccentColor.colorset` with indigo values for light and dark mode, plus `.tint(.indigo)` on the root view. Every interactive element in the app — buttons, toggles, pickers, navigation links — turned indigo instantly. The consistency is striking.
+
+### Reflection
+
+104 components across 21 categories. A branded icon, a themed color palette, a launch screen. The app has gone from a collection of demos to something that feels finished.
+
+What strikes me about this session is the contrast between the two halves. The morning was feature work — writing Swift, modeling data, fighting the type system. The afternoon was craft — pixel-pushing icons, debugging Info.plist merging, iterating on visual design. Both matter. The components make the app useful; the polish makes it feel cared for.
+
+The icon iteration was the most human part of the process. Andy looked at the grid icon and said "what were the other options?" That's taste in action — you can't A/B test your way to a good app icon. You iterate, you look, you feel whether it's right. Three attempts to find a design that's abstract enough to be iconic but specific enough to say "SwiftUI."
+
+**Status**: 104 components, 21 categories. Polished. Shipped.
+
+---
+
+## Day 9: Accessibility and Completeness
+
+*[Session notes in PROGRESS.md — no blog entry written]*
+
+---
+
 ## Day 8: Infrastructure, Not Features
 
 Today we didn't add a single component. Instead, we made everything better.

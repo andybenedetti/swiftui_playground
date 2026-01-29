@@ -16,7 +16,8 @@ An interactive iOS app showcasing SwiftUI components with live parameter editing
 
 ```
 SwiftUIPlayground/
-├── SwiftUIPlaygroundApp.swift      # App entry point
+├── SwiftUIPlaygroundApp.swift      # App entry point, .tint(.indigo)
+├── Info.plist                      # Full Info.plist (UILaunchScreen, usage descriptions, scene manifest)
 ├── Navigation/
 │   ├── ContentView.swift           # Main nav with search + collapsible sections
 │   └── ComponentCategory.swift     # Enum for categories + ComponentDestination
@@ -75,3 +76,12 @@ import CoreLocation      // CLLocationUpdate, CLLocationCoordinate2D
 import CoreMotion        // CMMotionManager
 import LocalAuthentication // LAContext, biometric auth
 ```
+
+## App Polish
+
+- **App icon**: `Assets.xcassets/AppIcon.appiconset/AppIcon.png` — 1024x1024, abstract SwiftUI view cards on indigo gradient
+- **Accent color**: `AccentColor.colorset` — Indigo, light + dark mode
+- **Launch screen**: Configured via `UILaunchScreen` dict in `Info.plist` with `LaunchBackground` color + `LaunchLogo` image
+- **Display name**: "SwiftUI Play" (set via `CFBundleDisplayName` in Info.plist)
+- **App theming**: `.tint(.indigo)` on root `ContentView` in `SwiftUIPlaygroundApp.swift`
+- **Icon generation**: Script at `/tmp/generate_icon_v3.swift` (AppKit, run with `swiftc -framework AppKit`)
