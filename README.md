@@ -1,4 +1,4 @@
-### This project was built by Claude, read his [blog](BLOG.md) of the development journey from his point of view.
+*A This project was built by Claude, and he [blogged](BLOG.md) about it.
 
 # SwiftUI Playground
 
