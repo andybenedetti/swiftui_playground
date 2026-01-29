@@ -1,10 +1,10 @@
 # SwiftUI Playground - Progress Tracker
 
-## Current Status: 95 Components, 19 Categories
+## Current Status: 104 Components, 21 Categories
 
 **GitHub**: https://github.com/andybenedetti/swiftui_playground
 
-### Component Inventory (95 total)
+### Component Inventory (104 total)
 
 | Category | Count | Components |
 |----------|-------|------------|
@@ -25,7 +25,9 @@
 | Media | 2 | VideoPlayer, PhotosPicker |
 | Modifiers | 5 | Frame, Padding, Background, Overlay, ClipShape |
 | Navigation | 4 | NavigationLink, Toolbar, NavigationSplitView, NavigationPath |
+| Sensors | 4 | Location, Device Motion, Biometric Auth, Battery Monitor |
 | Shapes | 5 | Rectangle, RoundedRectangle, Circle, Ellipse, Capsule |
+| Styling | 5 | ButtonStyle, ShapeStyle, Material, LabelStyle, ViewModifier |
 | Text | 4 | Text, Label, AttributedString, Markdown |
 
 ## Next Steps - Ideas for Future Sessions
@@ -61,6 +63,7 @@ All resolved:
 - Day 8: Replaced collapsible categories with push navigation, split categories (16 → 18)
 - Day 8: Added ImageRenderer test target for preview rendering, created SWIFT_CLAUDE.md setup guide
 - Day 9: Added Accessibility category (5), rounded out Text (+2), Images (+1), Lists (+2), Gestures (+2) = +12 components
+- Day 10: Added Sensors category (4), Styling category (5) = +9 components, 95 → 104, 19 → 21 categories
 
 ## Session Notes
 
@@ -149,3 +152,20 @@ All resolved:
   - Gestures: MagnifyGesture, RotateGesture (+2, now 5)
 - Component count: 83 → 95 (+12)
 - Category count: 18 → 19
+
+### Day 10
+- **Added Sensors category** (4 new components)
+  - Location - CoreLocation async stream + MapKit visualization
+  - Device Motion - CoreMotion spirit level (ContentUnavailableView on simulator)
+  - Biometric Auth - LocalAuthentication Face ID/Touch ID flow
+  - Battery Monitor - UIDevice battery level/state with NotificationCenter bridging
+- **Added Styling category** (5 new components)
+  - ButtonStyle - Built-in + custom CapsuleButtonStyle, GradientButtonStyle, BouncyButtonStyle
+  - ShapeStyle - Linear, Radial, Angular, Elliptical gradients as fill/stroke/background
+  - Material - All 5 material thicknesses over rich backgrounds
+  - LabelStyle - Built-in + custom VerticalLabelStyle, BadgeLabelStyle
+  - ViewModifier - Card, Glow, Badge, Shake custom modifiers with View extensions
+- Component count: 95 → 104 (+9)
+- Category count: 19 → 21
+- Frameworks added: CoreLocation, CoreMotion, LocalAuthentication
+- Info.plist keys added: NSLocationWhenInUseUsageDescription, NSFaceIDUsageDescription

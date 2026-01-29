@@ -164,12 +164,23 @@ struct ContentView: View {
         case .toolbar: ToolbarPlayground()
         case .navigationSplitView: NavigationSplitViewPlayground()
         case .navigationPath: NavigationPathPlayground()
+        // Sensors
+        case .location: LocationPlayground()
+        case .deviceMotion: DeviceMotionPlayground()
+        case .biometricAuth: BiometricAuthPlayground()
+        case .batteryMonitor: BatteryMonitorPlayground()
         // Shapes
         case .rectangle: RectanglePlayground()
         case .roundedRectangle: RoundedRectanglePlayground()
         case .circle: CirclePlayground()
         case .ellipse: EllipsePlayground()
         case .capsule: CapsulePlayground()
+        // Styling
+        case .buttonStyle: ButtonStylePlayground()
+        case .shapeStyle: ShapeStylePlayground()
+        case .material: MaterialPlayground()
+        case .labelStyle: LabelStylePlayground()
+        case .viewModifier: ViewModifierPlayground()
         // Text
         case .text: TextPlayground()
         case .label: LabelPlayground()

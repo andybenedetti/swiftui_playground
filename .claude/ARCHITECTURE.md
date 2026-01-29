@@ -39,7 +39,9 @@ SwiftUIPlayground/
     ├── Drawing/                    # Path, Canvas, Custom Shape
     ├── Media/                      # VideoPlayer, PhotosPicker
     ├── Charts/                     # Bar Chart, Line Chart, Area Chart, Pie Chart
-    └── Maps/                       # Map Basics, Map Markers, Map Camera
+    ├── Maps/                       # Map Basics, Map Markers, Map Camera
+    ├── Sensors/                    # Location, Device Motion, Biometric Auth, Battery Monitor
+    └── Styling/                    # ButtonStyle, ShapeStyle, Material, LabelStyle, ViewModifier
 ```
 
 ## Key Files to Modify When Adding Components
@@ -64,9 +66,12 @@ SwiftUIPlayground/
 ## Frameworks Used
 
 ```swift
-import SwiftUI     // Core UI
-import AVKit       // VideoPlayer
-import PhotosUI    // PhotosPicker
-import Charts      // Bar, Line, Area, Pie charts
-import MapKit      // Map, Marker, Annotation, MapCamera
+import SwiftUI           // Core UI
+import AVKit             // VideoPlayer
+import PhotosUI          // PhotosPicker
+import Charts            // Bar, Line, Area, Pie charts
+import MapKit            // Map, Marker, Annotation, MapCamera
+import CoreLocation      // CLLocationUpdate, CLLocationCoordinate2D
+import CoreMotion        // CMMotionManager
+import LocalAuthentication // LAContext, biometric auth
 ```

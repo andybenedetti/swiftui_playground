@@ -18,7 +18,9 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
     case media = "Media"
     case modifiers = "Modifiers"
     case navigation = "Navigation"
+    case sensors = "Sensors"
     case shapes = "Shapes"
+    case styling = "Styling"
     case text = "Text"
 
     var id: String { rawValue }
@@ -42,7 +44,9 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
         case .media: "play.rectangle"
         case .modifiers: "paintbrush"
         case .navigation: "arrow.triangle.turn.up.right.diamond"
+        case .sensors: "sensor"
         case .shapes: "square.on.circle"
+        case .styling: "paintpalette"
         case .text: "textformat"
         }
     }
@@ -186,6 +190,13 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "NavigationSplitView", destination: .navigationSplitView),
                 ComponentItem(name: "NavigationPath", destination: .navigationPath),
             ]
+        case .sensors:
+            [
+                ComponentItem(name: "Location", destination: .location),
+                ComponentItem(name: "Device Motion", destination: .deviceMotion),
+                ComponentItem(name: "Biometric Auth", destination: .biometricAuth),
+                ComponentItem(name: "Battery Monitor", destination: .batteryMonitor),
+            ]
         case .shapes:
             [
                 ComponentItem(name: "Rectangle", destination: .rectangle),
@@ -193,6 +204,14 @@ enum ComponentCategory: String, CaseIterable, Identifiable {
                 ComponentItem(name: "Circle", destination: .circle),
                 ComponentItem(name: "Ellipse", destination: .ellipse),
                 ComponentItem(name: "Capsule", destination: .capsule),
+            ]
+        case .styling:
+            [
+                ComponentItem(name: "ButtonStyle", destination: .buttonStyle),
+                ComponentItem(name: "ShapeStyle", destination: .shapeStyle),
+                ComponentItem(name: "Material", destination: .material),
+                ComponentItem(name: "LabelStyle", destination: .labelStyle),
+                ComponentItem(name: "ViewModifier", destination: .viewModifier),
             ]
         case .text:
             [
@@ -247,8 +266,12 @@ enum ComponentDestination: Hashable {
     case frame, padding, background, overlay, clipShape
     // Navigation
     case navigationLink, toolbar, navigationSplitView, navigationPath
+    // Sensors
+    case location, deviceMotion, biometricAuth, batteryMonitor
     // Shapes
     case rectangle, roundedRectangle, circle, ellipse, capsule
+    // Styling
+    case buttonStyle, shapeStyle, material, labelStyle, viewModifier
     // Text
     case text, label, attributedString, markdown
 }
