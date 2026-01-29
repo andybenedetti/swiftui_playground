@@ -7,8 +7,6 @@ struct ParameterControl<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
-                .font(.caption)
-                .foregroundStyle(.secondary)
             content()
         }
     }
@@ -37,15 +35,29 @@ struct PickerControl<T: Hashable>: View {
     @Binding var selection: T
     let options: [T]
     let optionLabel: (T) -> String
+    var segmentedThreshold: Int = 5
 
     var body: some View {
-        ParameterControl(label: label) {
-            Picker(label, selection: $selection) {
-                ForEach(options, id: \.self) { option in
-                    Text(optionLabel(option)).tag(option)
+        if options.count <= segmentedThreshold {
+            ParameterControl(label: label) {
+                Picker(label, selection: $selection) {
+                    ForEach(options, id: \.self) { option in
+                        Text(optionLabel(option)).tag(option)
+                    }
                 }
+                .pickerStyle(.segmented)
             }
-            .pickerStyle(.segmented)
+        } else {
+            HStack {
+                Text(label)
+                Spacer()
+                Picker(label, selection: $selection) {
+                    ForEach(options, id: \.self) { option in
+                        Text(optionLabel(option)).tag(option)
+                    }
+                }
+                .pickerStyle(.menu)
+            }
         }
     }
 }
