@@ -7,98 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001 /* SwiftUIPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101; };
-		002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102; };
-		003 /* ComponentCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103; };
-		004 /* ComponentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104; };
-		005 /* CodePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105; };
-		006 /* ParameterControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106; };
-		007 /* ButtonPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107; };
-		008 /* TogglePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108; };
-		009 /* SliderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109; };
-		010 /* StepperPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110; };
-		011 /* PickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111; };
-		012 /* DatePickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112; };
-		013 /* ColorPickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113; };
-		014 /* TextFieldPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114; };
-		015 /* VStackPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115; };
-		016 /* HStackPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116; };
-		017 /* ZStackPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117; };
-		018 /* GridPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118; };
-		019 /* TextPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119; };
-		020 /* LabelPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120; };
-		021 /* ImagePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121; };
-		022 /* ListPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122; };
-		023 /* ScrollViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123; };
-		024 /* FormPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124; };
-		025 /* RectanglePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125; };
-		026 /* CirclePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126; };
-		027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200; };
-		028 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201; };
-		029 /* ProgressViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127; };
-		030 /* GaugePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128; };
-		031 /* MenuPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129; };
-		032 /* TabViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130; };
-		033 /* SheetPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131; };
-		034 /* AlertPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132; };
-		035 /* AsyncImagePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133; };
-		036 /* DividerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134; };
-		037 /* SpacerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135; };
-		038 /* ShadowPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136; };
-		039 /* BlurPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137; };
-		040 /* RotationPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138; };
-		041 /* SecureFieldPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139; };
-		042 /* TextEditorPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140; };
-		043 /* RoundedRectanglePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141; };
-		044 /* EllipsePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142; };
-		045 /* CapsulePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143; };
-		046 /* OpacityPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144; };
-		047 /* ScalePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145; };
-		048 /* TapGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146; };
-		049 /* LongPressGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147; };
-		050 /* DragGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148; };
-		051 /* LinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149; };
-		052 /* ShareLinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150; };
-		053 /* DisclosureGroupPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151; };
-		054 /* ContentUnavailableViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152; };
-		055 /* MultiDatePickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153; };
-		056 /* ViewThatFitsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154; };
-		057 /* TimelineViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155; };
-		058 /* GeometryReaderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156; };
-		059 /* AnimationCurvesPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157; };
-		060 /* WithAnimationPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158; };
-		061 /* TransitionPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159; };
-		062 /* PhaseAnimatorPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160; };
-		063 /* FramePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161; };
-		064 /* PaddingPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162; };
-		065 /* BackgroundPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163; };
-		066 /* OverlayPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164; };
-		067 /* ClipShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165; };
-		068 /* NavigationLinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166; };
-		069 /* ToolbarPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167; };
-		070 /* NavigationSplitViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168; };
-		071 /* NavigationPathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169; };
-		072 /* PathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170; };
-		073 /* CanvasPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171; };
-		074 /* CustomShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172; };
-		075 /* VideoPlayerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173; };
-		076 /* PhotosPickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174; };
-		077 /* BarChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175; };
-		078 /* LineChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176; };
-		079 /* AreaChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177; };
-		080 /* PieChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178; };
-		081 /* MapBasicsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179; };
-		082 /* MapMarkersPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180; };
-		083 /* MapCameraPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181; };
-		084 /* AppStoragePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182; };
-		085 /* BindingPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183; };
-		086 /* EnvironmentPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184; };
-		087 /* ObservablePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185; };
-		088 /* StatePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186; };
-		089 /* FocusStatePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187; };
-		090 /* KeyboardToolbarPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188; };
-		091 /* SubmitActionsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189; };
+		001 /* SwiftUIPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101 /* SwiftUIPlaygroundApp.swift */; };
+		002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102 /* ContentView.swift */; };
+		003 /* ComponentCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103 /* ComponentCategory.swift */; };
+		004 /* ComponentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104 /* ComponentPage.swift */; };
+		005 /* CodePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105 /* CodePreview.swift */; };
+		006 /* ParameterControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106 /* ParameterControl.swift */; };
+		007 /* ButtonPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107 /* ButtonPlayground.swift */; };
+		008 /* TogglePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108 /* TogglePlayground.swift */; };
+		009 /* SliderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109 /* SliderPlayground.swift */; };
+		010 /* StepperPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110 /* StepperPlayground.swift */; };
+		011 /* PickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111 /* PickerPlayground.swift */; };
+		012 /* DatePickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112 /* DatePickerPlayground.swift */; };
+		013 /* ColorPickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113 /* ColorPickerPlayground.swift */; };
+		014 /* TextFieldPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114 /* TextFieldPlayground.swift */; };
+		015 /* VStackPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115 /* VStackPlayground.swift */; };
+		016 /* HStackPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116 /* HStackPlayground.swift */; };
+		017 /* ZStackPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117 /* ZStackPlayground.swift */; };
+		018 /* GridPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118 /* GridPlayground.swift */; };
+		019 /* TextPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119 /* TextPlayground.swift */; };
+		020 /* LabelPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120 /* LabelPlayground.swift */; };
+		021 /* ImagePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121 /* ImagePlayground.swift */; };
+		022 /* ListPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122 /* ListPlayground.swift */; };
+		023 /* ScrollViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123 /* ScrollViewPlayground.swift */; };
+		024 /* FormPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124 /* FormPlayground.swift */; };
+		025 /* RectanglePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125 /* RectanglePlayground.swift */; };
+		026 /* CirclePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126 /* CirclePlayground.swift */; };
+		027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200 /* Assets.xcassets */; };
+		028 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 201 /* Preview Assets.xcassets */; };
+		029 /* ProgressViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127 /* ProgressViewPlayground.swift */; };
+		030 /* GaugePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128 /* GaugePlayground.swift */; };
+		031 /* MenuPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129 /* MenuPlayground.swift */; };
+		032 /* TabViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130 /* TabViewPlayground.swift */; };
+		033 /* SheetPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131 /* SheetPlayground.swift */; };
+		034 /* AlertPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132 /* AlertPlayground.swift */; };
+		035 /* AsyncImagePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133 /* AsyncImagePlayground.swift */; };
+		036 /* DividerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134 /* DividerPlayground.swift */; };
+		037 /* SpacerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135 /* SpacerPlayground.swift */; };
+		038 /* ShadowPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136 /* ShadowPlayground.swift */; };
+		039 /* BlurPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137 /* BlurPlayground.swift */; };
+		040 /* RotationPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138 /* RotationPlayground.swift */; };
+		041 /* SecureFieldPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139 /* SecureFieldPlayground.swift */; };
+		042 /* TextEditorPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140 /* TextEditorPlayground.swift */; };
+		043 /* RoundedRectanglePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141 /* RoundedRectanglePlayground.swift */; };
+		044 /* EllipsePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142 /* EllipsePlayground.swift */; };
+		045 /* CapsulePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143 /* CapsulePlayground.swift */; };
+		046 /* OpacityPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144 /* OpacityPlayground.swift */; };
+		047 /* ScalePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145 /* ScalePlayground.swift */; };
+		048 /* TapGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146 /* TapGesturePlayground.swift */; };
+		049 /* LongPressGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147 /* LongPressGesturePlayground.swift */; };
+		050 /* DragGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148 /* DragGesturePlayground.swift */; };
+		051 /* LinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149 /* LinkPlayground.swift */; };
+		052 /* ShareLinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150 /* ShareLinkPlayground.swift */; };
+		053 /* DisclosureGroupPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151 /* DisclosureGroupPlayground.swift */; };
+		054 /* ContentUnavailableViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152 /* ContentUnavailableViewPlayground.swift */; };
+		055 /* MultiDatePickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153 /* MultiDatePickerPlayground.swift */; };
+		056 /* ViewThatFitsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154 /* ViewThatFitsPlayground.swift */; };
+		057 /* TimelineViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155 /* TimelineViewPlayground.swift */; };
+		058 /* GeometryReaderPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156 /* GeometryReaderPlayground.swift */; };
+		059 /* AnimationCurvesPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157 /* AnimationCurvesPlayground.swift */; };
+		060 /* WithAnimationPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158 /* WithAnimationPlayground.swift */; };
+		061 /* TransitionPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159 /* TransitionPlayground.swift */; };
+		062 /* PhaseAnimatorPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160 /* PhaseAnimatorPlayground.swift */; };
+		063 /* FramePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161 /* FramePlayground.swift */; };
+		064 /* PaddingPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162 /* PaddingPlayground.swift */; };
+		065 /* BackgroundPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163 /* BackgroundPlayground.swift */; };
+		066 /* OverlayPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164 /* OverlayPlayground.swift */; };
+		067 /* ClipShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165 /* ClipShapePlayground.swift */; };
+		068 /* NavigationLinkPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166 /* NavigationLinkPlayground.swift */; };
+		069 /* ToolbarPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167 /* ToolbarPlayground.swift */; };
+		070 /* NavigationSplitViewPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168 /* NavigationSplitViewPlayground.swift */; };
+		071 /* NavigationPathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169 /* NavigationPathPlayground.swift */; };
+		072 /* PathPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170 /* PathPlayground.swift */; };
+		073 /* CanvasPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171 /* CanvasPlayground.swift */; };
+		074 /* CustomShapePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172 /* CustomShapePlayground.swift */; };
+		075 /* VideoPlayerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173 /* VideoPlayerPlayground.swift */; };
+		076 /* PhotosPickerPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174 /* PhotosPickerPlayground.swift */; };
+		077 /* BarChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175 /* BarChartPlayground.swift */; };
+		078 /* LineChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176 /* LineChartPlayground.swift */; };
+		079 /* AreaChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177 /* AreaChartPlayground.swift */; };
+		080 /* PieChartPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178 /* PieChartPlayground.swift */; };
+		081 /* MapBasicsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179 /* MapBasicsPlayground.swift */; };
+		082 /* MapMarkersPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180 /* MapMarkersPlayground.swift */; };
+		083 /* MapCameraPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181 /* MapCameraPlayground.swift */; };
+		084 /* AppStoragePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182 /* AppStoragePlayground.swift */; };
+		085 /* BindingPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183 /* BindingPlayground.swift */; };
+		086 /* EnvironmentPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184 /* EnvironmentPlayground.swift */; };
+		087 /* ObservablePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185 /* ObservablePlayground.swift */; };
+		088 /* StatePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186 /* StatePlayground.swift */; };
+		089 /* FocusStatePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187 /* FocusStatePlayground.swift */; };
+		090 /* KeyboardToolbarPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188 /* KeyboardToolbarPlayground.swift */; };
+		091 /* SubmitActionsPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189 /* SubmitActionsPlayground.swift */; };
+		8BC320E04F275912B028ACC9 /* PreviewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3F664FEDD1E54FBA4A505 /* PreviewRenderer.swift */; };
+		E9231A32786FD325D9CA2465 /* PreviewRenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB79E98A264350931F1CD6A /* PreviewRenderTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E9F1ECA9444EEBB0D6DB957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 700 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 500;
+			remoteInfo = SwiftUIPlayground;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		100 /* SwiftUIPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,10 +205,20 @@
 		189 /* SubmitActionsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitActionsPlayground.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4BB79E98A264350931F1CD6A /* PreviewRenderTests.swift */ = {isa = PBXFileReference; name = PreviewRenderTests.swift; path = SwiftUIPlaygroundTests/PreviewRenderTests.swift; sourceTree = "<group>"; };
+		A3B3F664FEDD1E54FBA4A505 /* PreviewRenderer.swift */ = {isa = PBXFileReference; name = PreviewRenderer.swift; path = SwiftUIPlaygroundTests/PreviewRenderer.swift; sourceTree = "<group>"; };
+		AABB00112233445566778899 /* SwiftUIPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5DA0A26F4794BDF26C634CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,6 +233,7 @@
 			children = (
 				401 /* SwiftUIPlayground */,
 				402 /* Products */,
+				6A31423A955FB41D71878961 /* SwiftUIPlaygroundTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				100 /* SwiftUIPlayground.app */,
+				AABB00112233445566778899 /* SwiftUIPlaygroundTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,7 +291,7 @@
 				413 /* Gestures */,
 				414 /* Animation */,
 				415 /* Modifiers */,
-				416 /* NavigationComponents */,
+				416 /* Navigation */,
 				417 /* Drawing */,
 				418 /* Media */,
 				419 /* Charts */,
@@ -275,28 +299,6 @@
 				420 /* Maps */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		412 /* Effects */ = {
-			isa = PBXGroup;
-			children = (
-				136 /* ShadowPlayground.swift */,
-				137 /* BlurPlayground.swift */,
-				138 /* RotationPlayground.swift */,
-				144 /* OpacityPlayground.swift */,
-				145 /* ScalePlayground.swift */,
-			);
-			path = Effects;
-			sourceTree = "<group>";
-		};
-		413 /* Gestures */ = {
-			isa = PBXGroup;
-			children = (
-				146 /* TapGesturePlayground.swift */,
-				147 /* LongPressGesturePlayground.swift */,
-				148 /* DragGesturePlayground.swift */,
-			);
-			path = Gestures;
 			sourceTree = "<group>";
 		};
 		406 /* Controls */ = {
@@ -384,6 +386,28 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		412 /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				136 /* ShadowPlayground.swift */,
+				137 /* BlurPlayground.swift */,
+				138 /* RotationPlayground.swift */,
+				144 /* OpacityPlayground.swift */,
+				145 /* ScalePlayground.swift */,
+			);
+			path = Effects;
+			sourceTree = "<group>";
+		};
+		413 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				146 /* TapGesturePlayground.swift */,
+				147 /* LongPressGesturePlayground.swift */,
+				148 /* DragGesturePlayground.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
 		414 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,7 +431,7 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		416 /* NavigationComponents */ = {
+		416 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				166 /* NavigationLinkPlayground.swift */,
@@ -480,12 +504,41 @@
 			path = FocusKeyboard;
 			sourceTree = "<group>";
 		};
+		6A31423A955FB41D71878961 /* SwiftUIPlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3B3F664FEDD1E54FBA4A505 /* PreviewRenderer.swift */,
+				4BB79E98A264350931F1CD6A /* PreviewRenderTests.swift */,
+			);
+			name = SwiftUIPlaygroundTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		256A228F37337B6C7E43F742 /* SwiftUIPlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F62A9E41166AB1922E72A21 /* Build configuration list for PBXNativeTarget "SwiftUIPlaygroundTests" */;
+			buildPhases = (
+				E9D9A766DD4F7146B70BF530 /* Sources */,
+				D5DA0A26F4794BDF26C634CB /* Frameworks */,
+				7745F34A9B876095648721AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3BCEB5428527A8BFE2BEB61 /* PBXTargetDependency */,
+			);
+			name = SwiftUIPlaygroundTests;
+			packageProductDependencies = (
+			);
+			productName = SwiftUIPlaygroundTests;
+			productReference = AABB00112233445566778899 /* SwiftUIPlaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		500 /* SwiftUIPlayground */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 600;
+			buildConfigurationList = 600 /* Build configuration list for PBXNativeTarget "SwiftUIPlayground" */;
 			buildPhases = (
 				501 /* Sources */,
 				300 /* Frameworks */,
@@ -515,7 +568,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 701;
+			buildConfigurationList = 701 /* Build configuration list for PBXProject "SwiftUIPlayground" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -529,6 +582,7 @@
 			projectRoot = "";
 			targets = (
 				500 /* SwiftUIPlayground */,
+				256A228F37337B6C7E43F742 /* SwiftUIPlaygroundTests */,
 			);
 		};
 /* End PBXProject section */
@@ -540,6 +594,13 @@
 			files = (
 				027 /* Assets.xcassets in Resources */,
 				028 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7745F34A9B876095648721AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,9 +703,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9D9A766DD4F7146B70BF530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BC320E04F275912B028ACC9 /* PreviewRenderer.swift in Sources */,
+				E9231A32786FD325D9CA2465 /* PreviewRenderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C3BCEB5428527A8BFE2BEB61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftUIPlayground;
+			target = 500 /* SwiftUIPlayground */;
+			targetProxy = 3E9F1ECA9444EEBB0D6DB957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2247FC113906AD76BA28E150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_IDENTIFIER = com.swiftuiplayground.app.tests;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_NAME = SwiftUIPlaygroundTests;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIPlayground.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUIPlayground";
+			};
+			name = Debug;
+		};
 		800 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -820,9 +913,32 @@
 			};
 			name = Release;
 		};
+		F33A3C2AE7500681C9C68D54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_IDENTIFIER = com.swiftuiplayground.app.tests;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_NAME = SwiftUIPlaygroundTests;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIPlayground.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUIPlayground";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5F62A9E41166AB1922E72A21 /* Build configuration list for PBXNativeTarget "SwiftUIPlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2247FC113906AD76BA28E150 /* Debug */,
+				F33A3C2AE7500681C9C68D54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		600 /* Build configuration list for PBXNativeTarget "SwiftUIPlayground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
