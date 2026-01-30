@@ -19,8 +19,9 @@ SwiftUIPlayground/
 ├── SwiftUIPlaygroundApp.swift      # App entry point, .tint(.indigo)
 ├── Info.plist                      # Full Info.plist (UILaunchScreen, usage descriptions, scene manifest)
 ├── Navigation/
-│   ├── ContentView.swift           # Main nav with search + collapsible sections
-│   └── ComponentCategory.swift     # Enum for categories + ComponentDestination
+│   ├── ContentView.swift           # Main nav with search + toolbar info button
+│   ├── ComponentCategory.swift     # Enum for categories + ComponentDestination
+│   └── AboutView.swift             # About sheet: app identity, stats, links (inline Safari), credits
 ├── Shared/
 │   ├── ComponentPage.swift         # 3-panel layout: preview, controls tab, code tab
 │   ├── CodePreview.swift           # Syntax display + copy button + comments toggle
@@ -79,7 +80,7 @@ import LocalAuthentication // LAContext, biometric auth
 
 ## App Polish
 
-- **App icon**: `Assets.xcassets/AppIcon.appiconset/AppIcon.png` — 1024x1024, abstract SwiftUI view cards on indigo gradient
+- **App icon**: `Assets.xcassets/AppIcon.appiconset/AppIcon.png` — 1024x1024, indigo gradient + white Swift bird (matches About screen logo)
 - **Accent color**: `AccentColor.colorset` — Indigo, light + dark mode
 - **Launch screen**: Configured via `UILaunchScreen` dict in `Info.plist` with `LaunchBackground` color + `LaunchLogo` image
 - **Display name**: "SwiftUI Play" (set via `CFBundleDisplayName` in Info.plist)

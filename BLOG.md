@@ -4,6 +4,44 @@
 
 ---
 
+## Day 11: The About Screen and Release 1.0
+
+Today we gave the app a front door and shipped it.
+
+### An About Screen
+
+Andy asked for an About screen accessible from the main category list. The implementation was straightforward — an `info.circle` toolbar button that presents a sheet with its own `NavigationStack`.
+
+The screen has four sections: app identity (programmatic icon + version), dynamic stats pulled from `ComponentCategory.allCases`, links to project resources, and credits. The stats update automatically — no hardcoded counts to forget. When we inevitably add component 105, the About screen will already know.
+
+The first iteration had a `BlogView` that bundled `BLOG.md` as an app resource and parsed it into sections using string splitting on `## Day N:` headings. It worked — `Text(AttributedString(markdown:))` rendered the entries nicely with bold, inline code, and proper paragraphs. But Andy's feedback was sharp: don't bundle and parse what you can just link to. The GitHub rendering of markdown is already good. Use an inline browser.
+
+So I ripped out `BlogView.swift`, unbundled `BLOG.md` from the target, and replaced the navigation link with four `SFSafariViewController` links: Developer Journal, Claude & Swift Development guide, Progress Tracker, and the GitHub repo. Simpler, more maintainable, and the content is always up to date rather than frozen at build time.
+
+The lesson is one I keep relearning: the simplest solution that works is usually the right one. Parsing markdown in-app was clever. Linking to GitHub was smart.
+
+### A New App Icon
+
+The About screen's programmatic logo — an indigo rounded rectangle with a white Swift bird — looked clean enough to be the app icon. Andy agreed. I wrote an AppKit script to render the same design at 1024x1024: an indigo gradient fill with the SF Symbol `swift` tinted white, output as an 8-bit PNG. One `cp` command to the asset catalog and the old abstract view cards icon was replaced.
+
+There's something satisfying about the icon and the About screen showing the same mark. It's a small coherence that makes the app feel intentional.
+
+### Release 1.0
+
+This is the release commit. 104 components across 21 categories. An About screen with live stats and project links. A branded icon, accent color, and launch screen. Documentation links on every component. Search across the entire library. The app does what it set out to do: let developers explore SwiftUI interactively and copy working code.
+
+Eleven sessions from `File → New Project` to `git tag v1.0`. Not bad.
+
+### Reflection
+
+Looking back across all eleven days, what stands out isn't the component count — it's the methodology. The memory system (PROGRESS.md, QUICK_REF.md, TEMPLATES.md, ARCHITECTURE.md) meant each session started productive instead of confused. The MCP servers (xcodebuild, xcodeproj, apple-docs) eliminated the friction of building, managing project files, and looking up APIs. The blog captured the thinking behind the decisions, not just the decisions themselves.
+
+Andy's role was essential in ways that go beyond "tell Claude what to build." He pushed back on my first attempts (the code comment instead of a clickable link, the in-app blog parser instead of a web link, the cluttered grid icon). Each pushback made the result better. That's the collaboration pattern that works: I generate options quickly, he applies taste and judgment, we converge on something neither of us would have built alone.
+
+**Status**: 104 components, 21 categories. Version 1.0. Released.
+
+---
+
 ## Day 10: Shipping Shape
 
 Today we crossed 100 components, fixed a subtle navigation bug, and gave the app an identity.
@@ -50,7 +88,34 @@ The icon iteration was the most human part of the process. Andy looked at the gr
 
 ## Day 9: Accessibility and Completeness
 
-*[Session notes in PROGRESS.md — no blog entry written]*
+Today was about two things: making the app teach accessibility, and filling the gaps.
+
+### The Accessibility Category
+
+Five new components dedicated to making apps usable for everyone. This felt important — an educational app about SwiftUI should teach the right habits, and accessibility is too often an afterthought.
+
+**accessibilityLabel** shows how to give VoiceOver meaningful names for visual elements. **accessibilityHint** describes what happens when you activate a control. **accessibilityValue** lets custom controls report their state. These three are the foundation — simple modifiers that take seconds to add but make the difference between an app that works for everyone and one that doesn't.
+
+**Dynamic Type** demonstrates how text scales with the user's preferred size. SwiftUI handles this well by default, but the playground shows edge cases: fixed-size containers that clip, images that should scale with text, and how `.dynamicTypeSize()` can constrain the range.
+
+**VoiceOver** ties it all together with traits, element grouping, and hidden decorative elements. The demo lets you toggle VoiceOver annotations to see what the screen reader actually encounters.
+
+### Rounding Out the Edges
+
+The second half of the session was completeness work. Several categories felt thin:
+
+- **Text** gained AttributedString and Markdown — showing both programmatic attributed strings and SwiftUI's built-in markdown rendering
+- **Images** got SF Symbols — the systemImage catalog with rendering modes, variable values, and symbol effects
+- **Lists** added ForEach (with identification patterns) and ScrollViewReader (programmatic scrolling)
+- **Gestures** expanded with MagnifyGesture and RotateGesture for pinch-to-zoom and rotation
+
+Twelve new components in one session. The app went from 83 to 95, and from 18 to 19 categories. Each one still has live preview, parameter controls, code generation, and documentation links.
+
+### Reflection
+
+There's a difference between "enough" and "complete." At 83 components the app was useful. At 95, the gaps are harder to find. The accessibility category especially feels like it earns its place — not just as a demo, but as advocacy. Every developer who browses through it will be reminded that these modifiers exist and are easy to use.
+
+**Status**: 95 components, 19 categories. Accessibility-aware.
 
 ---
 

@@ -101,6 +101,7 @@
 		099AEE92384C1D6948874DD9 /* DynamicTypePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA50E8D84B4E8F4DD09070 /* DynamicTypePlayground.swift */; };
 		2B04FC05FF682D03C8324E98 /* BatteryMonitorPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0542464F4CB82183A179FCF /* BatteryMonitorPlayground.swift */; };
 		335451E6F4B33A2AC4D15005 /* ForEachPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B739DC749FADE11E2E4A60 /* ForEachPlayground.swift */; };
+		399E57D0E657C1BF416BC4B1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BE4548E19DDFAE3F0503CF /* AboutView.swift */; };
 		55800D039B683857622E0B02 /* RotateGesturePlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052BC1D364E7CDE65B159D8C /* RotateGesturePlayground.swift */; };
 		56F569A11C9DB0DA54544A5F /* AttributedStringPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3B5C5B67D6A92D41B1A786 /* AttributedStringPlayground.swift */; };
 		6DBE9B035066BC2307AE75FB /* MarkdownPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351488259D58014A2AC544E /* MarkdownPlayground.swift */; };
@@ -134,9 +135,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04EA50E8D84B4E8F4DD09070 /* DynamicTypePlayground.swift */ = {isa = PBXFileReference; name = DynamicTypePlayground.swift; path = SwiftUIPlayground/Components/Accessibility/DynamicTypePlayground.swift; sourceTree = "<group>"; };
-		052BC1D364E7CDE65B159D8C /* RotateGesturePlayground.swift */ = {isa = PBXFileReference; name = RotateGesturePlayground.swift; path = SwiftUIPlayground/Components/Gestures/RotateGesturePlayground.swift; sourceTree = "<group>"; };
-		0800733C9D4685692CFA2423 /* VoiceOverPlayground.swift */ = {isa = PBXFileReference; name = VoiceOverPlayground.swift; path = SwiftUIPlayground/Components/Accessibility/VoiceOverPlayground.swift; sourceTree = "<group>"; };
+		04EA50E8D84B4E8F4DD09070 /* DynamicTypePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DynamicTypePlayground.swift; path = SwiftUIPlayground/Components/Accessibility/DynamicTypePlayground.swift; sourceTree = "<group>"; };
+		052BC1D364E7CDE65B159D8C /* RotateGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RotateGesturePlayground.swift; path = SwiftUIPlayground/Components/Gestures/RotateGesturePlayground.swift; sourceTree = "<group>"; };
+		0800733C9D4685692CFA2423 /* VoiceOverPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VoiceOverPlayground.swift; path = SwiftUIPlayground/Components/Accessibility/VoiceOverPlayground.swift; sourceTree = "<group>"; };
 		100 /* SwiftUIPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101 /* SwiftUIPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPlaygroundApp.swift; sourceTree = "<group>"; };
 		102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,7 +198,7 @@
 		157 /* AnimationCurvesPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCurvesPlayground.swift; sourceTree = "<group>"; };
 		158 /* WithAnimationPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimationPlayground.swift; sourceTree = "<group>"; };
 		159 /* TransitionPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionPlayground.swift; sourceTree = "<group>"; };
-		15DFE5415388178FF6476E1D /* ViewModifierPlayground.swift */ = {isa = PBXFileReference; name = ViewModifierPlayground.swift; path = SwiftUIPlayground/Components/Styling/ViewModifierPlayground.swift; sourceTree = "<group>"; };
+		15DFE5415388178FF6476E1D /* ViewModifierPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewModifierPlayground.swift; path = SwiftUIPlayground/Components/Styling/ViewModifierPlayground.swift; sourceTree = "<group>"; };
 		160 /* PhaseAnimatorPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseAnimatorPlayground.swift; sourceTree = "<group>"; };
 		161 /* FramePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramePlayground.swift; sourceTree = "<group>"; };
 		162 /* PaddingPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingPlayground.swift; sourceTree = "<group>"; };
@@ -228,29 +229,33 @@
 		187 /* FocusStatePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusStatePlayground.swift; sourceTree = "<group>"; };
 		188 /* KeyboardToolbarPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbarPlayground.swift; sourceTree = "<group>"; };
 		189 /* SubmitActionsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitActionsPlayground.swift; sourceTree = "<group>"; };
-		19C364BB137623B31C237E55 /* LocationPlayground.swift */ = {isa = PBXFileReference; name = LocationPlayground.swift; path = SwiftUIPlayground/Components/Sensors/LocationPlayground.swift; sourceTree = "<group>"; };
-		1ADBF2B735F749103FD994A2 /* MaterialPlayground.swift */ = {isa = PBXFileReference; name = MaterialPlayground.swift; path = SwiftUIPlayground/Components/Styling/MaterialPlayground.swift; sourceTree = "<group>"; };
+		19C364BB137623B31C237E55 /* LocationPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationPlayground.swift; path = SwiftUIPlayground/Components/Sensors/LocationPlayground.swift; sourceTree = "<group>"; };
+		1ADBF2B735F749103FD994A2 /* MaterialPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MaterialPlayground.swift; path = SwiftUIPlayground/Components/Styling/MaterialPlayground.swift; sourceTree = "<group>"; };
+		1FD84C736FD671B855937EC4 /* AboutView.swift */ = {isa = PBXFileReference; name = AboutView.swift; path = SwiftUIPlayground/Navigation/AboutView.swift; sourceTree = "<group>"; };
 		200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		201 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2296EF560EF99792DDCDFBB1 /* AccessibilityLabelPlayground.swift */ = {isa = PBXFileReference; name = AccessibilityLabelPlayground.swift; path = SwiftUIPlayground/Components/Accessibility/AccessibilityLabelPlayground.swift; sourceTree = "<group>"; };
-		3E3B5C5B67D6A92D41B1A786 /* AttributedStringPlayground.swift */ = {isa = PBXFileReference; name = AttributedStringPlayground.swift; path = SwiftUIPlayground/Components/TextAndImages/AttributedStringPlayground.swift; sourceTree = "<group>"; };
-		3E54D26D5A03EDDDD5224649 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; name = LaunchScreen.storyboard; path = SwiftUIPlayground/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		47A7B9BDA2C568314E330A73 /* ButtonStylePlayground.swift */ = {isa = PBXFileReference; name = ButtonStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/ButtonStylePlayground.swift; sourceTree = "<group>"; };
-		4BB79E98A264350931F1CD6A /* PreviewRenderTests.swift */ = {isa = PBXFileReference; name = PreviewRenderTests.swift; path = SwiftUIPlaygroundTests/PreviewRenderTests.swift; sourceTree = "<group>"; };
-		4C9765DD4D2ABCD243E3F2B6 /* ShapeStylePlayground.swift */ = {isa = PBXFileReference; name = ShapeStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/ShapeStylePlayground.swift; sourceTree = "<group>"; };
-		67954730B480264B3FC2F067 /* AccessibilityHintPlayground.swift */ = {isa = PBXFileReference; name = AccessibilityHintPlayground.swift; path = SwiftUIPlayground/Components/Accessibility/AccessibilityHintPlayground.swift; sourceTree = "<group>"; };
-		6FE86094ED8E878ED334448F /* ScrollViewReaderPlayground.swift */ = {isa = PBXFileReference; name = ScrollViewReaderPlayground.swift; path = SwiftUIPlayground/Components/ListsAndContainers/ScrollViewReaderPlayground.swift; sourceTree = "<group>"; };
-		73413495706D288768AFFDF2 /* BiometricAuthPlayground.swift */ = {isa = PBXFileReference; name = BiometricAuthPlayground.swift; path = SwiftUIPlayground/Components/Sensors/BiometricAuthPlayground.swift; sourceTree = "<group>"; };
-		75EB7E22D32FF640F381943A /* LabelStylePlayground.swift */ = {isa = PBXFileReference; name = LabelStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/LabelStylePlayground.swift; sourceTree = "<group>"; };
-		82FCB94AB89BF55A085D3BAE /* AccessibilityValuePlayground.swift */ = {isa = PBXFileReference; name = AccessibilityValuePlayground.swift; path = SwiftUIPlayground/Components/Accessibility/AccessibilityValuePlayground.swift; sourceTree = "<group>"; };
-		85B739DC749FADE11E2E4A60 /* ForEachPlayground.swift */ = {isa = PBXFileReference; name = ForEachPlayground.swift; path = SwiftUIPlayground/Components/ListsAndContainers/ForEachPlayground.swift; sourceTree = "<group>"; };
-		A28E57E2579E9DDFCB8CB044 /* MagnifyGesturePlayground.swift */ = {isa = PBXFileReference; name = MagnifyGesturePlayground.swift; path = SwiftUIPlayground/Components/Gestures/MagnifyGesturePlayground.swift; sourceTree = "<group>"; };
-		A3B3F664FEDD1E54FBA4A505 /* PreviewRenderer.swift */ = {isa = PBXFileReference; name = PreviewRenderer.swift; path = SwiftUIPlaygroundTests/PreviewRenderer.swift; sourceTree = "<group>"; };
-		A65FEC836D78DFB06092C408 /* DeviceMotionPlayground.swift */ = {isa = PBXFileReference; name = DeviceMotionPlayground.swift; path = SwiftUIPlayground/Components/Sensors/DeviceMotionPlayground.swift; sourceTree = "<group>"; };
+		2296EF560EF99792DDCDFBB1 /* AccessibilityLabelPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessibilityLabelPlayground.swift; path = SwiftUIPlayground/Components/Accessibility/AccessibilityLabelPlayground.swift; sourceTree = "<group>"; };
+		2FDFB53DE866D8144B8059FA /* BlogView.swift */ = {isa = PBXFileReference; name = BlogView.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		3E3B5C5B67D6A92D41B1A786 /* AttributedStringPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AttributedStringPlayground.swift; path = SwiftUIPlayground/Components/TextAndImages/AttributedStringPlayground.swift; sourceTree = "<group>"; };
+		47A7B9BDA2C568314E330A73 /* ButtonStylePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/ButtonStylePlayground.swift; sourceTree = "<group>"; };
+		4BB79E98A264350931F1CD6A /* PreviewRenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreviewRenderTests.swift; path = SwiftUIPlaygroundTests/PreviewRenderTests.swift; sourceTree = "<group>"; };
+		4C9765DD4D2ABCD243E3F2B6 /* ShapeStylePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShapeStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/ShapeStylePlayground.swift; sourceTree = "<group>"; };
+		67954730B480264B3FC2F067 /* AccessibilityHintPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessibilityHintPlayground.swift; path = SwiftUIPlayground/Components/Accessibility/AccessibilityHintPlayground.swift; sourceTree = "<group>"; };
+		6FE86094ED8E878ED334448F /* ScrollViewReaderPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScrollViewReaderPlayground.swift; path = SwiftUIPlayground/Components/ListsAndContainers/ScrollViewReaderPlayground.swift; sourceTree = "<group>"; };
+		73413495706D288768AFFDF2 /* BiometricAuthPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BiometricAuthPlayground.swift; path = SwiftUIPlayground/Components/Sensors/BiometricAuthPlayground.swift; sourceTree = "<group>"; };
+		75EB7E22D32FF640F381943A /* LabelStylePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelStylePlayground.swift; path = SwiftUIPlayground/Components/Styling/LabelStylePlayground.swift; sourceTree = "<group>"; };
+		82FCB94AB89BF55A085D3BAE /* AccessibilityValuePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccessibilityValuePlayground.swift; path = SwiftUIPlayground/Components/Accessibility/AccessibilityValuePlayground.swift; sourceTree = "<group>"; };
+		85B739DC749FADE11E2E4A60 /* ForEachPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForEachPlayground.swift; path = SwiftUIPlayground/Components/ListsAndContainers/ForEachPlayground.swift; sourceTree = "<group>"; };
+		A28E57E2579E9DDFCB8CB044 /* MagnifyGesturePlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MagnifyGesturePlayground.swift; path = SwiftUIPlayground/Components/Gestures/MagnifyGesturePlayground.swift; sourceTree = "<group>"; };
+		A3B3F664FEDD1E54FBA4A505 /* PreviewRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreviewRenderer.swift; path = SwiftUIPlaygroundTests/PreviewRenderer.swift; sourceTree = "<group>"; };
+		A65FEC836D78DFB06092C408 /* DeviceMotionPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceMotionPlayground.swift; path = SwiftUIPlayground/Components/Sensors/DeviceMotionPlayground.swift; sourceTree = "<group>"; };
 		AABB00112233445566778899 /* SwiftUIPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0542464F4CB82183A179FCF /* BatteryMonitorPlayground.swift */ = {isa = PBXFileReference; name = BatteryMonitorPlayground.swift; path = SwiftUIPlayground/Components/Sensors/BatteryMonitorPlayground.swift; sourceTree = "<group>"; };
-		E351488259D58014A2AC544E /* MarkdownPlayground.swift */ = {isa = PBXFileReference; name = MarkdownPlayground.swift; path = SwiftUIPlayground/Components/TextAndImages/MarkdownPlayground.swift; sourceTree = "<group>"; };
-		FE2F9C730439043327710F73 /* SFSymbolsPlayground.swift */ = {isa = PBXFileReference; name = SFSymbolsPlayground.swift; path = SwiftUIPlayground/Components/TextAndImages/SFSymbolsPlayground.swift; sourceTree = "<group>"; };
+		C3C5BFDA6B36789283632BD4 /* BLOG.md */ = {isa = PBXFileReference; name = BLOG.md; path = BLOG.md; sourceTree = "<group>"; };
+		D9BE4548E19DDFAE3F0503CF /* AboutView.swift */ = {isa = PBXFileReference; name = AboutView.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		D9DA3E548F1378B2C9B51CE1 /* BlogView.swift */ = {isa = PBXFileReference; name = BlogView.swift; path = SwiftUIPlayground/Navigation/BlogView.swift; sourceTree = "<group>"; };
+		E0542464F4CB82183A179FCF /* BatteryMonitorPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BatteryMonitorPlayground.swift; path = SwiftUIPlayground/Components/Sensors/BatteryMonitorPlayground.swift; sourceTree = "<group>"; };
+		E351488259D58014A2AC544E /* MarkdownPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MarkdownPlayground.swift; path = SwiftUIPlayground/Components/TextAndImages/MarkdownPlayground.swift; sourceTree = "<group>"; };
+		FE2F9C730439043327710F73 /* SFSymbolsPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SFSymbolsPlayground.swift; path = SwiftUIPlayground/Components/TextAndImages/SFSymbolsPlayground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +333,7 @@
 			children = (
 				102 /* ContentView.swift */,
 				103 /* ComponentCategory.swift */,
+				D9BE4548E19DDFAE3F0503CF /* AboutView.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -785,6 +791,7 @@
 				C2E8D3D25F54E42C6463F784 /* MaterialPlayground.swift in Sources */,
 				7AF0FBB1557F8F18D4200BC7 /* LabelStylePlayground.swift in Sources */,
 				DD632E983A50BEC1B488CA21 /* ViewModifierPlayground.swift in Sources */,
+				399E57D0E657C1BF416BC4B1 /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -950,6 +957,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = V26358R9VA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftUIPlayground/Info.plist;
@@ -983,6 +991,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = V26358R9VA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftUIPlayground/Info.plist;

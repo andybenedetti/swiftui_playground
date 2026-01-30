@@ -180,3 +180,13 @@ All resolved:
   - Added full Info.plist (replaces auto-generated; has UILaunchScreen, scene manifest, usage descriptions)
   - New assets: LaunchBackground.colorset, LaunchLogo.imageset, AppIcon.png
   - README updated to 104 components / 21 categories
+
+### Day 11
+- **Added About screen** - Accessible via info.circle toolbar button on main category list
+  - Programmatic indigo app icon with Swift symbol
+  - Dynamic stats: component count, category count, minimum iOS
+  - Links section with inline Safari browser: Developer Journal (BLOG.md), Claude & Swift Development (SWIFT_CLAUDE.md), Progress Tracker (PROGRESS.md), GitHub Repository
+  - Built With section: SwiftUI, Claude by Anthropic
+  - Sheet presentation with own NavigationStack, Done button to dismiss
+- **New app icon** - Indigo gradient + white Swift bird, matching the About screen logo
+- New file: `Navigation/AboutView.swift`

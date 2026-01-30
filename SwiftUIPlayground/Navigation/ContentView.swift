@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText = ""
+    @State private var showingAbout = false
 
     var sortedCategories: [ComponentCategory] {
         ComponentCategory.allCases.sorted { $0.rawValue < $1.rawValue }
@@ -54,6 +55,20 @@ struct ContentView: View {
             }
             .navigationDestination(for: ComponentDestination.self) { destination in
                 destinationView(for: destination)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showingAbout = true
+                    } label: {
+                        Image(systemName: "info.circle")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingAbout) {
+                NavigationStack {
+                    AboutView()
+                }
             }
         }
     }
