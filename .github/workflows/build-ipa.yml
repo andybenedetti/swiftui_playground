@@ -1,0 +1,67 @@
+name: Build unsigned IPA
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "SwiftUIPlayground/**"
+      - "SwiftUIPlayground.xcodeproj/**"
+      - ".github/workflows/build-ipa.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build for iPhone / iPad
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Build unsigned device app
+        shell: bash
+        run: |
+          set -euo pipefail
+          xcodebuild \
+            -project SwiftUIPlayground.xcodeproj \
+            -scheme SwiftUIPlayground \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath "$RUNNER_TEMP/SwiftUIPlaygroundDerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            build
+
+      - name: Package unsigned IPA
+        shell: bash
+        run: |
+          set -euo pipefail
+          APP="$RUNNER_TEMP/SwiftUIPlaygroundDerivedData/Build/Products/Release-iphoneos/SwiftUIPlayground.app"
+          test -d "$APP"
+          mkdir -p "$RUNNER_TEMP/ipa/Payload"
+          cp -R "$APP" "$RUNNER_TEMP/ipa/Payload/"
+          (
+            cd "$RUNNER_TEMP/ipa"
+            /usr/bin/ditto -c -k --sequesterRsrc --keepParent Payload \
+              "$GITHUB_WORKSPACE/SwiftUIPlayground-unsigned.ipa"
+          )
+          ls -lh "$GITHUB_WORKSPACE/SwiftUIPlayground-unsigned.ipa"
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SwiftUIPlayground-unsigned-ipa
+          path: SwiftUIPlayground-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 30
